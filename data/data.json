@@ -1,321 +1,133 @@
 {
-  "penyakit": {
-    "P01": {
-      "nama": "Penyakit Blas (Blast)",
-      "deskripsi": "Penyakit Blas (Blast) adalah infeksi jamur mematikan yang disebabkan oleh patogen Magnaporthe oryzae. Jamur ini dapat menginfeksi seluruh fase pertumbuhan tanaman padi dan menyerang berbagai bagian di atas permukaan tanah, dengan dampak paling parah terjadi pada area daun (blas daun) dan pangkal malai (blas leher atau neck blast). Serangan pada fase generatif dapat memutus aliran nutrisi ke bulir, menyebabkan malai hampa, patah leher, dan penurunan hasil panen secara drastis.",
-      "anti": [
-        "Aplikasikan fungisida sistemik berbahan aktif Trisiklazol, Benomil, atau Isoprotiolan pada saat terlihat gejala awal atau menjelang fase berbunga.",
-        "Gunakan benih varietas padi yang memiliki ketahanan terhadap ras jamur blas di daerah setempat.",
-        "Hindari penggunaan pupuk Nitrogen (Urea) yang berlebihan, dan seimbangkan dengan pupuk Kalium untuk memperkeras jaringan tanaman.",
-        "Jaga kebersihan lahan (sanitasi) dengan memusnahkan sisa jerami yang terinfeksi dari musim tanam sebelumnya."
-      ],
-      "link": "/template/detailPenyakit/p1.html"
+  "penyakit": [
+    {
+      "id": "P01",
+      "nama": "Antraknosa (Patek / Busuk Buah)",
+      "deskripsi": "Penyakit ini disebabkan oleh jamur Colletotrichum spp. Gejala awalnya berupa bercak coklat kehitaman pada permukaan buah yang kemudian meluas menjadi busuk lunak dan keriput.",
+      "solusi": "1. Musnahkan buah yang terinfeksi.\n2. Perbaiki drainase tanah agar tidak lembab.\n3. Gunakan fungisida berbahan aktif propineb atau mankozeb sesuai dosis."
     },
-    "P02": {
-      "nama": "Penyakit Hawar Daun Bakteri (BLB / Kresek)",
-      "deskripsi": "Hawar Daun Bakteri (Bacterial Leaf Blight/BLB) atau penyakit Kresek adalah penyakit padi destruktif yang disebabkan oleh bakteri Xanthomonas oryzae pv. oryzae. Patogen ini menginfeksi sistem pembuluh (xilem) melalui luka atau lubang alami daun, memicu layu, mengeringnya tepi daun, dan perubahan warna menjadi kuning keabu-abuan. Penyakit ini sangat mudah menyebar melalui air irigasi, percikan hujan, atau alat pertanian, terutama pada curah hujan tinggi.",
-      "anti": [
-        "Semprotkan bakterisida berbahan aktif Tembaga Hidroksida, Asam Oksolinik, atau Streptomisin sulfat saat gejala awal muncul.",
-        "Lakukan pengeringan petakan sawah secara berkala (intermittent irrigation) untuk menekan kelembapan dan perkembangan bakteri.",
-        "Hentikan sementara pemupukan Nitrogen saat serangan sedang berlangsung agar daun tidak semakin rimbun dan lunak.",
-        "Gunakan jarak tanam yang lebih lebar (seperti sistem Jajar Legowo) untuk memperbaiki sirkulasi udara di area pertanaman."
-      ],
-      "link": "/template/detailPenyakit/p2.html"
+    {
+      "id": "P02",
+      "nama": "Virus Kuning (Gemini Virus)",
+      "deskripsi": "Penyakit yang ditularkan oleh kutu kebul (Bemisia tabaci). Menyebabkan klorosis (kuning) pada daun, tulang daun menebal, dan pertumbuhan tanaman menjadi kerdil.",
+      "solusi": "1. Cabut dan musnahkan tanaman yang terinfeksi.\n2. Kendalikan vektor kutu kebul dengan insektisida.\n3. Gunakan varietas benih yang tahan terhadap virus kuning."
     },
-    "P03": {
-      "nama": "Penyakit Tungro",
-      "deskripsi": "Penyakit Tungro adalah penyakit virus kompleks yang sangat merugikan, ditularkan secara spesifik oleh hama wereng hijau (Nephotettix virescens). Tanaman yang terinfeksi akan mengalami klorosis (perubahan warna daun menjadi kuning-oranye dari ujung ke pangkal), serta mengalami hambatan pertumbuhan yang parah (kerdil). Infeksi berat pada fase vegetatif awal menyebabkan tanaman tidak mampu menghasilkan malai yang normal, berisiko gagal panen total.",
-      "anti": [
-        "Kendalikan populasi vektor wereng hijau dengan segera menggunakan insektisida berbahan aktif BPMC, Buprofezin, atau Imidakloprid.",
-        "Terapkan pergiliran tanaman dan usahakan waktu tanam serempak dalam satu hamparan untuk memutus siklus hidup vektor virus.",
-        "Segera cabut dan musnahkan (eradikasi) tanaman yang sudah menunjukkan gejala tungro agar tidak menular ke tanaman lain.",
-        "Gunakan varietas padi yang tahan terhadap wereng hijau sebagai langkah preventif paling efektif."
-      ],
-      "link": "/template/detailPenyakit/p3.html"
+    {
+      "id": "P03",
+      "nama": "Layu Fusarium",
+      "deskripsi": "Penyakit layu yang disebabkan oleh jamur Fusarium oxysporum. Gejalanya kelayuan yang dimulai dari daun bagian bawah lalu menjalar ke atas, dan jaringan pembuluh akar/batang berwarna coklat.",
+      "solusi": "1. Cabut dan bakar tanaman yang sakit.\n2. Lakukan pergiliran/rotasi tanaman dengan famili selain Solanaceae.\n3. Aplikasikan agens hayati Trichoderma spp. pada saat pengolahan lahan."
     },
-    "P04": {
-      "nama": "Penyakit Busuk Pelepah (Sheath Blight)",
-      "deskripsi": "Penyakit Busuk Pelepah (Sheath Blight) merupakan infeksi cendawan yang disebabkan oleh patogen Rhizoctonia solani. Penyakit ini umumnya mulai menyerang pada fase anakan maksimum hingga fase bunting, menargetkan pelepah daun di dekat permukaan air. Gejala berupa bercak oval basah yang membesar, mengering, dengan tepi kecoklatan. Pada serangan parah, infeksi menjalar hingga daun bendera, menghambat pengisian bulir dan memicu tanaman rebah.",
-      "anti": [
-        "Aplikasikan fungisida berbahan aktif Heksakonazol, Propikonazol, atau Difenokonazol pada area pangkal batang yang terinfeksi.",
-        "Kurangi tingkat genangan air di sawah agar kondisi iklim mikro di sekitar pangkal batang tidak terlalu lembap.",
-        "Lakukan sanitasi lingkungan dengan membersihkan gulma di sekitar pematang sawah yang berpotensi menjadi inang alternatif jamur.",
-        "Terapkan pemupukan berimbang yang tidak didominasi oleh unsur Nitrogen tinggi pada saat fase bunting."
-      ],
-      "link": "/template/detailPenyakit/p4.html"
+    {
+      "id": "P04",
+      "nama": "Layu Bakteri",
+      "deskripsi": "Penyakit yang disebabkan oleh bakteri Ralstonia solanacearum. Tanaman akan layu secara tiba-tiba di siang hari padahal daun masih hijau, dan jika pangkal batang dipotong akan terasa lunak/berlendir.",
+      "solusi": "1. Perbaiki sanitasi kebun dan saluran air.\n2. Cabut tanaman layu beserta tanah di sekitar akarnya.\n3. Aplikasikan bakterisida berbahan aktif tembaga hidroksida."
     },
-    "P05": {
-      "nama": "Penyakit Rumput Kerdil (Grassy Stunt)",
-      "deskripsi": "Penyakit Kerdil Rumput (Grassy Stunt) adalah infeksi virus sistemik yang ditularkan secara eksklusif oleh hama wereng batang coklat (Nilaparvata lugens). Penyakit ini menyebabkan gangguan morfologi parah pada tanaman padi, ditandai dengan postur yang sangat kerdil, pertumbuhan anakan berlebih yang menyerupai rumput, serta daun yang menjadi sempit, kaku, dan menguning. Jika infeksi terjadi pada fase vegetatif awal, tanaman umumnya gagal menghasilkan malai.",
-      "anti": [
-        "Aplikasikan insektisida berbahan aktif Pimetrozin, Dinotefuran, atau BPMC untuk mengendalikan populasi vektor wereng batang coklat.",
-        "Segera lakukan eradikasi (pencabutan dan pemusnahan) pada tanaman yang menunjukkan gejala infeksi.",
-        "Gunakan Varietas Unggul Tahan Wereng (VUTW) pada musim tanam berikutnya untuk menekan risiko serangan berulang.",
-        "Terapkan sistem tanam Jajar Legowo untuk mengurangi tingkat kelembapan pada area pangkal batang tanaman."
-      ],
-      "link": "/template/detailPenyakit/p5.html"
+    {
+      "id": "P05",
+      "nama": "Bercak Daun (Cercospora)",
+      "deskripsi": "Penyakit akibat jamur Cercospora capsici. Menimbulkan bercak bulat kecil pada daun dengan pusat berwarna pucat kebasah-basahan dan tepi gelap. Menyebabkan daun gugur prematur.",
+      "solusi": "1. Kurangi kelembapan dengan mengatur jarak tanam.\n2. Bersihkan gulma di sekitar tanaman.\n3. Semprotkan fungisida kontak dan sistemik secara berkala."
     },
-    "P07": {
-      "nama": "Penyakit Kerdil Hampa (Ragged Stunt)",
-      "deskripsi": "Penyakit Kerdil Hampa disebabkan oleh Rice Ragged Stunt Virus (RRSV) yang penularannya difasilitasi oleh hama wereng batang coklat. Penyakit ini mengakibatkan kelainan bentuk fisik tanaman yang spesifik, seperti daun yang melintir dengan tepi bergerigi atau robek (ragged), pembengkakan pada tulang daun, postur tanaman kerdil, serta malai yang gagal keluar secara sempurna sehingga menghasilkan bulir hampa secara masif.",
-      "anti": [
-        "Lakukan penyemprotan insektisida berbahan aktif Pimetrozin atau BPMC untuk membasmi wereng batang coklat sebagai vektor utama.",
-        "Eradikasi (cabut dan bakar) tanaman yang terindikasi terinfeksi agar penyebaran virus dapat diputus sedini mungkin.",
-        "Aplikasikan rotasi tanaman dengan palawija untuk memutus siklus hidup hama wereng di lahan persawahan."
-      ],
-      "link": "/template/detailPenyakit/p7.html"
+    {
+      "id": "P06",
+      "nama": "Hama Thrips",
+      "deskripsi": "Serangga kecil yang mengisap cairan daun. Serangan ditandai dengan bercak keperakan pada permukaan bawah daun, daun mengeriting ke atas, dan berubah warna kecoklatan/tembaga.",
+      "solusi": "1. Pasang perangkap lekat kuning/biru (Yellow/Blue Sticky Trap).\n2. Gunakan mulsa plastik perak untuk memantulkan cahaya.\n3. Semprotkan insektisida berbahan aktif abamektin."
     },
-    "P08": {
-      "nama": "Penyakit Gosong Palsu (False Smut)",
-      "deskripsi": "Penyakit Gosong Palsu merupakan infeksi cendawan Ustilaginoidea virens yang secara spesifik menargetkan malai pada fase generatif. Patogen ini mengubah bulir padi individual menjadi gumpalan spora (sklerotia) bertekstur beludru. Gumpalan ini awalnya berwarna kuning oranye dan seiring kematangannya akan berubah menjadi hijau kehitaman. Penyakit ini sering merebak jika kondisi cuaca lembap atau banyak hujan saat masa berbunga.",
-      "anti": [
-        "Semprotkan fungisida berbahan aktif Propikonazol atau Tembaga pada fase pembengkakan malai (bunting) sebagai tindakan preventif.",
-        "Pastikan penggunaan benih bersertifikat yang sehat dan bebas dari patogen bawaan benih (seed-borne).",
-        "Hindari aplikasi pupuk Nitrogen yang terlalu tinggi menjelang fase generatif, karena memicu kerentanan malai."
-      ],
-      "link": "/template/detailPenyakit/p8.html"
+    {
+      "id": "P07",
+      "nama": "Hama Kutu Daun (Aphids)",
+      "deskripsi": "Hama pengisap cairan tanaman yang juga bisa menjadi vektor pembawa virus. Menyebabkan daun mengerut, melengkung ke bawah, dan sering memunculkan embun jelaga hitam.",
+      "solusi": "1. Manfaatkan musuh alami seperti kepik (Ladybug).\n2. Jaga kebersihan lahan pertanian.\n3. Gunakan insektisida sistemik jika serangan sudah masuk fase parah."
     },
-    "P09": {
-      "nama": "Penyakit Busuk Akar (Root Rot)",
-      "deskripsi": "Penyakit Busuk Akar seringkali bukanlah akibat patogen tunggal, melainkan dipicu oleh kondisi tanah yang anaerob (kurang oksigen) akibat genangan air yang terus-menerus. Kondisi ini memicu akumulasi gas beracun (seperti asam sulfida) atau infeksi jamur tanah. Gejalanya terlihat dari tanaman yang menguning, pertumbuhan kerdil, dan sistem perakaran yang menghitam, membusuk, serta mengeluarkan aroma menyengat yang tidak sedap.",
-      "anti": [
-        "Terapkan sistem pengeringan petakan sawah secara berkala (intermittent irrigation) untuk memulihkan sirkulasi oksigen di dalam tanah.",
-        "Gunakan pupuk kandang atau kompos yang sudah terdekomposisi (matang) sempurna agar tidak memicu fermentasi di dalam tanah sawah.",
-        "Taburkan pembenah tanah seperti Dolomit jika indikasi tanah terlalu asam akibat pembusukan material organik."
-      ],
-      "link": "/template/detailPenyakit/p9.html"
-    },
-    "P10": {
-      "nama": "Penyakit Bakanae (Bakanae Disease)",
-      "deskripsi": "Penyakit Bakanae (penyakit bibit bodoh) disebabkan oleh jamur Gibberella fujikuroi yang memproduksi hormon pertumbuhan giberelin dalam jumlah berlebih. Efek toksik ini memaksa bibit atau tanaman padi tumbuh memanjang secara abnormal, jauh melampaui tinggi tanaman sehat. Tanaman yang terinfeksi akan terlihat kurus, berdaun pucat kekuningan, dan umumnya akan mati sebelum masa panen atau hanya menghasilkan malai yang hampa.",
-      "anti": [
-        "Wajib melakukan perlakuan benih (seed treatment) menggunakan fungisida berbahan aktif Karbendazim atau Tiram sebelum proses perendaman/semai.",
-        "Segera cabut dan musnahkan tanaman yang terlihat tumbuh memanjang secara tidak wajar di area pembibitan maupun lahan utama.",
-        "Gunakan sumber benih dari area pertanaman yang terbukti bebas dari sejarah infeksi penyakit bakanae."
-      ],
-      "link": "/template/detailPenyakit/p10.html"
-    },
-    "P06": {
-      "nama": "Penyakit Kresek (Acute BLB/Bacterial Wilt)",
-      "deskripsi": "Penyakit Kresek merupakan fase infeksi akut dan sistemik terparah dari patogen Hawar Daun Bakteri (Xanthomonas oryzae pv. oryzae). Berbeda dengan hawar biasa yang menginfeksi lokal pada daun tanaman dewasa, kresek menyerang pembuluh air (xilem) secara total pada tanaman muda (1-4 minggu setelah tanam). Hal ini menyebabkan tanaman layu mendadak, daun menggulung, berubah warna menjadi hijau keabu-abuan pucat, dan akhirnya mati total (mati bujang) layaknya tersiram air panas.",
-      "anti": [
-        "Segera cabut dan musnahkan tanaman yang menunjukkan gejala layu kresek agar bakteri tidak menyebar melalui genangan air sawah.",
-        "Lakukan drainase (pengeringan lahan) secara total selama beberapa hari untuk menekan pergerakan dan perkembangbiakan bakteri.",
-        "Aplikasikan bakterisida sistemik berbahan aktif Tembaga Hidroksida atau Asam Oksolinik secara intensif pada area di sekitarnya.",
-        "Hindari pemotongan ujung daun bibit sebelum pindah tanam, karena luka tersebut adalah pintu masuk utama bakteri penyebab kresek."
-      ],
-      "link": "/template/detailPenyakit/p6.html"
+    {
+      "id": "P08",
+      "nama": "Hama Lalat Buah",
+      "deskripsi": "Lalat buah betina menusuk buah untuk meletakkan telur. Larva yang menetas akan memakan daging buah dari dalam sehingga muncul titik hitam, buah membusuk, dan gugur sebelum waktunya.",
+      "solusi": "1. Kumpulkan dan kubur buah yang busuk/jatuh ke tanah.\n2. Pasang perangkap atraktan (contoh: Metil Eugenol).\n3. Lakukan pembungkusan buah sejak dini jika luasan lahan memungkinkan."
     }
-  },
-  "gejala": {
-    "G01": {
-      "teks": "Bercak coklat/hitam pada daun",
-      "keterangan": "Penyakit ini memicu penurunan hasil panen akibat daun mengering (hawar) dan infeksi pada gabah",
-      "gambar": "../static/images/fotoGejala/G1.png"
-    },
-    "G02": {
-      "teks": "Bercak berbentuk belah ketupat",
-      "keterangan": "Bercak ini berwarna cokelat dengan pusat abu-abu, ujung meruncing, dan dapat menyebabkan daun mengering serta menginfeksi leher malai (blas leher)",
-      "gambar": "../static/images/fotoGejala/G2.png"
-    },
-    "G03": {
-      "teks": "Daun menguning",
-      "keterangan": "Gejala ini sering muncul saat fase vegetatif maupun bunting (kekurangan kalsium), ditandai ujung daun kuning atau kering",
-      "gambar": "../static/images/fotoGejala/G3.png"
-    },
-    "G04": {
-      "teks": "Daun kering seperti terbakar",
-      "keterangan": "Gejalanya ditandai dengan daun menguning, menggulung, dan mengering mulai dari ujung, terlihat terbakar, dan cepat menyebar saat kondisi lembap",
-      "gambar": "../static/images/fotoGejala/G4.png"
-    },
-    "G05": {
-      "teks": "Tanaman kerdil",
-      "keterangan": "Pertumbuhan tinggi tanaman terhambat drastis, daun menguning-oranye dari ujung, jumlah anakan berkurang, dan malai pendek atau hampa",
-      "gambar": "../static/images/fotoGejala/G5.png"
-    },
-    "G06": {
-      "teks": "Daun kuning-oranye",
-      "keterangan": "Warna kuning oranye sering menandakan serangan bakteri atau jamur, terutama jika dimulai dari ujung daun",
-      "gambar": "../static/images/fotoGejala/G6.png"
-    },
-    "G07": {
-      "teks": "Bercak pada batang atau pelepah",
-      "keterangan": "Bercak oval berwarna abu-abu, coklat, atau hitam pada pelepah daun, dapat meluas hingga membusukkan batang dan menyebabkan bulir hampa",
-      "gambar": "../static/images/fotoGejala/G7.png"
-    },
-    "G08": {
-      "teks": "Tanaman mudah rebah",
-      "keterangan": "Batang padi roboh sebelum panen akibat batang lemah, akar dangkal, atau faktor cuaca seperti angin dan hujan",
-      "gambar": "../static/images/fotoGejala/G8.png"
-    },
-    "G09": {
-      "teks": "Bulir padi hampa",
-      "keterangan": "Gabah kosong tanpa isi, biasanya berwarna putih pucat dan malai tampak tegak",
-      "gambar": "../static/images/fotoGejala/G9.png"
-    },
-    "G10": {
-      "teks": "Pertumbuhan terhambat",
-      "keterangan": "Tinggi tanaman, jumlah anakan, dan perkembangan daun tidak optimal dibandingkan fase pertumbuhan normal",
-      "gambar": "../static/images/fotoGejala/G10.png"
-    },
-    "G11": {
-      "teks": "Tepi daun bergerigi atau sobek",
-      "keterangan": "Daun tampak tidak rata, melintir, atau memiliki pinggiran yang bergerigi (ragged) khas serangan virus tertentu.",
-      "gambar": "../static/images/fotoGejala/G11.png"
-    },
-    "G12": {
-      "teks": "Tulang daun membengkak",
-      "keterangan": "Terdapat pembengkakan urat daun (vein swelling) yang terlihat menonjol pada permukaan bawah helai atau pelepah daun.",
-      "gambar": "../static/images/fotoGejala/G12.png"
-    },
-    "G13": {
-      "teks": "Bulir padi berupa gumpalan spora",
-      "keterangan": "Bulir padi berubah bentuk menjadi gumpalan atau bola spora bertekstur beludru berwarna kuning, oranye, hingga hijau kehitaman.",
-      "gambar": "../static/images/fotoGejala/G13.png"
-    },
-    "G14": {
-      "teks": "Akar membusuk dan berwarna hitam",
-      "keterangan": "Sistem perakaran tanaman rusak, berwarna hitam kecoklatan, dan sering mengeluarkan bau tidak sedap (bau busuk/belerang).",
-      "gambar": "../static/images/fotoGejala/G14.png"
-    },
-    "G15": {
-      "teks": "Tanaman tumbuh memanjang tidak normal",
-      "keterangan": "Tanaman tampak kurus, pucat, dan jauh lebih tinggi (abnormal) dibandingkan tanaman sehat di sekitarnya.",
-      "gambar": "../static/images/fotoGejala/G15.png"
-    }
-  },
-  "aturan": [
+  ],
+  "gejala": [
+    { "id": "G01", "nama": "Terdapat bercak melingkar agak mengkilap (hitam/orange/coklat) pada buah" },
+    { "id": "G02", "nama": "Buah menjadi keriput, mengering, atau membusuk lunak" },
+    { "id": "G03", "nama": "Muncul titik hitam (bekas tusukan) pada pangkal buah" },
+    { "id": "G04", "nama": "Buah menjadi pucat dan gugur ke tanah sebelum waktunya" },
+    { "id": "G05", "nama": "Pucuk dan helaian daun berubah menjadi kuning terang (klorosis)" },
+    { "id": "G06", "nama": "Tulang daun menebal dan daun menggulung ke atas" },
+    { "id": "G07", "nama": "Pertumbuhan tanaman menjadi kerdil dan sulit berbuah" },
+    { "id": "G08", "nama": "Tanaman mengalami kelayuan mulai dari daun bagian bawah yang perlahan menjalar ke atas" },
+    { "id": "G09", "nama": "Warna jaringan pembuluh pada akar dan batang berubah menjadi coklat" },
+    { "id": "G10", "nama": "Tanaman layu secara tiba-tiba (walaupun daun belum menguning / masih hijau)" },
+    { "id": "G11", "nama": "Pangkal batang terasa lunak, berair, dan berisiko rebah" },
+    { "id": "G12", "nama": "Terdapat bercak-bercak bulat, kecil, dan basah pada daun" },
+    { "id": "G13", "nama": "Daun yang terserang perlahan layu lalu rontok/gugur" },
+    { "id": "G14", "nama": "Permukaan bawah daun terdapat bercak berwarna keperakan" },
+    { "id": "G15", "nama": "Daun berubah menjadi warna coklat tembaga, mengeriting, dan keriput" },
+    { "id": "G16", "nama": "Daun melengkung ke bawah, mengkerut, dan terdapat bintik putih / jelaga hitam" }
+  ],
+  "rules": [
     {
-      "id": "R01",
-      "kondisi": ["G01", "G02"],
-      "kesimpulan": "P01",
-      "keterangan": "Bercak coklat/hitam dan bercak belah ketupat khas blas"
+      "id_penyakit": "P01",
+      "gejala": [
+        { "id_gejala": "G01", "cf_pakar": 0.8 },
+        { "id_gejala": "G02", "cf_pakar": 0.7 }
+      ]
     },
     {
-      "id": "R02",
-      "kondisi": ["G02", "G04"],
-      "kesimpulan": "P01",
-      "keterangan": "Bercak blas disertai daun kering seperti terbakar"
+      "id_penyakit": "P02",
+      "gejala": [
+        { "id_gejala": "G05", "cf_pakar": 0.8 },
+        { "id_gejala": "G06", "cf_pakar": 0.9 },
+        { "id_gejala": "G07", "cf_pakar": 0.6 }
+      ]
     },
     {
-      "id": "R03",
-      "kondisi": ["G01", "G07"],
-      "kesimpulan": "P01",
-      "keterangan": "Bercak daun menyebar hingga batang/pelepah"
+      "id_penyakit": "P03",
+      "gejala": [
+        { "id_gejala": "G08", "cf_pakar": 0.9 },
+        { "id_gejala": "G09", "cf_pakar": 0.8 },
+        { "id_gejala": "G07", "cf_pakar": 0.4 }
+      ]
     },
     {
-      "id": "R04",
-      "kondisi": ["G03", "G04"],
-      "kesimpulan": "P02",
-      "keterangan": "Daun menguning dan mengering seperti terbakar (BLB/Kresek)"
+      "id_penyakit": "P04",
+      "gejala": [
+        { "id_gejala": "G10", "cf_pakar": 0.9 },
+        { "id_gejala": "G09", "cf_pakar": 0.6 },
+        { "id_gejala": "G11", "cf_pakar": 0.7 }
+      ]
     },
     {
-      "id": "R05",
-      "kondisi": ["G03", "G06"],
-      "kesimpulan": "P02",
-      "keterangan": "Daun menguning hingga oranye akibat infeksi bakteri (Kresek)"
+      "id_penyakit": "P05",
+      "gejala": [
+        { "id_gejala": "G12", "cf_pakar": 0.9 },
+        { "id_gejala": "G13", "cf_pakar": 0.7 }
+      ]
     },
     {
-      "id": "R06",
-      "kondisi": ["G04", "G08"],
-      "kesimpulan": "P02",
-      "keterangan": "Daun kering dan tanaman mudah rebah akibat HDB"
+      "id_penyakit": "P06",
+      "gejala": [
+        { "id_gejala": "G14", "cf_pakar": 0.9 },
+        { "id_gejala": "G15", "cf_pakar": 0.8 },
+        { "id_gejala": "G07", "cf_pakar": 0.4 }
+      ]
     },
     {
-      "id": "R07",
-      "kondisi": ["G05", "G06"],
-      "kesimpulan": "P03",
-      "keterangan": "Tanaman kerdil dan daun kuning-oranye (Tungro)"
+      "id_penyakit": "P07",
+      "gejala": [
+        { "id_gejala": "G16", "cf_pakar": 0.9 },
+        { "id_gejala": "G07", "cf_pakar": 0.4 }
+      ]
     },
     {
-      "id": "R08",
-      "kondisi": ["G05", "G10"],
-      "kesimpulan": "P03",
-      "keterangan": "Kerdil dan pertumbuhan terhambat secara menyeluruh (Tungro)"
-    },
-    {
-      "id": "R09",
-      "kondisi": ["G07", "G08"],
-      "kesimpulan": "P04",
-      "keterangan": "Bercak pada pelepah dan tanaman rebah (Busuk Pelepah)"
-    },
-    {
-      "id": "R10",
-      "kondisi": ["G07", "G09"],
-      "kesimpulan": "P04",
-      "keterangan": "Infeksi pelepah/batang menyebabkan pengisian bulir hampa"
-    },
-    {
-      "id": "R11",
-      "kondisi": ["G05", "G09"],
-      "kesimpulan": "P05",
-      "keterangan": "Tanaman kerdil menyerupai rumput dan bulir hampa (Grassy Stunt)"
-    },
-    {
-      "id": "R12",
-      "kondisi": ["G06", "G10"],
-      "kesimpulan": "P05",
-      "keterangan": "Daun kuning-oranye kaku dan pertumbuhan terhambat (Grassy Stunt)"
-    },
-    {
-      "id": "R13",
-      "kondisi": ["G05", "G11"],
-      "kesimpulan": "P07",
-      "keterangan": "Tanaman kerdil disertai tepi daun bergerigi atau sobek (Ragged Stunt)"
-    },
-    {
-      "id": "R14",
-      "kondisi": ["G09", "G12"],
-      "kesimpulan": "P07",
-      "keterangan": "Bulir padi hampa disertai pembengkakan tulang daun (Ragged Stunt)"
-    },
-    {
-      "id": "R15",
-      "kondisi": ["G13"],
-      "kesimpulan": "P08",
-      "keterangan": "Bulir berubah menjadi gumpalan spora beludru (False Smut)"
-    },
-    {
-      "id": "R16",
-      "kondisi": ["G03", "G14"],
-      "kesimpulan": "P09",
-      "keterangan": "Daun menguning diiringi akar hitam yang membusuk (Root Rot)"
-    },
-    {
-      "id": "R17",
-      "kondisi": ["G10", "G14"],
-      "kesimpulan": "P09",
-      "keterangan": "Pertumbuhan terhambat karena sistem akar rusak dan membusuk (Root Rot)"
-    },
-    {
-      "id": "R18",
-      "kondisi": ["G03", "G15"],
-      "kesimpulan": "P10",
-      "keterangan": "Daun menguning pucat dan tanaman tumbuh memanjang abnormal (Bakanae)"
-    },
-    {
-      "id": "R19",
-      "kondisi": ["G09", "G15"],
-      "kesimpulan": "P10",
-      "keterangan": "Tumbuh tinggi tidak normal dan menghasilkan bulir hampa (Bakanae)"
-    },
-    {
-      "id": "R20",
-      "kondisi": ["G05", "G15"],
-      "kesimpulan": "P10",
-      "keterangan": "Perpaduan tanaman lemah/kerdil dengan beberapa batang memanjang ekstrem (Bakanae)"
-    },
-    {
-      "id": "R21",
-      "kondisi": ["G04", "G10"],
-      "kesimpulan": "P06",
-      "keterangan": "Infeksi akut tanaman muda menyebabkan daun kering terbakar dan layu mendadak (Kresek)"
-    },
-    {
-      "id": "R22",
-      "kondisi": ["G03", "G04", "G10"],
-      "kesimpulan": "P06",
-      "keterangan": "Daun menguning lalu kering menggulung disertai hambatan tumbuh drastis (Kresek)"
+      "id_penyakit": "P08",
+      "gejala": [
+        { "id_gejala": "G03", "cf_pakar": 0.9 },
+        { "id_gejala": "G02", "cf_pakar": 0.5 },
+        { "id_gejala": "G04", "cf_pakar": 0.8 }
+      ]
     }
   ]
 }

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="gambar/icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/static/style/caraKerja.css">
+    <title>Cara Kerja - SiPadi</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-xl d-flex justify-content-between align-items-center">
+
+            <!-- Logo tetap di kiri -->
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <img src="/static/images/logo2.png" alt="Logo SiPadi"
+                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
+                <h3 style="color: green; margin: 0;">SiPadi</h3>
+            </a>
+
+            <!-- Tombol silang di kanan -->
+            <a href="/index.html" id="menu-toggle" class="btn-back-home" title="Kembali ke Home">
+                ✕
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- HERO CARA KERJA -->
+    <section class="carakerja-hero" style="min-height: 100vh;">
+        <div class="container-xl">
+
+            <!-- TAMBAH INI: wrapper kotak -->
+            <div class="hero-card">
+                <div class="row align-items-center">
+                    <div class="col-5">
+                        <img class="metode" src="/static/images/work.png" alt="Cara Kerja">
+                    </div>
+                    <div class="col-7 d-flex justify-content-center flex-column">
+                        <h2 class="mt-2 mb-3" style="color: #000000;">Metode Forward Chaining pada Sistem Pakar Diagnosis Penyakit Padi</h2>
+                        <p class="font-weight-light">Metode Forward Chaining pada sistem pakar diagnosis
+                            penyakit padi adalah pendekatan data-driven yang menelusuri aturan (rules)
+                            berdasarkan fakta gejala (input) untuk menyimpulkan jenis penyakit dan solusinya.
+                            Sistem ini mencocokkan gejala yang dipilih (IF) dengan basis pengetahuan pakar untuk
+                            menghasilkan diagnosis akhir (THEN).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- AKHIR wrapper kotak -->
+
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="faq-section" style="min-height: 100vh;">
+        <div class="container-xl">
+            <div class="text-center mb-5">
+                <h1 class="sub-heading font-weight-bold" style="color: #000000;">Pertanyaan yang Sering Diajukan</h1>
+                <p class="font-weight-light text-muted">Pertanyaan ini meliputi informasi dasar terkait penerapan
+                    Forward Chaining pada sistem pakar ini</p>
+            </div>
+
+            <div class="accordion mb-5" id="accordionExample">
+                <div class="card mb-3">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn font-weight-bold btn-block text-left" type="button"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                Apa itu Metode Forward Chaining?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Forward Chaining adalah metode penalaran dalam sistem pakar yang memulai proses
+                            inferensi dari kumpulan fakta atau gejala yang diketahui, kemudian menelusurinya secara
+                            maju melalui aturan-aturan IF-THEN hingga mencapai kesimpulan akhir, sehingga metode ini
+                            sangat cocok digunakan ketika data gejala sudah tersedia dan sistem perlu menentukan
+                            penyakit apa yang paling mungkin menyerang tanaman.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn font-weight-bold btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Bagaimana cara kerja dari metode Forward Chaining?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Saat pengguna mencentang gejala yang diamati pada tanaman padi — misalnya bercak belah
+                            ketupat pada daun dan pusat bercak berwarna abu-abu — sistem akan membaca seluruh aturan
+                            yang tersimpan dalam basis pengetahuan, mencocokkan fakta tersebut dengan kondisi IF
+                            pada setiap aturan, dan ketika kondisi terpenuhi sistem langsung mengeksekusi bagian
+                            THEN sebagai kesimpulan, yaitu menampilkan nama penyakit beserta solusi penanganannya
+                            secara otomatis dan real-time.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn font-weight-bold btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Mengapa Metode Forward Chaining dipilih untuk Sistem Pakar Diagnosis Penyakit Padi?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Forward Chaining dipilih karena sangat sesuai dengan alur berpikir petani yang selalu
+                            berangkat dari gejala yang mereka lihat di lapangan menuju diagnosis penyakit — metode
+                            ini efisien untuk jumlah penyakit dan gejala yang terstruktur, mudah diimplementasikan
+                            dalam bahasa pemrograman berbasis web (HTML, CSS, JavaScript), transparan sehingga alur
+                            keputusannya dapat dijelaskan kepada pengguna, serta tidak memerlukan data latih dalam
+                            jumlah besar seperti metode Machine Learning.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn font-weight-bold btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                Apa keuntungan menggunakan Metode Forward Chaining?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Metode Forward Chaining menawarkan sejumlah keunggulan untuk sistem pakar diagnosis
+                            penyakit padi, antara lain prosesnya transparan dan mudah dipahami karena setiap aturan
+                            IF-THEN dapat dilihat dan dijelaskan, responsnya instan karena seluruh logika berjalan
+                            di sisi pengguna (client-side) tanpa perlu koneksi server, basis pengetahuannya mudah
+                            diperbarui cukup dengan menambah aturan baru tanpa mengubah struktur program, serta
+                            dapat dijalankan langsung di browser smartphone petani tanpa instalasi aplikasi tambahan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-modern">
+        <div class="container-xl">
+
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/static/images/logo2.png" alt="Logo SiPadi">
+                    <div>
+                        <h2>SiPadi</h2>
+                        <p>Sistem Pakar Penyakit Padi</p>
+                    </div>
+                </div>
+
+                <div class="footer-about">
+                    <h4>Tentang</h4>
+                    <p>
+                        Sistem pakar diagnosis penyakit padi membantu petani dalam
+                        mengidentifikasi penyakit pada tanaman padi berdasarkan
+                        gejala yang muncul. Sistem ini memberikan hasil diagnosis
+                        secara cepat beserta saran penanganannya, sehingga petani
+                        dapat mengambil tindakan yang tepat untuk menjaga kesehatan
+                        tanaman dan meningkatkan hasil panen.
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <div class="footer-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Surakarta, Indonesia</span>
+                </div>
+                <div class="footer-copy">
+                    <h6>©2026 | SiPadi | All Rights Reserved</h6>
+                </div>
+                <div class="footer-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+62 000 0000 0000</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

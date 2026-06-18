@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/static/style/style5.css">
+
+    <title>Diagnosis │ SiPadi</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center">
+                <img src="/static/images/logo2.png" alt="Logo SiPadi"
+                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
+                <h3 style="color: green; margin: 0;">SiPadi</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item align-self-center active">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item align-self-center active">
+                        <a class="nav-link" href="/template/berita.html">Berita</a>
+                    </li>
+
+                    <li class="nav-item align-self-center active">
+                        <a class="nav-link" href="/template/jenisPadi.html">Jenis Padi</a>
+                    </li>
+
+                    <li class="nav-item align-self-center active">
+                        <a class="nav-link" href="/template/informasi.html">Informasi</a>
+                    </li>
+
+                    <li class="nav-item align-self-center active">
+                        <a class="btn px-4 btn-primary ml-2 btn-register" href='/template/diagnosis.html' role="button">
+                            Diagnosis
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="form">
+        <div class="container">
+            <h1 class="mb-1" style="font-size:2.5rem; font-weight:600; color:green;">
+                Form Diagnosis Penyakit
+                <span id="metode-badge" style="font-size:2.5rem; font-weight:600; color:green;">Tanaman Padi</span>
+            </h1>
+            <p class="text-muted mb-4 mt-3" style="font-size:1rem;">
+                Jawab setiap pertanyaan gejala di bawah ini. Sistem akan menelusuri aturan secara maju
+                untuk menemukan kemungkinan penyakit pada tanaman padi Anda
+            </p>
+
+            <form id="diagnosisForm">
+                <div id="gejala-list" class="mb-3"></div>
+            </form>
+
+            <div class="mt-5" id="hasil"></div>
+        </div>
+    </section>
+
+    <script src="/static/js/script.js"></script>
+
+    <footer class="footer-modern">
+
+        <div class="container-xl">
+
+            <!-- Footer Top -->
+            <div class="footer-top">
+
+                <!-- Logo -->
+                <div class="footer-brand">
+
+                    <img src="/static/images/logo2.png" alt="Logo SiPadi">
+
+                    <div>
+                        <h2>SiPadi</h2>
+                        <p>Sistem Pakar Penyakit Padi</p>
+                    </div>
+
+                </div>
+
+                <!-- Tentang -->
+                <div class="footer-about">
+
+                    <h4>Tentang</h4>
+
+                    <p>
+                        Sistem pakar diagnosis penyakit padi membantu petani dalam
+                        mengidentifikasi penyakit pada tanaman padi berdasarkan
+                        gejala yang muncul. Sistem ini memberikan hasil diagnosis
+                        secara cepat beserta saran penanganannya, sehingga petani
+                        dapat mengambil tindakan yang tepat untuk menjaga kesehatan
+                        tanaman dan meningkatkan hasil panen.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <!-- Lokasi -->
+                <div class="footer-location">
+
+                    <i class="fas fa-map-marker-alt"></i>
+
+                    <span>
+                        Surakarta, Indonesia
+                    </span>
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-copy">
+
+                    <h6>
+                        ©2026 | SiPadi | All Rights Reserved
+                    </h6>
+
+                </div>
+
+                <!-- Nomor -->
+                <div class="footer-phone">
+
+                    <i class="fas fa-phone-alt"></i>
+
+                    <span>
+                        +62 000 0000 0000
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

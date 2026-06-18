@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Berita</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="/static/style/style6.css" />
+</head>
+
+<body class="detail-page">
+
+    <div id="readingBar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background-color: #28a745; z-index: 9999; transition: width 0.2s;"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-xl d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand d-flex align-items-center" href="/template/berita.html">
+                <img src="/static/images/logo2.png" alt="Logo SiPadi"
+                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
+                <h3 style="color: green; margin: 0;">SiPadi</h3>
+            </a>
+
+            <button id="menu-toggle" class="btn-back-home" title="Kembali">
+                ✕
+            </button>
+
+        </div>
+    </nav>
+
+    <main class="main-article">
+        <div class="container-xl">
+
+            <nav aria-label="breadcrumb" class="breadcrumb-custom mb-4">
+                <i class="fas fa-home"></i> <a href="/">Beranda</a>
+                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> <a
+                    href="/template/berita.html">Berita Pertanian</a>
+                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> Antisipasi Serangan Wereng Coklat
+                pada Musim Tanam Ini
+            </nav>
+
+            <h1 class="article-title mb-3">Antisipasi Serangan Wereng Coklat pada Musim Tanam Ini</h1>
+
+            <div class="article-meta mb-4">
+                <span class="author">Oleh Tim SiPadi</span>,
+                <span class="date">Kamis, 12 Mei 2026 | 08:30 WIB</span> -
+                <span class="views"><i class="far fa-eye"></i> 1,245 kali dilihat</span>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 pr-lg-5">
+
+                    <div class="featured-image-wrapper mb-4">
+                        <img src="/static/images/fotoberita/pestisida2.png" alt="Pelatihan Petani" class="featured-img w-100">
+
+                        <div class="share-container">
+                            <button class="btn-floating-share shadow-sm"><i class="fas fa-share-alt"></i></button>
+
+                            <div class="share-menu shadow-sm">
+                                <a href="javascript:void(0)" onclick="copyToClipboard()" class="share-item copy-link"
+                                    title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?text=Cek%20berita%20pertanian%20ini!"
+                                    target="_blank" class="share-item wa" title="Bagikan ke WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=#" target="_blank"
+                                    class="share-item fb" title="Bagikan ke Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" class="share-item ig"
+                                    title="Buka Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <article class="article-content">
+                        <p class="intro-text"><strong>SiPadi, InfoTani -</strong> Kementerian Pertanian melalui dinas
+                            terkait mengimbau para petani untuk meningkatkan kewaspadaan terhadap potensi ledakan
+                            serangan hama wereng batang coklat (WBC) yang diperkirakan akan meningkat tajam pada musim
+                            tanam gadu tahun ini.</p>
+
+                        <p>Peringatan kewaspadaan ini dikeluarkan menyusul adanya anomali cuaca ekstrem dan tingkat
+                            kelembapan udara yang sangat tinggi. Kondisi iklim mikro tersebut menciptakan habitat yang
+                            sangat ideal bagi perkembangbiakan hama wereng secara masif di berbagai hamparan sentra
+                            produksi padi.</p>
+
+                        <p>"Kami sangat meminta para petani untuk tidak lengah dan rutin turun ke sawah guna memantau
+                            area pangkal batang padi. Jika sudah ditemukan lebih dari lima ekor wereng per rumpun,
+                            tindakan pengendalian terpadu harus segera dilakukan sebelum populasinya meledak dan
+                            menyebabkan puso," ujar perwakilan Tim Penyuluh Pertanian Pusat dalam keterangan resminya.
+                        </p>
+
+                        <p>Sebagai langkah antisipasi utama, para petani sangat disarankan untuk menerapkan sistem pola
+                            tanam jajar legowo. Sistem ini terbukti ampuh memperbaiki sirkulasi udara dan intensitas
+                            cahaya matahari di area pertanaman, sehingga kelembapan di sekitar pangkal batang dapat
+                            ditekan.</p>
+
+                        <p>Selain itu, untuk mengurangi risiko resistensi hama akibat penggunaan pestisida kimia yang
+                            berlebihan, petani juga diedukasi untuk mulai beralih memanfaatkan agens hayati.
+                            Pengaplikasian jamur <i>Beauveria bassiana</i> dinilai sangat efektif untuk menginfeksi dan
+                            mengendalikan populasi wereng coklat secara alami dan ramah lingkungan.</p>
+
+                        <p>Rangkaian edukasi dan sosialisasi mengenai langkah mitigasi wereng coklat ini akan terus
+                            digencarkan melalui kegiatan bimbingan teknis di berbagai Balai Penyuluhan Pertanian (BPP)
+                            tingkat kecamatan sepanjang bulan Mei 2026.</p>
+                    </article>
+
+                    <div class="tags-section mt-5 pt-4 border-top">
+                        <i class="fas fa-tags text-success mr-2"></i>
+                        <a href="#" class="tag-pill">#PERTANIAN DIGITAL</a>
+                        <a href="#" class="tag-pill">#SIPADI</a>
+                        <a href="#" class="tag-pill">#MITRA STRATEGIS</a>
+                        <a href="#" class="tag-pill">#PETANI MILENIAL</a>
+                        <a href="#" class="tag-pill">#PENYULUHAN</a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0 pl-lg-3">
+
+                    <div class="sidebar-widget mb-5">
+                        <img src="/static/images/fotoberita/padibojonegoro.png"
+                            alt="Produksi Padi Bojonegoro" class="w-100 rounded-lg mb-3 shadow-sm"
+                            style="height: 200px; object-fit: cover;">
+                        <h5 class="sidebar-title"><a href="/template/beritapadi/padibojonegoro.html">Produksi Padi Bojonegoro Sekitar Migas Kedung Keris Jeblok</a></h5>
+                        <p class="sidebar-meta">Oleh Tim SiPadi &bull; Minggu, 19 April 2026 | 15:17 WIB</p>
+                    </div>
+
+                    <div class="sidebar-list">
+
+                        <div class="sidebar-item d-flex mb-4">
+                            <img src="/static/images/fotoberita/homeberita3.jpg" alt="Deteksi Penyakit Padi" class="sidebar-thumb rounded">
+                            <div class="ml-3">
+                                <h6 class="sidebar-list-title"><a href="/template/beritapadi/sistempakarbantu.html">Deteksi Penyakit Padi Lebih Cepat, Ini Keunggulan Aplikasi Sistem Pakar</a></h6>
+                                <p class="sidebar-meta m-0">Rabu, 13 Mei 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-item d-flex mb-4">
+                            <img src="/static/images/fotoberita/bankIndonesia.png" alt="Bank Indonesia" class="sidebar-thumb rounded">
+                            <div class="ml-3">
+                                <h6 class="sidebar-list-title"><a href="/template/beritapadi/bankIndonesia.html">Bank Indonesia: Pertanian Jadi Tulang Punggung Ekonomi, Bukti Nyata Sektor Pangan Semakin Kuat</a></h6>
+                                <p class="sidebar-meta m-0">Rabu, 13 Mei 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-item d-flex mb-4">
+                            <img src="/static/images/fotoberita/kementan&pemda.png"
+                                alt="Kementan dan Pemda" class="sidebar-thumb rounded">
+                            <div class="ml-3">
+                                <h6 class="sidebar-list-title"><a href="/template/beritapadi/kementan.html">Kementan dan Pemda Perkuat Antisipasi Kemarau, Pastikan Pertanaman Padi Gunungkidul Tetap Aman Hingga Masa Panen</a></h6>
+                                <p class="sidebar-meta m-0">Selasa, 12 Mei 2026</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-modern">
+
+    <div class="container-xl">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <img src="/static/images/logo2.png" alt="Logo SiPadi">
+
+          <div>
+            <h2>SiPadi</h2>
+            <p>Sistem Pakar Penyakit Padi</p>
+          </div>
+
+        </div>
+
+        <div class="footer-about">
+
+          <h4>Tentang</h4>
+
+          <p>
+            Sistem pakar diagnosis penyakit padi membantu petani dalam
+            mengidentifikasi penyakit pada tanaman padi berdasarkan
+            gejala yang muncul. Sistem ini memberikan hasil diagnosis
+            secara cepat beserta saran penanganannya, sehingga petani
+            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
+            tanaman dan meningkatkan hasil panen.
+          </p>
+
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer-bottom">
+
+        <div class="footer-location">
+
+          <i class="fas fa-map-marker-alt"></i>
+
+          <span>
+            Surakarta, Indonesia
+          </span>
+
+        </div>
+
+        <div class="footer-copy">
+
+          <h6>
+            ©2026 | SiPadi | All Rights Reserved
+          </h6>
+
+        </div>
+
+        <div class="footer-phone">
+
+          <i class="fas fa-phone-alt"></i>
+
+          <span>
+            +62 000 0000 0000
+          </span>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <script>
+        // 1. --- LOGIKA TOMBOL KEMBALI (X) BAWAAN ---
+        const closeBtn = document.getElementById("menu-toggle");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+                const previousPage = document.referrer.toLowerCase();
+
+                // Jika asal halaman dari Home / Beranda
+                if (previousPage.includes("index.html") || previousPage.endsWith("127.0.0.1:5500/") || previousPage.endsWith("localhost:5500/")) {
+                    window.location.href = "/index.html#berita";
+                }
+                // Jika asal halaman dari Portal Berita Utama
+                else if (previousPage.includes("berita.html")) {
+                    window.location.href = "/template/berita.html";
+                }
+                // Jika dari halaman lainnya, gunakan sejarah navigasi browser
+                else if (previousPage !== "") {
+                    window.history.back();
+                }
+                // Antisipasi jika halaman dibuka langsung melalui tab baru
+                else {
+                    window.location.href = "/template/berita.html";
+                }
+            });
+        }
+
+        // 2. --- LOGIKA BREADCRUMB DINAMIS & KONDISIONAL ---
+        // Deteksi apakah URL asal (referrer) mengandung kata 'berita.html'
+        const isFromBerita = document.referrer.toLowerCase().includes('berita.html');
+
+        // Jika BUKAN berasal dari halaman berita.html (artinya di-klik lewat Home/Index)
+        if (!isFromBerita) {
+            const breadcrumbLinks = document.querySelectorAll('.breadcrumb-custom a');
+            
+            breadcrumbLinks.forEach(function(link) {
+                // Mencari secara spesifik link yang teksnya tertulis "Berita Pertanian"
+                if (link.innerText.trim() === "Berita Pertanian") {
+                    const nextChevron = link.nextElementSibling;
+                    
+                    if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) {
+                        nextChevron.remove(); // Hapus ikon panah (>)
+                    }
+                    link.remove(); // Hapus teks "Berita Pertanian"
+                }
+            });
+        }
+
+        // 3. --- LOGIKA MENYALIN LINK (COPY TO CLIPBOARD) ---
+        function copyToClipboard() {
+            const url = window.location.href;
+
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link artikel berhasil disalin!");
+            }).catch(err => {
+                console.error("Gagal menyalin link: ", err);
+            });
+        }
+    </script>
+</body>
+
+</html>

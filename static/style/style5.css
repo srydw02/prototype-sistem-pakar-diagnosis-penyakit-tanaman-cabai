@@ -1,0 +1,424 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+
+/* 
+================================================================
+    YANG MENGGUNAKAN CSS INI ADALAH HALAMAN DIAGNOSIS
+================================================================ */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: black;
+  
+}
+
+/* Paksa scrollbar selalu muncul biar layout gak lompat antar halaman */
+html {
+  overflow-y: scroll !important;
+}
+
+/* Biar konten web tidak "nyelip" atau tenggelam di bawah navbar yang fixed */
+body {
+  padding-top: 80px; 
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 14px 0;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.navbar .container-xl {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b8f1f;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 8px;
+}
+
+.nav-link {
+    position: relative;
+    color: #222 !important;
+    font-weight: 500;
+    transition: all .3s ease;
+    padding: 8px 6px !important;
+}
+
+
+.nav-link:hover {
+    color: #2f9e44 !important;
+    transform: translateY(-2px);
+}
+
+
+.nav-link.active {
+    color: #2f9e44 !important;
+    font-weight: 600;
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #2f9e44;
+
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+
+    transition: .3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+
+.btn-register {
+    border-radius: 14px;
+    padding: 10px 22px !important;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(47,158,68,.25);
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-register {
+    border-radius: 14px;
+    padding: 10px 22px !important;
+    margin: 0 0 0 10px !important; /* Mencegah margin bawaan yang bikin navbar melar */
+    font-weight: 500;
+    font-size: 16px;
+    transition: .3s ease;
+    background: #d8f5cf; /* Warna tombol navbar */
+    color: #0b8f1f;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(47,158,68,.25);
+    background: #2f9825;
+    color: white;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* =========================
+   KONTEN DIAGNOSIS
+========================= */
+.kiri {
+  margin: 1%;
+  margin-top: auto;
+  width: 15%;
+  height: auto;
+  border-radius: 5px;
+  float: left;
+  background-color: #f9f7f2;
+}
+
+.kanan {
+  margin: 1%;
+  margin-top: auto;
+  width: 75%;
+  height: auto;
+  float: left;
+}
+
+.teks {
+  font-size: medium;
+  color: #5d4037;
+}
+
+.isi:hover a {
+  background-color: #4E9258;
+  color: #ffffff;
+}
+.heading {
+  font-size: 4em;
+  color: #2E5A27;
+  font-weight: 700;
+}
+
+.sub-heading {
+  font-size: 3em;
+  color: #A67B5B;
+  font-weight: 600;
+}
+
+.col label {
+  font-weight: 400;
+  color: #5d4037;
+}
+
+.btn-primary {
+  background: #a5e68d50;
+  border: none;
+  color: green;
+  border-radius: 14px;
+}
+
+.btn-primary:hover {
+  background: #066d33;
+  border: 0px;
+  color: white;
+}
+
+.btn-success {
+  background: #00d25b50;
+  border: none;
+  color: #00d25b;
+  border-radius: 14px;
+}
+
+a {
+  color: #4E9258;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #F4C430;
+}
+
+section .container {
+  padding-top: 40px;
+}
+
+/* surya hama */
+/* tombol lihat informasi bar diagnosis */
+.btn-lihat-info {
+  background-color: green !important;
+  color: #ffffff !important;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-modern {
+    width: 100%;
+    background: linear-gradient(135deg, #155027, #10692e);
+    color: white;
+    padding: 60px 0 25px;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-modern::before,
+.footer-modern::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+}
+
+.footer-modern::before {
+    width: 220px;
+    height: 220px;
+    bottom: -80px;
+    right: 140px;
+}
+
+.footer-modern::after {
+    width: 120px;
+    height: 120px;
+    top: 35px;
+    right: 45px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 320px;
+}
+
+.footer-brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer-brand h2 {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    margin: 0;
+    font-size: 17px;
+    opacity: .95;
+}
+
+.footer-about {
+    flex: 1;
+}
+
+.footer-about h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer-about p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    opacity: .96;
+}
+
+.footer-modern hr {
+    margin: 40px 0 28px;
+    border-color: rgba(255,255,255,.18);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    text-align: center;
+}
+
+.footer-copy h5 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-copy p {
+    margin: 0;
+    font-size: 15px;
+    opacity: .95;
+}
+
+.footer-location,
+.footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.footer-location i,
+.footer-phone i {
+    font-size: 18px;
+}
+
+@media(max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        min-width: 100%;
+        justify-content: center;
+    }
+
+    .footer-about {
+        width: 100%;
+    }
+
+    .footer-about h4 {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-location,
+    .footer-phone {
+        justify-content: center;
+    }
+}
+
+/* Kunci semua tulisan di footer agar tetap putih srya*/
+.footer-modern, 
+.footer-modern h2, 
+.footer-modern h4, 
+.footer-modern h5, 
+.footer-modern h6, 
+.footer-modern p, 
+.footer-modern span, 
+.footer-modern i {
+    color: #ffffff !important;
+}
+
+/* Pastikan garis pembatas di footer juga tetap terang */
+.footer-modern hr {
+    border-color: rgba(255, 255, 255, 0.18) !important;
+}

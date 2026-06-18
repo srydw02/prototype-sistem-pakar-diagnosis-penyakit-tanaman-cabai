@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Paksa scrollbar selalu muncul biar layout gak lompat antar halaman iki surya*/
+html {
+  overflow-y: scroll !important;
+}
+
+body {
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+}
+
+#hero {
+  padding-top: 25px;
+  padding-bottom: 5px;
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+}
+#wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#penyakit {
+  margin-top: 20px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 14px 0;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.navbar .container-xl {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b8f1f;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 8px;
+}
+
+.nav-link {
+    position: relative;
+    color: #222 !important;
+    font-weight: 500;
+    transition: all .3s ease;
+    padding: 8px 6px !important;
+}
+
+
+.nav-link:hover {
+    color: #2f9e44 !important;
+    transform: translateY(-2px);
+}
+
+
+.nav-link.active {
+    color: #2f9e44 !important;
+    font-weight: 600;
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #2f9e44;
+
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+
+    transition: .3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+
+.btn-register {
+    border-radius: 14px;
+    padding: 10px 22px !important;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(47,158,68,.25);
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Biar konten web tidak "nyelip" atau tenggelam di bawah navbar yang fixed */
+body {
+  padding-top: 80px; 
+}
+
+.nav-link:hover {
+  color: #2f9e44 !important;
+  transform: translateY(-2px);
+}
+
+.isi:hover a {
+  background-color: rgb(35, 87, 155);
+  color: #ffff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(209, 247, 207, 0.1);
+  transition: 0.3s;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.col {
+  margin-bottom: 20px;
+}
+
+.kiri {
+  margin: 1%;
+  margin-top: auto;
+  width: 15%;
+  height: auto;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+}
+
+.kanan {
+  margin: 1%;
+  margin-top: auto;
+  width: 75%;
+  height: auto;
+  float: left;
+}
+
+.teks {
+  font-size: medium;
+}
+
+.heading {
+  font-size: 4em;
+}
+.sub-heading {
+  font-size: 3em;
+}
+
+.col label {
+  font-weight: 400;
+  color: #2f281e;
+}
+
+.btn-primary {
+  background: #a5e68d50;
+  border: none;
+  color: green;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  background: #2f9825;
+  border: 0px;
+}
+.btn-success {
+  background: #00d25b50;
+  border: none;
+  color: #00d25b;
+  border-radius: 10px;
+}
+.margin-top {
+  margin-top: 1em;
+}
+
+a {
+  color: black;
+}
+a:hover {
+  color: green;
+  border: 0px;
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .card {
+    margin-top: 10px;
+    margin-left: 0 !important;
+  }
+}
+/* =========================
+   NAVBAR (COPAS DARI STYLE 2)
+========================= */
+.navbar {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  padding: 14px 0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-brand h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b8f1f;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 8px;
+}
+
+.nav-link {
+  position: relative;
+  color: #222 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 6px !important;
+}
+
+.nav-link:hover {
+  color: #2f9e44 !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: #2f9e44 !important;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2f9e44;
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+.nav-link.active::before {
+  width: 70%;
+}
+
+.btn-primary {
+  background: #d8f5cf;
+  border: none;
+  color: #0b8f1f;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #2f9825;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-register {
+  border-radius: 14px;
+  padding: 10px 22px !important;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(47, 158, 68, 0.25);
+}
+
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-modern {
+    width: 100%;
+    background: linear-gradient(135deg, #155027, #10692e);
+    color: white;
+    padding: 60px 0 25px;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-modern::before,
+.footer-modern::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+}
+
+.footer-modern::before {
+    width: 220px;
+    height: 220px;
+    bottom: -80px;
+    right: 140px;
+}
+
+.footer-modern::after {
+    width: 120px;
+    height: 120px;
+    top: 35px;
+    right: 45px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 320px;
+}
+
+.footer-brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer-brand h2 {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    margin: 0;
+    font-size: 17px;
+    opacity: .95;
+}
+
+.footer-about {
+    flex: 1;
+}
+
+.footer-about h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer-about p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    opacity: .96;
+}
+
+.footer-modern hr {
+    margin: 40px 0 28px;
+    border-color: rgba(255,255,255,.18);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    text-align: center;
+}
+
+.footer-copy h5 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-copy p {
+    margin: 0;
+    font-size: 15px;
+    opacity: .95;
+}
+
+.footer-location,
+.footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.footer-location i,
+.footer-phone i {
+    font-size: 18px;
+}
+
+@media(max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        min-width: 100%;
+        justify-content: center;
+    }
+
+    .footer-about {
+        width: 100%;
+    }
+
+    .footer-about h4 {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-location,
+    .footer-phone {
+        justify-content: center;
+    }
+}

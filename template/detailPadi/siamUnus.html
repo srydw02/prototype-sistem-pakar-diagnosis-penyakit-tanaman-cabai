@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padi Siam Unus - SiPadi Analitik</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../../static/style/detailPadi.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-xl d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand d-flex align-items-center" href="/template/jenisPadi.html">
+                <img src="/static/images/logo2.png" alt="Logo SiPadi"
+                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
+                <h3 style="color: green; margin: 0;">SiPadi</h3>
+            </a>
+
+            <button id="menu-toggle" class="btn-back-home" title="Kembali">
+                ✕
+            </button>
+
+        </div>
+    </nav>
+
+    <div class="detail-header">
+        <h1>Padi Siam Unus</h1>
+        <p>Raja Lahan Rawa Pasang Surut dengan Ketahanan Alami Tinggi</p>
+    </div>
+
+    <div class="detail-container container-xl">
+        
+        <div class="detail-main-info">
+            <div class="detail-image-wrapper">
+                <img src="../../static/images/fotoJenisPadi/siamunus.png" alt="Padi Siam Unus">
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card"><h4>Daerah Asal</h4><p>Kalimantan (Rawa)</p></div>
+                <div class="spec-card"><h4>Tekstur Nasi</h4><p>Pulen &amp; Enak</p></div>
+                <div class="spec-card"><h4>Bentuk Beras</h4><p>Ramping Panjang</p></div>
+                <div class="spec-card"><h4>Penyajian</h4><p>Konsumsi Harian Utama</p></div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            
+            <h3 class="editorial-title">Deskripsi Lengkap</h3>
+            <p class="editorial-text">
+                Padi Siam Unus merupakan varietas lokal pasang surut legendaris yang sangat populer di pulau Kalimantan. Varietas ini terkenal karena adaptabilitasnya yang luar biasa tinggi di ekosistem lahan rawa tergenang dan tanah masam. Bulir berasnya ramping dan panjang, menghasilkan nasi yang pulen, berderai pas (tidak terlalu lekat), serta memiliki rasa gurih alami yang sangat disukai oleh masyarakat lokal untuk konsumsi makanan pokok sehari-hari.
+            </p>
+
+            <hr class="editorial-hr">
+
+            <h3 class="editorial-title">Analisis Karakteristik</h3>
+            <div class="row editorial-row">
+                <div class="col-md-6 editorial-col-left">
+                    <h4 class="editorial-subtitle">Keunggulan Agronomi</h4>
+                    <p class="editorial-text">
+                        Keunggulan utama Siam Unus adalah daya tahan alaminya yang sangat tinggi terhadap kondisi stres lingkungan, seperti kadar keasaman tanah yang tinggi (pH rendah) dan fluktuasi air di lahan pasang surut. Padi ini tidak membutuhkan asupan pupuk kimia intensif untuk dapat tumbuh dengan baik, menjadikannya andalan petani lokal lahan rawa sejak turun-temurun.
+                    </p>
+                </div>
+                <div class="col-md-6 editorial-col-right">
+                    <h4 class="editorial-subtitle">Tantangan Budidaya</h4>
+                    <p class="editorial-text">
+                        Masa pertumbuhan varietas lokal ini tergolong cukup panjang, memerlukan waktu sekitar 125 hingga 135 hari hingga masa panen tiba. Pengelolaan tinggi air di petakan lahan rawa selama masa vegetatif awal sangat krusial guna menghindari pembusukan pangkal batang muda sebelum sistem perakarannya berkembang kuat mencengkeram tanah rawa.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="editorial-hr">
+
+            <h3 class="editorial-title">Kalender Tanam &amp; Titik Kritis</h3>
+            <p class="editorial-text">Alur waktu fase pertumbuhan padi lokal rawa Siam Unus untuk hasil panen optimal.</p>
+            
+            <div class="editorial-timeline mt-4 mb-5">
+                <div class="timeline-axis">
+                    <div class="timeline-progress" style="width: 100%;"></div>
+                </div>
+                
+                <div class="timeline-labels">
+                    <div class="timeline-segment" style="width: 45%;">
+                        <div class="segment-tick"></div>
+                        <span class="segment-title">Vegetatif</span>
+                        <span class="segment-desc">0-55 Hari</span>
+                    </div>
+                    
+                    <div class="timeline-segment" style="width: 30%;">
+                        <div class="pulse-marker">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-dot"></div>
+                            <div class="clean-tooltip">Titik Rawan: Fase pengisian bulir di lahan rawa. Fluktuasi asam-basa air pasang surut yang ekstrem rawan memicu stres tanaman dan menarik hama penggerek batang.</div>
+                        </div>
+                        <span class="segment-title text-danger">Reproduktif</span>
+                        <span class="segment-desc">56-95 Hari</span>
+                    </div>
+                    
+                    <div class="timeline-segment" style="width: 25%;">
+                        <div class="segment-tick"></div>
+                        <span class="segment-title">Pematangan</span>
+                        <span class="segment-desc">96-135 Hari</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="editorial-hr">
+
+            <h3 class="editorial-title">Proyeksi Finansial Dasar (Per Hektar)</h3>
+            <table class="editorial-table">
+                <tbody>
+                    <tr>
+                        <td>Estimasi Biaya Produksi (Adaptasi Lahan Rawa)</td>
+                        <td class="text-right">Rp 7.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>Estimasi Hasil (4.8 Ton Beras Siam Unggul)</td>
+                        <td class="text-right">Rp 28.800.000</td>
+                    </tr>
+                    <tr class="table-total">
+                        <td>Estimasi Margin Kotor</td>
+                        <td class="text-right highlight-text">Rp 21.300.000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="editorial-hr">
+
+            <h3 class="editorial-title mb-4">Komparasi Varietas</h3>
+            <p class="editorial-text mb-4">Pilih varietas di sisi kanan untuk membandingkan metrik agronomi dengan Siam Unus.</p>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="bar-chart-wrapper">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="borderless-control-panel pl-lg-4">
+                        <h5 class="editorial-subtitle mb-4">Varietas Pembanding:</h5>
+                        <div id="checkboxContainer" class="checkbox-list-clean">
+                            </div>
+                        <small class="text-muted d-block mt-4" style="font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 10px;">
+                            * Siam Unus terkunci sebagai subjek utama.<br>
+                            * Maksimal 4 varietas perbandingan.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer-modern">
+      <div class="container-xl">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/static/images/logo2.png" alt="Logo SiPadi">
+            <div>
+              <h2>SiPadi</h2>
+              <p>Sistem Pakar Penyakit Padi</p>
+            </div>
+          </div>
+          <div class="footer-about">
+            <h4>Tentang</h4>
+            <p>
+              Sistem pakar diagnosis penyakit padi membantu petani dalam
+              mengidentifikasi penyakit pada tanaman padi berdasarkan
+              gejala yang muncul. Sistem ini memberikan hasil diagnosis
+              secara cepat beserta saran penanganannya, sehingga petani
+              dapat mengambil tindakan yang tepat untuk menjaga kesehatan
+              tanaman dan meningkatkan hasil panen.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <div class="footer-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Surakarta, Indonesia</span>
+          </div>
+          <div class="footer-copy">
+            <h6>©2026 | SiPadi | All Rights Reserved</h6>
+          </div>
+          <div class="footer-phone">
+            <i class="fas fa-phone-alt"></i>
+            <span>+62 000 0000 0000</span>
+          </div>
+        </div>
+      </div>
+    </footer>    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script>
+        const closeBtn = document.getElementById("menu-toggle");
+
+        closeBtn.addEventListener("click", function () {
+            if (document.referrer !== "") {
+                window.history.back();
+            } else {
+                window.location.href = "/index.html#jenisPadi"; 
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Poppins', sans-serif";
+            Chart.defaults.color = '#555';
+
+            // Database 10 Padi (Siam Unus Terkunci)
+            const padiData = {
+                'Siam Unus': { data: [5, 3, 10, 6, 9], color: '#0b8f1f', isDefault: true, locked: true },
+                'Genjah Arum': { data: [9, 9, 6, 5, 8], color: '#e67e22', isDefault: false, locked: false }, 
+                'Siam Mutiara': { data: [6, 4, 8, 6, 7], color: '#3498db', isDefault: true, locked: false },
+                'Adan Krayan': { data: [4, 3, 9, 7, 9], color: '#9b59b6', isDefault: false, locked: false },
+                'Kuku Balam': { data: [5, 4, 8, 6, 8], color: '#f1c40f', isDefault: false, locked: false },
+                'Mentik Susu': { data: [7, 6, 7, 5, 9], color: '#1abc9c', isDefault: false, locked: false },
+                'Mentik Wangi': { data: [6, 6, 8, 5, 9], color: '#e74c3c', isDefault: false, locked: false },
+                'Pandan Wangi': { data: [6, 5, 9, 4, 10], color: '#34495e', isDefault: false, locked: false },
+                'Pare Gropak': { data: [5, 4, 7, 7, 6], color: '#7f8c8d', isDefault: false, locked: false },
+                'Rojolele': { data: [6, 4, 9, 5, 9], color: '#d35400', isDefault: false, locked: false }
+            };
+
+            const labels = ['Hasil Panen', 'Kecepatan Panen', 'Harga Jual', 'Ketahanan Hama', 'Kualitas Rasa'];
+            let currentChart = null;
+
+            const container = document.getElementById('checkboxContainer');
+            Object.keys(padiData).forEach(nama => {
+                const info = padiData[nama];
+                const wrapper = document.createElement('div');
+                wrapper.className = 'custom-checkbox-item';
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = 'chk_' + nama;
+                input.value = nama;
+                input.className = 'padi-checkbox';
+                input.checked = info.isDefault;
+                if(info.locked) input.disabled = true;
+
+                const label = document.createElement('label');
+                label.htmlFor = 'chk_' + nama;
+                label.innerHTML = `<span class="color-dot" style="background-color: ${info.color}"></span> ${nama}`;
+
+                wrapper.appendChild(input);
+                wrapper.appendChild(label);
+                container.appendChild(wrapper);
+
+                input.addEventListener('change', function() {
+                    const checkedBoxes = document.querySelectorAll('.padi-checkbox:checked');
+                    if (checkedBoxes.length > 4) {
+                        alert("Maksimal hanya 4 varietas pembanding.");
+                        this.checked = false;
+                        return;
+                    }
+                    updateChart();
+                });
+            });
+
+            function updateChart() {
+                const selectedPadi = [];
+                document.querySelectorAll('.padi-checkbox:checked').forEach(cb => {
+                    selectedPadi.push(cb.value);
+                });
+
+                const datasets = selectedPadi.map(nama => {
+                    const info = padiData[nama];
+                    return {
+                        label: nama,
+                        data: info.data,
+                        backgroundColor: info.color,
+                        borderRadius: 4,
+                        barPercentage: 0.8,
+                        categoryPercentage: 0.9
+                    };
+                });
+
+                if (currentChart) { currentChart.destroy(); }
+
+                const ctx = document.getElementById('barChart').getContext('2d');
+                currentChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: { labels: labels, datasets: datasets },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        scales: {
+                            y: { beginAtZero: true, max: 10, grid: { color: '#f0f0f0' }, ticks: { stepSize: 2 } },
+                            x: { grid: { display: false } }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { backgroundColor: 'rgba(34, 34, 34, 0.9)', padding: 12, cornerRadius: 4 }
+                        }
+                    }
+                });
+            }
+            updateChart();
+        });
+    </script>
+</body>
+</html>

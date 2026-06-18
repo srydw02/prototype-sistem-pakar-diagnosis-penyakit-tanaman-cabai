@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="../gambar/icon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <link rel="stylesheet" href="../static/style/style.css" />
+  <link rel="stylesheet" href="../static/style/style6.css" />
+
+  <title>Berita │ SiPadi</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+    <div class="container-xl">
+      <a class="navbar-brand d-flex align-items-center">
+        <img src="/static/images/logo2.png" alt="Logo SiPadi"
+          style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
+        <h3 style="color: green; margin: 0;">SiPadi</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item align-self-center">
+            <a class="nav-link" href="/#home">Home</a>
+          </li>
+          <li class="nav-item align-self-center active">
+            <a class="nav-link active" href="/template/berita.html">Berita</a>
+          </li>
+          <li class="nav-item align-self-center">
+            <a class="nav-link" href="/template/jenisPadi.html">Jenis Padi</a>
+          </li>
+          <li class="nav-item align-self-center">
+            <a class="nav-link" href="/template/informasi.html">Informasi</a>
+          </li>
+          <li class="nav-item align-self-center">
+            <a class="btn px-4 btn-primary ml-2 btn-register" href="/template/diagnosis.html"
+              role="button">Diagnosis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="news-portal-wrapper">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-lg-7 pr-lg-4 mb-4 mb-lg-0">
+          <div class="cnn-section-header">
+            <div class="accent-bar"></div>
+            BERITA UTAMA
+          </div>
+
+          <article class="hero-article">
+            <a href="/template/beritapadi/bankIndonesia.html" class="text-decoration-none text-dark">
+              <div class="img-wrapper">
+                <img src="/static/images/fotoberita/bankIndonesia.png" alt="Berita Utama" class="w-100" />
+              </div>
+              <h1 class="hero-title mt-3">
+                Bank Indonesia: Pertanian Jadi Tulang Punggung Ekonomi, Bukti Nyata Sektor Pangan Semakin Kuat
+              </h1>
+              <p class="hero-excerpt mt-2">
+                Sektor pertanian kembali membuktikan ketangguhannya sebagai motor penggerak ekonomi. Dukungan pembiayaan
+                dan inovasi diharapkan terus memperkuat stabilitas pangan nasional ke depannya.
+              </p>
+            </a>
+          </article>
+        </div>
+
+        <div class="col-lg-5 pl-lg-3">
+          <div class="cnn-section-header">
+            <div class="accent-bar"></div>
+            BERITA PERTANIAN
+          </div>
+
+          <article class="medium-article mb-4">
+            <a href="/template/beritapadi/produksiBeras2.html" class="text-decoration-none text-dark">
+              <img src="/static/images/fotoberita/produkberas.png" alt="Berita" class="w-100 mb-2" />
+              <h3 class="medium-title">
+                Produksi Beras Semester I 2026 Diproyeksi Meningkat, Luas
+                Panen Ikut Menguat.
+              </h3>
+            </a>
+          </article>
+
+          <div class="list-article-wrapper">
+            <article class="list-article">
+              <a href="/template/beritapadi/swasembadaBerasNyata.html" class="d-flex text-decoration-none text-dark">
+                <div class="list-content pr-3">
+                  <h4 class="list-title">
+                    Swasembada Beras Nyata, Produksi Naik Tajam, Stok Muat, Tanpa Impor
+                  </h4>
+                </div>
+                <img src="/static/images/fotoberita/berasnyata1.png" alt="Thumb" />
+              </a>
+            </article>
+
+            <article class="list-article">
+              <a href="/template/beritapadi/irigasi.html" class="d-flex text-decoration-none text-dark">
+                <div class="list-content pr-3">
+                  <h4 class="list-title">
+                    Ratusan Hektar Sawah Terdampak Kekeringan, Ini Solusi
+                    Irigasi Cerdas
+                  </h4>
+                </div>
+                <img src="/static/images/fotoberita/kering.jpg" alt="Thumb" />
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="cnn-section-header mt-5 pt-3 mb-4">
+        <div class="accent-bar"></div>
+        SEPUTAR PADI
+      </div>
+
+      <div class="news-carousel-wrapper position-relative" id="techWrapper">
+        <button id="btnPrevTech" class="carousel-btn-center prev-btn" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="btnNextTech" class="carousel-btn-center next-btn" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="news-carousel-track" id="techTrack">
+          <div class="news-carousel-item">
+            <article class="grid-article">
+              <a href="/template/beritapadi/kementan.html" class="text-decoration-none text-dark">
+                <img src="/static/images/fotoberita/kementan&pemda.png" alt="Tech 1" class="w-100 mb-2" />
+                <h3 class="grid-title">
+                  Kementan dan Pemda Perkuat Antisipasi Kemarau, Pastikan Pertanaman Padi Gunungkidul Tetap Aman Hingga
+                  Masa Panen
+                </h3>
+              </a>
+            </article>
+          </div>
+
+          <div class="news-carousel-item">
+            <article class="grid-article">
+              <a href="/template/beritapadi/bankIndonesia.html" class="text-decoration-none text-dark">
+                <img src="/static/images/fotoberita/bankIndonesia.png" alt="Bank Indonesia" class="w-100 mb-2" />
+                <h3 class="grid-title">
+                  Bank Indonesia: Pertanian Jadi Tulang Punggung Ekonomi, Bukti Nyata Sektor Pangan Semakin Kuat
+                </h3>
+              </a>
+            </article>
+          </div>
+
+          <div class="news-carousel-item">
+            <article class="grid-article">
+              <a href="/template/beritapadi/kementanGaspol.html" class="text-decoration-none text-dark">
+                <img src="/static/images/fotoberita/kementanGaspol.png" alt="Kementan Gaspol" class="w-100 mb-2" />
+                <h3 class="grid-title">
+                  Kementan Gaspol Tangani Hama Padi di Pinrang, 5.000 Hektare Diselamatkan
+                </h3>
+              </a>
+            </article>
+          </div>
+
+          <div class="news-carousel-item">
+            <article class="grid-article">
+              <a href="/template/beritapadi/penyakitKerdil.html" class="text-decoration-none text-dark">
+                <img src="/static/images/fotoberita/penyakitKerdil.png" alt="Penyakit Kerdil" class="w-100 mb-2" />
+                <h3 class="grid-title">
+                  Padi Terserang Penyakit Kerdil, Petani Sragen Keluhkan Hasil Panen Turun Dratis
+                </h3>
+              </a>
+            </article>
+          </div>
+
+          <div class="news-carousel-item">
+            <article class="grid-article">
+              <a href="/template/beritapadi/sistempakarbantu.html" class="text-decoration-none text-dark">
+                <img src="/static/images/fotoberita/homeberita3.jpg" alt="Sistem Pakar" class="w-100 mb-2" />
+                <h3 class="grid-title">
+                  Deteksi Penyakit Padi Lebih Cepat, Ini Keunggulan Aplikasi Sistem Pakar
+                </h3>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="cnn-section-header mt-5 pt-3">
+        <div class="accent-bar"></div>
+        KABAR PERTANIAN
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-lg-8 pr-lg-4 mb-4 mb-lg-0">
+          <article class="hero-article">
+            <a href="/template/beritapadi/padibojonegoro.html" class="text-decoration-none text-dark">
+              <div class="img-wrapper">
+                <img src="/static/images/fotoberita/padibojonegoro.png" alt="Edukasi Petani" class="w-100" />
+              </div>
+              <h2 class="hero-title mt-3" style="font-size: 2rem;">
+                Produksi Padi Bojonegoro Sekitar Migas Kedung Keris Jeblok
+              </h2>
+              <p class="hero-excerpt mt-2">
+                Produksi Padi di Sekitar Lapangan Minyak Kedung Keris Turun Drastis Akibat Serangan Penyakit
+              </p>
+            </a>
+          </article>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="vertical-ticker-wrapper bg-white shadow-sm p-3 h-100 d-flex flex-column"
+            style="border-radius: 12px; border: 1px solid #eef2f5;">
+            <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #0b8f1f; font-size: 1.1rem;">
+              <i class="fas fa-lightbulb mr-2 text-warning"></i> Berita Lainnya
+            </h5>
+
+            <div class="vertical-ticker-track flex-grow-1" id="eduVerticalTrack"
+              style="overflow-y: hidden; height: 460px;">
+              
+              <a href="/template/beritapadi/swasembadaBerasNyata.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img
+                  src="/static/images/fotoberita/berasnyata1.png"
+                  alt="Swasembada Beras" class="rounded mr-3" style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
+                    Swasembada Beras 2025
+                  </h6>
+                  <p class="text-muted m-0" style="font-size: 0.8rem;">
+                    Produksi naik tajam, stok melimpah tanpa impor.
+                  </p>
+                </div>
+              </a>
+
+              <a href="/template/beritapadi/eksporberaskearab.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="/static/images/fotoberita/eksporberas.png" alt="Ekspor Beras" class="rounded mr-3"
+                  style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
+                    Ekspor Perdana ke Arab
+                  </h6>
+                  <p class="text-muted m-0" style="font-size: 0.8rem;">
+                    Bukti kuatnya produksi & stok pangan nasional.
+                  </p>
+                </div>
+              </a>
+
+              <a href="/template/beritapadi/fasekritis.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="/static/images/fotoberita/pestisida2.png" alt="Fase Kritis" class="rounded mr-3"
+                  style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
+                    3 Fase Kritis Penyakit Blas
+                  </h6>
+                  <p class="text-muted m-0" style="font-size: 0.8rem;">
+                    Kenali dan cegah serangan jamur pemusnah panen.
+                  </p>
+                </div>
+              </a>
+
+              <a href="/template/beritapadi/kementanUji.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="/static/images/fotoberita/kementanUji.png" alt="Kementan Uji" class="rounded mr-3"
+                  style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
+                    Uji Biodiesel B50
+                  </h6>
+                  <p class="text-muted m-0" style="font-size: 0.8rem;">
+                    Kementan siapkan bioreaktor untuk mesin traktor.
+                  </p>
+                </div>
+              </a>
+
+              <a href="/template/beritapadi/produksiBeras2.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="/static/images/fotoberita/produkberas.png" alt="Produksi Beras" class="rounded mr-3"
+                  style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
+                    Prediksi Semester I 2026
+                  </h6>
+                  <p class="text-muted m-0" style="font-size: 0.8rem;">
+                    Luas panen padi dan produksi beras menguat.
+                  </p>
+                </div>
+              </a>
+
+              <a href="/template/beritapadi/waspadaseranganblast.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="/static/images/fotoberita/homeberita1.jpg" alt="Penyakit Blast" class="rounded mr-3"
+                  style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
+                    Ancaman Wabah Blas
+                  </h6>
+                  <p class="text-muted m-0" style="font-size: 0.8rem;">
+                    Cuaca ekstrem & kelembapan tinggi picu gagal panen.
+                  </p>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-modern">
+
+    <div class="container-xl">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <img src="/static/images/logo2.png" alt="Logo SiPadi">
+
+          <div>
+            <h2>SiPadi</h2>
+            <p>Sistem Pakar Penyakit Padi</p>
+          </div>
+
+        </div>
+
+        <div class="footer-about">
+
+          <h4>Tentang</h4>
+
+          <p>
+            Sistem pakar diagnosis penyakit padi membantu petani dalam
+            mengidentifikasi penyakit pada tanaman padi berdasarkan
+            gejala yang muncul. Sistem ini memberikan hasil diagnosis
+            secara cepat beserta saran penanganannya, sehingga petani
+            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
+            tanaman dan meningkatkan hasil panen.
+          </p>
+
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer-bottom">
+
+        <div class="footer-location">
+
+          <i class="fas fa-map-marker-alt"></i>
+
+          <span>
+            Surakarta, Indonesia
+          </span>
+
+        </div>
+
+        <div class="footer-copy">
+
+          <h6>
+            ©2026 | SiPadi | All Rights Reserved
+          </h6>
+
+        </div>
+
+        <div class="footer-phone">
+
+          <i class="fas fa-phone-alt"></i>
+
+          <span>
+            +62 000 0000 0000
+          </span>
+
+        </div>
+
+      </div>
+
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const techTrack = document.getElementById("techTrack");
+      const btnPrevTech = document.getElementById("btnPrevTech");
+      const btnNextTech = document.getElementById("btnNextTech");
+      const techWrapper = document.getElementById("techWrapper");
+      let techSlideInterval;
+
+      if (!techTrack) return;
+
+      techTrack.style.scrollBehavior = "smooth";
+
+      function slideNextTech() {
+        const firstItem = techTrack.querySelector(".news-carousel-item");
+        const itemWidth = firstItem.offsetWidth + 24; // +24 gap CSS
+
+        techTrack.scrollBy({ left: itemWidth, behavior: "smooth" });
+
+        setTimeout(() => {
+          techTrack.style.scrollBehavior = "auto";
+          techTrack.appendChild(firstItem);
+          techTrack.scrollLeft -= itemWidth;
+          techTrack.style.scrollBehavior = "smooth";
+        }, 400);
+      }
+
+      function slidePrevTech() {
+        const items = techTrack.querySelectorAll(".news-carousel-item");
+        const lastItem = items[items.length - 1];
+        const itemWidth = lastItem.offsetWidth + 24;
+
+        techTrack.style.scrollBehavior = "auto";
+        techTrack.prepend(lastItem);
+        techTrack.scrollLeft += itemWidth;
+
+        setTimeout(() => {
+          techTrack.style.scrollBehavior = "smooth";
+          techTrack.scrollBy({ left: -itemWidth, behavior: "smooth" });
+        }, 10);
+      }
+
+      if (btnNextTech) btnNextTech.addEventListener("click", slideNextTech);
+      if (btnPrevTech) btnPrevTech.addEventListener("click", slidePrevTech);
+
+      function startTechAutoSlide() {
+        // Di-set jalan tiap 4 detik (4000ms)
+        techSlideInterval = setInterval(slideNextTech, 2500);
+      }
+
+      function stopTechAutoSlide() {
+        clearInterval(techSlideInterval);
+      }
+
+      startTechAutoSlide();
+
+      if (techWrapper) {
+        techWrapper.addEventListener("mouseenter", stopTechAutoSlide);
+        techWrapper.addEventListener("mouseleave", startTechAutoSlide);
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const eduTrack = document.getElementById("eduVerticalTrack");
+      if (!eduTrack) return;
+
+      // Matikan smooth scroll CSS agar tidak bentrok dengan JS Frame-by-Frame
+      eduTrack.style.scrollBehavior = "auto";
+
+      // 1. Gandakan isi berita (Clone) biar bisa nge-loop tanpa ujung yang kosong
+      const items = Array.from(eduTrack.children);
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        eduTrack.appendChild(clone);
+      });
+
+      let isPaused = false;
+      let scrollPos = 0;
+      const scrollSpeed = 1; // KECEPATAN: Ganti angka ini kalau mau lebih lambat (misal 0.5) atau lebih ngebut (misal 2)
+
+      // 2. Fungsi penggerak 60 FPS
+      function continuousScroll() {
+        if (!isPaused) {
+          scrollPos += scrollSpeed;
+          eduTrack.scrollTop = scrollPos;
+
+          // Kalau posisi scroll udah ngelewatin batas item aslinya (setengah dari total gabungan)
+          // Langsung reset ke 0 tanpa ketahuan mata (seamless loop)
+          if (eduTrack.scrollTop >= eduTrack.scrollHeight / 2) {
+            scrollPos = 0;
+            eduTrack.scrollTop = 0;
+          }
+        }
+
+        // Minta browser panggil fungsi ini lagi di frame berikutnya
+        requestAnimationFrame(continuousScroll);
+      }
+
+      // 3. Jalankan animasi
+      requestAnimationFrame(continuousScroll);
+
+      // 4. Berhenti pas kursor nyorot area beritanya
+      const tickerWrapper = eduTrack.parentElement;
+      tickerWrapper.addEventListener("mouseenter", () => {
+        isPaused = true;
+      });
+      tickerWrapper.addEventListener("mouseleave", () => {
+        isPaused = false;
+      });
+    });
+  </script>
+</body>
+
+</html>

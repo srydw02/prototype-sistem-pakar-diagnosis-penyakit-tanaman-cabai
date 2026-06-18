@@ -1,0 +1,950 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================
+   GLOBAL RESET & THEME
+========================= */
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+a { transition: 0.3s ease; }
+a.hover-green:hover { color: #0b8f1f !important; }
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 14px 0;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.navbar .container-xl {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b8f1f;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 8px;
+}
+
+.nav-link {
+    position: relative;
+    color: #222 !important;
+    font-weight: 500;
+    transition: all .3s ease;
+    padding: 8px 6px !important;
+}
+
+.nav-link:hover {
+    color: #2f9e44 !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #2f9e44 !important;
+    font-weight: 600;
+}
+
+.btn-register {
+    border-radius: 14px;
+    padding: 10px 22px !important;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(47, 158, 68, .25);
+}
+
+.btn-primary {
+    background: #d8f5cf;
+    color: #0b8f1f;
+    border: none;
+    border-radius: 14px;
+    padding: 12px 24px;
+    transition: .3s ease;
+}
+
+.btn-primary:hover {
+    background: #0b8f1f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-back-home {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f1fff4;
+    color: #0b8f1f;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid #d8f5cf;
+    transition: all .3s ease;
+    flex-shrink: 0;
+}
+
+.btn-back-home:hover {
+    background: #0b8f1f;
+    color: white;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+/* =========================
+   MAIN ARTICLE LAYOUT
+========================= */
+.main-article {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+/* Breadcrumb */
+.breadcrumb-custom {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #6c757d;
+    background: #f8fbf9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+.breadcrumb-custom a {
+    color: #2f9e44;
+    text-decoration: none;
+}
+.breadcrumb-custom a:hover {
+    text-decoration: underline;
+}
+
+/* Header Title & Meta */
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #111;
+}
+.article-meta {
+    font-size: 0.9rem;
+    color: #666;
+    border-bottom: 2px solid #e8f5e9;
+    padding-bottom: 20px;
+}
+.article-meta .author {
+    color: #0b8f1f;
+    font-weight: 700;
+}
+
+.article-content{
+    color: black;
+}
+
+/* Featured Image & Share Button */
+.featured-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.featured-img {
+    height: 450px;
+    object-fit: cover;
+}
+.btn-floating-share {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    color: #444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   SHARE BUTTON & MENU POP-UP
+========================= */
+.share-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.btn-floating-share {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    color: #444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-container:hover .btn-floating-share {
+    background: #0b8f1f;
+    color: white;
+}
+
+/* Kotak Menu yang muncul saat di-hover */
+.share-menu {
+    position: absolute;
+    top: 55px; /* Posisinya tepat di bawah tombol share */
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    /* Animasi sembunyi ke bawah */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Menampilkan menu saat container di-hover */
+.share-container:hover .share-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Desain Icon Sosmed */
+.share-item {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.share-item:hover {
+    transform: scale(1.15); /* Membesar sedikit saat disentuh */
+}
+
+/* Warna Khas Platform */
+.share-item.copy-link { background: #6c757d; }
+.share-item.wa { background: #25D366; }
+.share-item.fb { background: #1877F2; }
+.share-item.ig { 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+}
+
+/* Article Content Text */
+.article-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+}
+.intro-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111;
+}
+.article-content p {
+    margin-bottom: 24px;
+}
+
+/* Tags Section */
+.tag-pill {
+    display: inline-block;
+    border: 1px solid #d8f5cf;
+    color: #2f9e44;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.tag-pill:hover {
+    background: #2f9e44;
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   SIDEBAR RIGHT
+========================= */
+.badge-sipadi {
+    background: #0b8f1f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.badge-outline {
+    border: 1px solid #0b8f1f;
+    color: #0b8f1f;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+.sidebar-title a {
+    color: #111;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-decoration: none;
+}
+.sidebar-title a:hover { color: #0b8f1f; }
+.sidebar-meta {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.sidebar-list-title a {
+    color: #222;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-decoration: none;
+}
+.sidebar-list-title a:hover { color: #0b8f1f; }
+.sidebar-thumb {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* Sidebar List Accent border top (Adaptasi dari style InfoPublik) */
+.sidebar-item {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+/* =========================
+   RELATED NEWS (BOTTOM)
+========================= */
+.related-card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(11, 143, 31, 0.15) !important;
+}
+.related-card img {
+    height: 200px;
+    object-fit: cover;
+}
+.related-card .card-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 991px) {
+    .article-title { font-size: 2rem; }
+    .featured-img { height: 250px; }
+    .col-lg-4 { border-top: 4px solid #f8fbf9; padding-top: 30px; }
+}
+
+/* =========================
+   CAROUSEL BERITA TERKAIT
+========================= */
+/* Tombol Slider (Makin Cakep & Estetik) */
+.carousel-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #2f9e44;
+    background: transparent;
+    color: #2f9e44;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none !important;
+}
+
+.carousel-btn:hover {
+    background: #2f9e44;
+    color: white;
+    box-shadow: 0 4px 12px rgba(47, 158, 68, 0.3);
+    transform: translateY(-2px);
+}
+
+.carousel-btn:active {
+    transform: translateY(0);
+}
+
+/* Layout Slider Wrapper & Track */
+.news-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px; /* Ruang untuk shadow hover */
+}
+
+.news-carousel-track {
+    display: flex;
+    gap: 24px; /* Jarak antar kartu */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+    
+    /* Sembunyikan scrollbar bawaan browser */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.news-carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Item Slider Responsive */
+.news-carousel-item {
+    scroll-snap-align: start;
+    flex: 0 0 calc(33.333% - 16px); /* Desktop: 3 Kolom */
+}
+
+@media (max-width: 991px) {
+    .news-carousel-item {
+        flex: 0 0 calc(50% - 12px); /* Tablet: 2 Kolom */
+    }
+}
+
+@media (max-width: 576px) {
+    .news-carousel-item {
+        flex: 0 0 100%; /* Mobile: 1 Kolom */
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* =========================
+   GLOBAL RESET & THEME
+========================= */
+body {
+    background-color: #ffffff; /* Latar putih bersih ala CNN */
+    font-family: "Poppins", sans-serif;
+    color: #111;
+}
+
+/* Jarak agar konten tidak tertutup Navbar Fixed */
+.news-portal-wrapper {
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+/* Efek Hover Teks Universal */
+a h1, a h2, a h3, a h4 {
+    transition: color 0.2s ease-in-out;
+}
+a:hover h1, a:hover h2, a:hover h3, a:hover h4 {
+    color: #0b8f1f !important; /* Hijau SiPadi */
+}
+
+/* =========================
+   CNN SECTION HEADER
+========================= */
+.cnn-section-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #000;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea; /* Garis tipis di bawah judul section */
+    padding-bottom: 8px;
+}
+
+.cnn-section-header .accent-bar {
+    width: 6px;
+    height: 22px;
+    background-color: #0b8f1f; /* Balok vertikal tebal warna Hijau */
+    margin-right: 12px;
+}
+
+/* =========================
+   HERO ARTICLE (Berita Utama Terbesar)
+========================= */
+.hero-article .img-wrapper {
+    overflow: hidden;
+    border-radius: 8px; /* Sedikit rounded agar tidak terlalu kaku */
+}
+
+.hero-article img {
+    object-fit: cover;
+    max-height: 450px;
+    transition: transform 0.4s ease;
+}
+
+.hero-article:hover img {
+    transform: scale(1.03);
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #111;
+}
+
+.hero-excerpt {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* =========================
+   MEDIUM ARTICLE (Grid / Samping)
+========================= */
+.medium-article img {
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+.medium-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111;
+    margin-top: 10px;
+}
+
+/* =========================
+   LIST ARTICLE (Berita Kecil Berjejer)
+========================= */
+.list-article-wrapper {
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+}
+
+.list-article {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.list-article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.list-article img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.list-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #111;
+    margin: 0;
+}
+
+/* =========================
+   GRID ARTICLE (3 Kolom)
+========================= */
+.grid-article img {
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.grid-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #111;
+    margin-top: 8px;
+}
+
+/* Tag Badge Merah/Hijau khas Breaking News */
+.badge-tag {
+    background-color: #e8f5e9;
+    color: #0b8f1f;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .list-article img {
+        width: 110px;
+        height: 80px;
+    }
+    
+    .list-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* =========================
+   TOMBOL CAROUSEL MENGAMBANG (MODERN BOX / GLASS EFFECT)
+========================= */
+.carousel-btn-center {
+    position: absolute;
+    top: 35%; 
+    transform: translateY(-50%);
+    width: 40px;        /* Dibuat lebih ramping */
+    height: 70px;       /* Dibuat tinggi seperti tab/box vertikal */
+    border-radius: 8px; /* Sudut tumpul elegan, BUKAN bulat (50%) */
+    
+    /* Efek Kaca (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    
+    color: #0b8f1f; 
+    border: 1px solid rgba(11, 143, 31, 0.15); /* Garis tepi hijau super tipis */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem; /* Ikon dibuat sedikit lebih besar */
+    cursor: pointer;
+    z-index: 10;
+    
+    /* DEFAULT: Sembunyi total & geser dikit ke luar biar pas muncul ada animasi masuk */
+    opacity: 0; 
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none !important;
+}
+
+/* Posisi nempel di kiri dan kanan (ditambah efek slide-in pas muncul) */
+.carousel-btn-center.prev-btn { left: 0px; }
+.carousel-btn-center.next-btn { right: 0px; }
+
+/* MAGIC 1: Saat area slider disorot, tombol nongol, redup, dan geser ke dalam dikit */
+.news-carousel-wrapper:hover .carousel-btn-center.prev-btn {
+    opacity: 0.7;
+    visibility: visible;
+    left: 15px; /* Geser ke dalam */
+}
+.news-carousel-wrapper:hover .carousel-btn-center.next-btn {
+    opacity: 0.7;
+    visibility: visible;
+    right: 15px; /* Geser ke dalam */
+}
+
+/* MAGIC 2: Saat tombolnya sendiri disorot, nyala 100% dan warnanya solid */
+.carousel-btn-center:hover {
+    opacity: 1 !important;
+    background: #0b8f1f;
+    color: #ffffff;
+    border-color: #0b8f1f;
+    transform: translateY(-50%) scale(1.05); /* Membesar sedikit, elegan */
+    box-shadow: 0 8px 25px rgba(11, 143, 31, 0.35);
+}
+
+/* =========================
+   VERTICAL TICKER EDUKASI PETANI
+========================= */
+.vertical-ticker-track {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scroll-behavior: smooth;
+    /* Sembunyikan scrollbar jelek */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.vertical-ticker-track::-webkit-scrollbar {
+    display: none;
+}
+
+.ticker-item {
+    padding: 10px;
+    border-radius: 8px;
+    background: #f8fdf9; /* Hijau super pudar */
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Biar ukurannya gak kegencet */
+}
+
+.ticker-item:hover {
+    background: #e6f7eb;
+    border-left: 4px solid #0b8f1f;
+    transform: translateX(5px); /* Efek geser ke kanan dikit pas disorot */
+}
+
+/* =========================
+   READING PROGRESS BAR (ALA CNN)
+========================= */
+.progress-container {
+    width: 100%;
+    height: 4px; /* Ketebalan garis, bisa diubah sesuai selera */
+    background: transparent;
+    position: absolute; 
+    bottom: -4px; /* Posisinya nempel tepat di garis bawah navbar */
+    left: 0;
+    z-index: 1050;
+}
+
+.progress-bar-custom {
+    height: 100%;
+    background: #0b8f1f; /* Warna hijau khas SiPadi */
+    width: 0%; /* Default 0% saat belum di-scroll */
+    border-radius: 0 3px 3px 0; /* Ujung kanannya agak membulat dikit biar manis */
+    box-shadow: 0 1px 3px rgba(11, 143, 31, 0.4); /* Efek nyala tipis */
+    transition: width 0.1s ease-out; /* Biar geraknya smooth nggak patah-patah */
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-modern {
+    width: 100%;
+    background: linear-gradient(135deg, #155027, #10692e);
+    color: white;
+    padding: 60px 0 25px;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorasi lingkaran transparan di background footer */
+.footer-modern::before,
+.footer-modern::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+}
+
+.footer-modern::before {
+    width: 220px;
+    height: 220px;
+    bottom: -80px;
+    right: 140px;
+}
+
+.footer-modern::after {
+    width: 120px;
+    height: 120px;
+    top: 35px;
+    right: 45px;
+}
+
+/* Tata letak bagian atas footer */
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 320px;
+}
+
+.footer-brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer-brand h2 {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    margin: 0;
+    font-size: 17px;
+    opacity: .95;
+}
+
+.footer-about {
+    flex: 1;
+}
+
+.footer-about h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer-about p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    opacity: .96;
+}
+
+/* Garis pembatas */
+.footer-modern hr {
+    margin: 40px 0 28px;
+    border-color: rgba(255,255,255,.18);
+}
+
+/* Tata letak bagian bawah footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    text-align: center;
+}
+
+.footer-copy h5 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-copy p {
+    margin: 0;
+    font-size: 15px;
+    opacity: .95;
+}
+
+.footer-location,
+.footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.footer-location i,
+.footer-phone i {
+    font-size: 18px;
+}
+
+/* Responsif untuk layar mobile / tablet */
+@media(max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        min-width: 100%;
+        justify-content: center;
+    }
+
+    .footer-about {
+        width: 100%;
+    }
+
+    .footer-about h4 {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-location,
+    .footer-phone {
+        justify-content: center;
+    }
+}
+
+/*sry muter*/
+#menu-toggle {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#menu-toggle:hover {
+  transform: rotate(90deg) scale(1.1);
+}

@@ -1,4 +1,4 @@
-{
+const pakarData = {
   "penyakit": [
     {
       "id": "P01",
@@ -130,4 +130,4 @@
       ]
     }
   ]
-}
+};

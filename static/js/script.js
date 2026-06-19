@@ -1,18 +1,18 @@
-let pakarData = {};
-
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/data/data.json')
-        .then(response => response.json())
-        .then(data => {
-            pakarData = data;
-            renderForm();
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            document.getElementById('gejala-list').innerHTML = `
-                <div class="alert alert-danger text-center">Gagal memuat data pakar. Pastikan path /data/data.json benar.</div>
+    // Validasi apakah data.js sudah berhasil di-load oleh HTML
+    if (typeof pakarData !== 'undefined') {
+        renderForm();
+    } else {
+        const formContainer = document.getElementById('gejala-list');
+        if (formContainer) {
+            formContainer.innerHTML = `
+                <div class="alert alert-danger text-center shadow-sm">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Fatal Error:</strong> 
+                    Data pakar tidak ditemukan. Pastikan file <code>data.js</code> sudah dipanggil di HTML sebelum <code>script.js</code>.
+                </div>
             `;
-        });
+        }
+    }
 });
 
 function renderForm() {

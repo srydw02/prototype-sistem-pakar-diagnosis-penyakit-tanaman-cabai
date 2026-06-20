@@ -24,6 +24,7 @@ body {
   padding-top: 50px;
   overflow-x: hidden;
 }
+
 /* ==========================================
     NAVBAR (CONTAINER ALIGNED FLEXBOX - PERFECT SLIM)
 ========================================== */
@@ -149,7 +150,6 @@ body {
 /* ==========================================
    HEADER SECTION
 ========================================== */
-
 .hero-section {
    background: linear-gradient(135deg, #ff3939 0%,#b91e1e 50%, #890a0a 100%) !important; 
     padding-top: 80px;
@@ -184,10 +184,9 @@ body {
     font-size: 1.1rem;
     color: rgb(255, 255, 255);
     opacity: 0.9;
-    Font-weight: 500;
+    font-weight: 500;
 }
     
-
 .wave-container {
     position: absolute;
     bottom: -1px;
@@ -237,51 +236,103 @@ body {
     margin-bottom: 20px !important;
 }
 
-
-#gejala-list select {
+/* ==========================================
+   CUSTOM DROPDOWN UI (Pengganti Select/Option)
+========================================== */
+.custom-dropdown {
+    position: relative;
     width: 100%;
-    border-radius: 10px !important;
-    padding: 5px 14px; 
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    -webkit-appearance: none; 
-    appearance: none;
-    transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    user-select: none;
 }
 
-.gejala-select {
+/* Tombol Dropdown Aktif */
+.dropdown-selected {
     background-color: #b91e1e;
-    color: white !important;
-    border: none !important;
-    border-radius: 15px !important;
-
-    transition:box-shadow .3s ease,background-color .3s ease;
-
-    box-shadow: 0 4px 10px rgba(185,30,30,.15);
-
-      appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
+    color: #ffffff !important;
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(185, 30, 30, 0.15);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+    
+    /* FIX BUG GEPENG: Kunci layout tinggi tombol */
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    
+    /* Ikon panah ke bawah */
     background-image: url("../images/icon_dropdown.svg");
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 18px center;
     background-size: 16px 16px;
 }
 
-.gejala-select:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(185,30,30,.25);
+.dropdown-selected:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(185, 30, 30, 0.25);
 }
 
-.gejala-select:focus {
-    border-color: #b91e1e;
+/* Kotak Daftar Pilihan yang melayang */
+.dropdown-options {
+    position: absolute;
+    top: 115%;
+    left: 0;
+    right: 0;
+    background-color: #2b2b2b; /* Warna latar gelap */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 9999;
+    
+    /* Status awal tersembunyi */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Muncul saat .custom-dropdown punya class active */
+.custom-dropdown.active .dropdown-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Putar warna saat terbuka */
+.custom-dropdown.active .dropdown-selected {
+    background-color: #890a0a;
+}
+
+/* List Item Pilihan */
+.dropdown-options li {
+    padding: 12px 20px;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Highlight Merah Cabai saat di-hover */
+.dropdown-options li:hover {
+    background-color: #E53935;
+    font-weight: 500;
+    padding-left: 25px;
+}
+
+/* Opsi yang terakhir dipilih */
+.dropdown-options li.selected-item {
+    background-color: #890a0a;
+    font-weight: 600;
+}
+
+/* ==========================================
+   TOMBOL ORIGINAL & BAWAAN
+========================================== */
 .btn-primary {
     background-color: #b91e1e !important;
     color: #ffffff !important;
@@ -319,7 +370,6 @@ body {
 .btn-lihat-info:hover {
     background-color: #b91e1e !important;
     box-shadow: 0 4px 12px rgba(185, 30, 30, 0.2);
-    
 }
 
 a {
@@ -371,8 +421,6 @@ a:hover {
     pointer-events: none;
 }
 
-
-
 .footer-modern ul li a {
     color: rgba(255, 255, 255, 0.6) !important;
     text-decoration: none;
@@ -396,10 +444,6 @@ a:hover {
     line-height: 1.6;
 }
 
-.btn-analisis:hover i {
-    animation: spin 0.5s ease-in-out;
-}
-
 .footer-brand-watermark {
     position: absolute;
     bottom: -90px;
@@ -419,4 +463,41 @@ a:hover {
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   CETAK PDF (MEDIA PRINT) - TAHAP 3.2
+========================================== */
+@media print {
+    /* Sembunyikan elemen yang tidak perlu dicetak */
+    .navbar, 
+    .hero-section, 
+    .footer-modern, 
+    #diagnosisForm, 
+    .d-print-none {
+        display: none !important;
+    }
+
+    /* Reset margin dan padding body untuk kertas */
+    body, html {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #ffffff !important;
+    }
+
+    /* Hilangkan efek melayang/margin negatif pada container utama */
+    .card-gejala-container {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    .card-diagnosa {
+        margin-top: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Paksa browser untuk mencetak warna background (Merah Header dsb) */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }

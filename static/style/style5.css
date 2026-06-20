@@ -24,6 +24,7 @@ body {
   padding-top: 50px;
   overflow-x: hidden;
 }
+
 /* ==========================================
     NAVBAR (CONTAINER ALIGNED FLEXBOX - PERFECT SLIM)
 ========================================== */
@@ -149,7 +150,6 @@ body {
 /* ==========================================
    HEADER SECTION
 ========================================== */
-
 .hero-section {
    background: linear-gradient(135deg, #ff3939 0%,#b91e1e 50%, #890a0a 100%) !important; 
     padding-top: 80px;
@@ -187,7 +187,6 @@ body {
     font-weight: 500;
 }
     
-
 .wave-container {
     position: absolute;
     bottom: -1px;
@@ -257,6 +256,11 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(185, 30, 30, 0.15);
     transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+    
+    /* FIX BUG GEPENG: Kunci layout tinggi tombol */
+    display: flex;
+    align-items: center;
+    min-height: 48px;
     
     /* Ikon panah ke bawah */
     background-image: url("../images/icon_dropdown.svg");
@@ -366,7 +370,6 @@ body {
 .btn-lihat-info:hover {
     background-color: #b91e1e !important;
     box-shadow: 0 4px 12px rgba(185, 30, 30, 0.2);
-    
 }
 
 a {
@@ -441,10 +444,6 @@ a:hover {
     line-height: 1.6;
 }
 
-.btn-analisis:hover i {
-    animation: spin 0.5s ease-in-out;
-}
-
 .footer-brand-watermark {
     position: absolute;
     bottom: -90px;
@@ -464,4 +463,41 @@ a:hover {
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   CETAK PDF (MEDIA PRINT) - TAHAP 3.2
+========================================== */
+@media print {
+    /* Sembunyikan elemen yang tidak perlu dicetak */
+    .navbar, 
+    .hero-section, 
+    .footer-modern, 
+    #diagnosisForm, 
+    .d-print-none {
+        display: none !important;
+    }
+
+    /* Reset margin dan padding body untuk kertas */
+    body, html {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #ffffff !important;
+    }
+
+    /* Hilangkan efek melayang/margin negatif pada container utama */
+    .card-gejala-container {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    .card-diagnosa {
+        margin-top: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Paksa browser untuk mencetak warna background (Merah Header dsb) */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }

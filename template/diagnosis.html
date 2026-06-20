@@ -6,76 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     
     <link rel="stylesheet" href="../static/style/style5.css">
-
-    <title>Diagnosis │ PadiCek</title>
-
+    <title>Diagnosis │ ChiliCare</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-xl">
-        
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="../static/images/icon.svg" alt="ChiliCare Logo">
-        </a>
-
-        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mainNavbarMenu"
-            aria-controls="mainNavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNavbarMenu">
-            <div class="d-lg-flex w-100 justify-content-between align-items-center">
-                
-                <ul class="navbar-nav mx-lg-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
-                    <li class="nav-item"><a class="nav-link" href="jenisPadi.html">Jenis Padi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
-                </ul>
-
-                <div class="navbar-action-btn-group my-2 my-lg-0">
-                    <a class="btn btn-diagnosis-nav shadow-sm" href="diagnosis.html" role="button">
-                        <i class="fas fa-stethoscope"></i>Diagnosis
-                    </a>
+        <div class="container-xl">
+            <!-- BUG FIX TAHAP 1: Relative Path Logo Navbar -->
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../static/images/icon.svg" alt="ChiliCare Logo">
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mainNavbarMenu"
+                aria-controls="mainNavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNavbarMenu">
+                <div class="d-lg-flex w-100 justify-content-between align-items-center">
+                    
+                    <ul class="navbar-nav mx-lg-auto">
+                        <!-- BUG FIX TAHAP 1: Relative Path Menu Home Navbar -->
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                        <li class="nav-item"><a class="nav-link" href="jenisPadi.html">Jenis Padi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+                    </ul>
+                    
+                    <div class="navbar-action-btn-group my-2 my-lg-0">
+                        <a class="btn btn-diagnosis-nav shadow-sm" href="diagnosis.html" role="button">
+                            <i class="fas fa-stethoscope"></i>Diagnosis
+                        </a>
+                    </div>
+                    
                 </div>
-                
             </div>
         </div>
-        
-    </div>
-</nav>
+    </nav>
 
     <header class="hero-section text-center text-lg-left">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h1 class="display-4 font-weight-bold text-light mb-3" style="font-size: 2.8rem; line-height: 1.2;">
-                    Form Diagnosis Penyakit <br>
-                    <span id="metode-badge" class="text-white">Tanaman Cabai</span>
-                </h1>
-                <p class="lead text-light-75 mb-0" style="font-size: 1.05rem; font-weight: 400; opacity: 0.9;">
-                    Pilih tingkat keyakinan Anda secara akurat untuk setiap kondisi tanaman di bawah ini. Sistem pakar akan menganalisis akumulasi nilai kepastian secara runut.
-                </p>
-                
-            </div>
-            <div class="col-lg-4 d-none d-lg-block text-center">
-                <i class="fas fa-leaf text-light" style="font-size: 8rem; opacity: 0.7; padding-left: 140px;"></i>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 font-weight-bold text-light mb-3" style="font-size: 2.8rem; line-height: 1.2;">
+                        Form Diagnosis Penyakit <br>
+                        <span id="metode-badge" class="text-white">Tanaman Cabai</span>
+                    </h1>
+                    <p class="lead text-light-75 mb-0" style="font-size: 1.05rem; font-weight: 400; opacity: 0.9;">
+                        Pilih tingkat keyakinan Anda secara akurat untuk setiap kondisi tanaman di bawah ini. Sistem pakar akan menganalisis akumulasi nilai kepastian secara runut.
+                    </p>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block text-center">
+                    <i class="fas fa-leaf text-light" style="font-size: 8rem; opacity: 0.7; padding-left: 140px;"></i>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="wave-container">
-    <svg viewBox="0 0 1440 180" preserveAspectRatio="none">
-        <path d="M0,64L120,96C240,128,480,192,720,192C960,192,1200,128,1320,96L1440,64L1440,320L0,3200" fill="#ffffff"></path>
-    </svg>
-    </div>
+        <div class="wave-container">
+            <svg viewBox="0 0 1440 180" preserveAspectRatio="none">
+                <path d="M0,64L120,96C240,128,480,192,720,192C960,192,1200,128,1320,96L1440,64L1440,320L0,3200" fill="#ffffff"></path>
+            </svg>
+        </div>
     </header>
-
 
     <main class="container card-gejala-container">
         <div class="row justify-content-center">
@@ -83,7 +77,7 @@
                 <div class="card-diagnosa border-0 shadow-sm p-4 p-md-5 bg-white mb-4" style="border-radius: 20px;">
                     <form id="diagnosisForm"  class="card-title ">
                         <div id="gejala-list" class="card-list mb-4 color-white"></div>
-                    </form>                
+                    </form>
                     <div id="hasil" class="mt-4"></div>
                 </div>
             </div>
@@ -92,50 +86,51 @@
 
     <!-- Footer Modern Kontras Melengkung -->
     <footer class="footer-modern">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-lg-4 mb-4">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="../static/images/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
-                </a>
-                <p class="text-white-50" style="font-size: 17px;">
-                    Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
-                </p>
-                <div class="social-links">
-                    </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 mb-4">
-                <h5 class="text-white mb-3">Produk</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="berita.html">Berita</a></li>
-                    <li><a href="jenisPadi.html">Jenis Padi</a></li>
-                    <li><a href="informasi.html">Informasi</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-4 mb-4">
-                <h5 class="text-white mb-3">Solusi</h5>
-                <p class="text-white-50" style="font-size: 17px;">
-                    Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-4">
+                    <!-- BUG FIX TAHAP 1: Relative Path Logo Footer -->
+                    <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                        <img src="../static/images/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+                    </a>
+                    <p class="text-white-50" style="font-size: 17px;">
+                        Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
                     </p>
+                    <div class="social-links">
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Produk</h5>
+                    <ul class="list-unstyled">
+                        <!-- BUG FIX TAHAP 1: Relative Path Menu Home Footer -->
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="jenisPadi.html">Jenis Padi</a></li>
+                        <li><a href="informasi.html">Informasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Solusi</h5>
+                    <p class="text-white-50" style="font-size: 17px;">
+                        Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.
+                    </p>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            
+            <div class="text-center">
+                <p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">
+                    ©2026 ChiliCare - All Rights Reserved
+                </p>
+            </div>
+            <div class="footer-brand-watermark">
+                ChiliCare
             </div>
         </div>
-        
-        <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
-        
-        <div class="text-center">
-            <p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">
-                ©2026 ChiliCare - All Rights Reserved
-            </p>
-        </div>
-
-        <div class="footer-brand-watermark">
-            ChiliCare
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- File Script Referensi Proyek -->
     <script src="../data/data.js"></script>

@@ -21,7 +21,8 @@ html {
 }
 
 body {
-  padding-top: 77px; 
+  padding-top: 50px;
+  overflow-x: hidden;
 }
 /* ==========================================
     NAVBAR (CONTAINER ALIGNED FLEXBOX - PERFECT SLIM)
@@ -31,16 +32,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    
-    background: rgba(255, 255, 255, 0.96) !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    
+    background: rgb(255, 255, 255) !important;
     padding-top: 0.6rem !important;    
     padding-bottom: 0.2 !important; 
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     z-index: 10000 !important; 
     transition: all 0.3s ease;
+    border-radius: 0px 0px 25px 25px !important;
 }
 
 .navbar .container-xl {
@@ -101,10 +99,10 @@ body {
     background-color: white !important;
     font-weight: 600;
     font-size: 17px; 
-    border-radius: 0px 20px 0px 20px !important;
+    border-radius: 0px 25px 0px 25px !important;
     padding: 8px 18px !important;
     display: inline-flex !important;
-    box-shadow: 0 8px 20px rgba(185, 30, 30, 0.15) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
     align-items: center;
     gap: 8px;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -184,7 +182,7 @@ body {
 
 .lead {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgb(255, 255, 255);
     opacity: 0.9;
     Font-weight: 500;
 }
@@ -203,6 +201,10 @@ body {
     height: 120px; 
 }
 
+.card {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.18)!important;
+     border-radius: 15px !important;
+}
 
 .card-gejala-container {
     position: relative;
@@ -223,7 +225,7 @@ body {
 }
 
 .card-diagnosa {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.10); 
     margin-top: -110px;
     z-index: 10;
 }
@@ -235,10 +237,6 @@ body {
     margin-bottom: 20px !important;
 }
 
-#gejala-list .mb-3:hover {
-    transform: translateY(-2px);
-    box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.03);
-}
 
 #gejala-list select {
     width: 100%;
@@ -248,7 +246,6 @@ body {
     color: #ffffff;
     font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color:  #b91e1e;
     cursor: pointer;
     -webkit-appearance: none; 
     appearance: none;
@@ -256,10 +253,33 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-#gejala-list select:focus {
+.gejala-select {
+    background-color: #b91e1e;
+    color: white !important;
+    border: none !important;
+    border-radius: 15px !important;
+
+    transition:box-shadow .3s ease,background-color .3s ease;
+
+    box-shadow: 0 4px 10px rgba(185,30,30,.15);
+
+      appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("../images/icon_dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+}
+
+.gejala-select:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(185,30,30,.25);
+}
+
+.gejala-select:focus {
     border-color: #b91e1e;
-    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.15);
-    outline: none;
 }
 
 .btn-primary {
@@ -342,20 +362,22 @@ a:hover {
 .footer-modern::after {
     content: "";
     position: absolute;
-    bottom: -50%;
+    bottom: -30%;
     right: -15%;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background: rgba(255, 255, 255, 0.05); 
     border-radius: 50%;
     pointer-events: none;
 }
 
+
+
 .footer-modern ul li a {
     color: rgba(255, 255, 255, 0.6) !important;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 10px;
     display: block;
 }

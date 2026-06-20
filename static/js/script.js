@@ -161,11 +161,17 @@ function restoreStateMemory() {
 }
 
 function resetDiagnosis() {
-    // Sapu bersih alokasi memori
-    sessionStorage.removeItem('savedDiagnosis');
-    sessionStorage.removeItem('isAnalyzed');
-    window.scrollTo(0, 0);
-    location.reload();
+    // Sabuk pengaman: Minta konfirmasi sebelum menghapus memori
+    const konfirmasi = confirm("Yakin ingin mereset semua data diagnosis? Form gejala dan hasil analisis akan dihapus.");
+    
+    // Jika user klik "OK", eksekusi pembersihan
+    if (konfirmasi) {
+        sessionStorage.removeItem('savedDiagnosis');
+        sessionStorage.removeItem('isAnalyzed');
+        window.scrollTo(0, 0);
+        location.reload();
+    }
+    // Jika user klik "Cancel", blok kode dihentikan dan tidak terjadi apa-apa
 }
 /* ---------------------------------------- */
 

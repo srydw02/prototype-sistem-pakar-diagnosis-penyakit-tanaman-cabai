@@ -19,6 +19,7 @@ function renderForm() {
     const formContainer = document.getElementById('gejala-list');
     let html = '';
 
+    // Generate Custom Dropdown (Div & UL/LI) menggantikan Select/Option
     pakarData.gejala.forEach((g, index) => {
         html += `
         <div class="card mb-3 shadow-sm">
@@ -26,14 +27,19 @@ function renderForm() {
                 <h6 class="font-weight-bold text-dark mb-3">
                     <span class="badge badge-danger mr-2">${index + 1}</span> Apakah ${g.nama}?
                 </h6>
-                <select class="custom-select form-control gejala-select" data-id="${g.id}">
-                    <option value="0.0">Tidak (0%)</option>
-                    <option value="0.2">Tidak Tahu (20%)</option>
-                    <option value="0.4">Sedikit Yakin (40%)</option>
-                    <option value="0.6">Cukup Yakin (60%)</option>
-                    <option value="0.8">Yakin (80%)</option>
-                    <option value="1.0">Sangat Yakin (100%)</option>
-                </select>
+                
+                <div class="custom-dropdown" data-id="${g.id}" data-value="0.0">
+                    <div class="dropdown-selected">Tidak (0%)</div>
+                    <ul class="dropdown-options">
+                        <li data-value="0.0" class="selected-item">Tidak (0%)</li>
+                        <li data-value="0.2">Tidak Tahu (20%)</li>
+                        <li data-value="0.4">Sedikit Yakin (40%)</li>
+                        <li data-value="0.6">Cukup Yakin (60%)</li>
+                        <li data-value="0.8">Yakin (80%)</li>
+                        <li data-value="1.0">Sangat Yakin (100%)</li>
+                    </ul>
+                </div>
+                
             </div>
         </div>`;
     });
@@ -46,17 +52,70 @@ function renderForm() {
     </div>`;
 
     formContainer.innerHTML = html;
+
+    // Inisialisasi event listener untuk dropdown baru
+    initCustomDropdowns();
+}
+
+function initCustomDropdowns() {
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector('.dropdown-selected');
+        const optionsList = dropdown.querySelector('.dropdown-options');
+        const options = dropdown.querySelectorAll('.dropdown-options li');
+
+        // Buka/Tutup dropdown saat diklik
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation(); // Mencegah event lari ke window (click outside)
+            
+            // Tutup dropdown lain yang sedang terbuka
+            document.querySelectorAll('.custom-dropdown').forEach(d => {
+                if (d !== dropdown) d.classList.remove('active');
+            });
+            
+            dropdown.classList.toggle('active');
+        });
+
+        // Pilih opsi
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                // Ubah teks yang ditampilkan
+                selected.innerText = option.innerText;
+                
+                // Simpan nilai value ke atribut parent container untuk dihitung nanti
+                dropdown.setAttribute('data-value', option.getAttribute('data-value'));
+                
+                // Tandai opsi yang sedang aktif (untuk CSS marker)
+                options.forEach(opt => opt.classList.remove('selected-item'));
+                option.classList.add('selected-item');
+
+                // Tutup dropdown
+                dropdown.classList.remove('active');
+            });
+        });
+    });
+
+    // Fitur Click Outside: Tutup semua dropdown jika user ngeklik area luar
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.custom-dropdown').forEach(d => {
+            d.classList.remove('active');
+        });
+    });
 }
 
 function hitungCF() {
-    const selects = document.querySelectorAll('.gejala-select');
+    // Tangkap dari div custom-dropdown, bukan class form-control
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
     let userInput = {};
     let adaInput = false;
 
-    selects.forEach(select => {
-        const val = parseFloat(select.value);
+    dropdowns.forEach(dropdown => {
+        const val = parseFloat(dropdown.getAttribute('data-value'));
         if (val > 0) {
-            userInput[select.getAttribute('data-id')] = val;
+            userInput[dropdown.getAttribute('data-id')] = val;
             adaInput = true;
         }
     });

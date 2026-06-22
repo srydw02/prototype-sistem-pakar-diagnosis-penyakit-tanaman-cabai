@@ -1,255 +1,313 @@
-let knowledgeBase = {};
-let currentGejalaIndex = 0;
-let selectedGejala = [];
-let gejalaKeys = [];
+/**
+ * SISTEM PAKAR DIAGNOSIS PENYAKIT CABAI
+ * Metode: Certainty Factor (CF)
+ * Mode: Local / Offline (Bypass CORS) + Custom Dropdown UI + The Ultimate Logic Memory
+ */
 
-fetch('/data/data.json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    knowledgeBase = data;
-    gejalaKeys = Object.keys(data.gejala);
-    
-    // CEK SESSION STORAGE: Jika ada sesi diagnosis yang tersimpan saat user klik 'back'
-    let savedDiagnosis = sessionStorage.getItem('savedDiagnosis');
-    if (savedDiagnosis) {
-        selectedGejala = JSON.parse(savedDiagnosis);
-        prosesDiagnosis(); // Langsung lompat ke hasil
+document.addEventListener('DOMContentLoaded', () => {
+    // Validasi apakah data.js sudah berhasil di-load oleh HTML
+    if (typeof pakarData !== 'undefined') {
+        renderForm();
+        restoreStateMemory(); // Panggil memori saat halaman selesai dirender
     } else {
-        tampilkanPertanyaan(); // Jika tidak ada, mulai dari pertanyaan pertama
+        const formContainer = document.getElementById('gejala-list');
+        if (formContainer) {
+            formContainer.innerHTML = `
+                <div class="alert alert-danger text-center shadow-sm">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Fatal Error:</strong> 
+                    Data pakar tidak ditemukan. Pastikan file <code>data.js</code> sudah dipanggil di HTML sebelum <code>script.js</code>.
+                </div>
+            `;
+        }
     }
-  });
+});
 
-function forwardChaining(faktaTerpilih) {
-  let workingMemory = new Set(faktaTerpilih);
-  let hasil = {};
+function renderForm() {
+    const formContainer = document.getElementById('gejala-list');
+    let html = '';
 
-  for (let i = 0; i < knowledgeBase.aturan.length; i++) {
-    let aturan = knowledgeBase.aturan[i];
-    let semuaTerpenuhi = true;
+    // Generate Custom Dropdown (Div & UL/LI)
+    pakarData.gejala.forEach((g, index) => {
+        html += `
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h6 class="font-weight-bold text-dark mb-3">
+                    <span class="badge badge-danger mr-2">${index + 1}</span> Apakah ${g.nama}?
+                </h6>
+                
+                <div class="custom-dropdown" data-id="${g.id}" data-value="0.0">
+                    <div class="dropdown-selected">Tidak (0%)</div>
+                    <ul class="dropdown-options">
+                        <li data-value="0.0" class="selected-item">Tidak (0%)</li>
+                        <li data-value="0.2">Tidak Tahu (20%)</li>
+                        <li data-value="0.4">Sedikit Yakin (40%)</li>
+                        <li data-value="0.6">Cukup Yakin (60%)</li>
+                        <li data-value="0.8">Yakin (80%)</li>
+                        <li data-value="1.0">Sangat Yakin (100%)</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>`;
+    });
 
-    for (let j = 0; j < aturan.kondisi.length; j++) {
-      let syarat = aturan.kondisi[j];
-      if (!workingMemory.has(syarat)) {
-        semuaTerpenuhi = false;
-        break;
-      }
-    }
+    html += `
+    <div class="text-center mt-5 mb-4">
+        <button type="button" class="btn btn-danger btn-lg px-5 shadow" onclick="hitungCF()">
+            <i class="fas fa-stethoscope mr-2"></i> Analisis Diagnosis
+        </button>
+    </div>`;
 
-    if (semuaTerpenuhi) {
-      let kodePenyakit = aturan.kesimpulan;
-      if (hasil[kodePenyakit] === undefined) {
-        hasil[kodePenyakit] = [];
-      }
-      hasil[kodePenyakit].push(aturan.id);
-    }
-  }
+    formContainer.innerHTML = html;
 
-  return hasil;
+    // Inisialisasi event listener untuk dropdown
+    initCustomDropdowns();
 }
 
-// --- UPDATE FUNGSI TAMPILKAN PERTANYAAN DENGAN RATIO TERKUNCI & MARGIN ---
-function tampilkanPertanyaan() {
-  let gejalaContainer = document.getElementById('gejala-list');
-  gejalaContainer.innerHTML = '';
+function initCustomDropdowns() {
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
 
-  if (currentGejalaIndex < gejalaKeys.length) {
-    let kode       = gejalaKeys[currentGejalaIndex];
-    let dataGejala = knowledgeBase.gejala[kode];
-    let nomorSoal  = currentGejalaIndex + 1;
-    let total      = gejalaKeys.length;
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector('.dropdown-selected');
+        const options = dropdown.querySelectorAll('.dropdown-options li');
 
-    let disableKembali = '';
-    if (currentGejalaIndex === 0) disableKembali = 'disabled';
+        // Buka/Tutup dropdown saat diklik
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            document.querySelectorAll('.custom-dropdown').forEach(d => {
+                if (d !== dropdown) d.classList.remove('active');
+            });
+            dropdown.classList.toggle('active');
+        });
 
-    let persenProgress = Math.round((currentGejalaIndex / total) * 100);
+        // Pilih opsi
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                // FIX BUG GEPENG: Gunakan textContent bukan innerText
+                selected.textContent = option.textContent;
+                dropdown.setAttribute('data-value', option.getAttribute('data-value'));
+                
+                options.forEach(opt => opt.classList.remove('selected-item'));
+                option.classList.add('selected-item');
+                dropdown.classList.remove('active');
 
-    gejalaContainer.innerHTML =
-      '<div class="progress mb-3" style="height:6px;">' +
-        '<div class="progress-bar bg-success" style="width:' + persenProgress + '%"></div>' +
-      '</div>' +
-      '<p class="text-muted mb-2" style="font-size:0.85rem;">Pertanyaan ' + nomorSoal + ' dari ' + total + '</p>' +
-      
-      // Menambah padding pada card (p-4) agar space putih lebih luas
-      '<div class="card p-4 text-center border-0 shadow-sm" style="border-radius: 15px;">' +
+                // Simpan perubahan ke memori browser secara live
+                saveStateLive();
 
-        // --- BUNGKUSAN GAMBAR (CONTAINER) ---
-        '<div style="position: relative; overflow: hidden; border-radius: 12px; margin: 15px auto 20px auto; width: 92%; aspect-ratio: 4 / 3; background-color: #f8f9fa;">' +
-          
-          '<img src="' + dataGejala.gambar + '" style="width: 100%; height: 100%; object-fit: cover; display: block;">' +
+                // THE ULTIMATE LOGIC: Hapus kotak hasil jika user merubah data iseng-iseng setelah diagnosis
+                const hasilContainer = document.getElementById('hasil');
+                if (hasilContainer && hasilContainer.innerHTML.trim() !== '') {
+                    hasilContainer.innerHTML = ''; // Hapus tampilan
+                    sessionStorage.removeItem('isAnalyzed'); // Hapus status memori hitungan
+                }
+            });
+        });
+    });
 
-          // OVERLAY KIRI (YA)
-          '<div onclick="pilihGejala(true)" ' +
-               'onmouseenter="this.style.opacity=\'1\'" ' +
-               'onmouseleave="this.style.opacity=\'0\'" ' +
-               'style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; ' +
-               'background-color: rgba(40, 167, 69, 0.85); color: white; display: flex; ' +
-               'align-items: center; justify-content: center; font-size: 2.5rem; font-weight: bold; ' +
-               'opacity: 0; transition: opacity 0.3s ease; cursor: pointer;">' +
-            'YA' +
-          '</div>' +
+    // Fitur Click Outside
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.custom-dropdown').forEach(d => {
+            d.classList.remove('active');
+        });
+    });
+}
 
-          // OVERLAY KANAN (TIDAK)
-          '<div onclick="pilihGejala(false)" ' +
-               'onmouseenter="this.style.opacity=\'1\'" ' +
-               'onmouseleave="this.style.opacity=\'0\'" ' +
-               'style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; ' +
-               'background-color: rgba(220, 53, 69, 0.85); color: white; display: flex; ' +
-               'align-items: center; justify-content: center; font-size: 2.5rem; font-weight: bold; ' +
-               'opacity: 0; transition: opacity 0.3s ease; cursor: pointer;">' +
-            'TIDAK' +
-          '</div>' +
+/* --- MANAJEMEN MEMORI SESSION STORAGE --- */
+function saveStateLive() {
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    let userInput = {};
+    dropdowns.forEach(dropdown => {
+        const val = parseFloat(dropdown.getAttribute('data-value'));
+        if (val > 0) { 
+            userInput[dropdown.getAttribute('data-id')] = val;
+        }
+    });
+    sessionStorage.setItem('savedDiagnosis', JSON.stringify(userInput));
+}
 
-        '</div>' +
-        // --- AKHIR BUNGKUSAN GAMBAR ---
-
-        '<h5 class="mb-2" style="font-weight: 600;">' + dataGejala.teks + '</h5>' +
-        '<p class="text-muted small px-3">' + dataGejala.keterangan + '</p>' +
+function restoreStateMemory() {
+    const savedState = sessionStorage.getItem('savedDiagnosis');
+    if (savedState) {
+        const userInput = JSON.parse(savedState);
+        const dropdowns = document.querySelectorAll('.custom-dropdown');
         
-        '<p class="text-primary small mt-3 mb-0" style="font-weight: 500; font-size: 0.75rem;">' +
-          'Klik sisi kiri gambar (YA) atau sisi kanan (TIDAK)' +
-        '</p>' +
-      '</div>' +
-      
-      '<div class="mt-4">' +
-        '<button type="button" class="btn btn-light text-muted" onclick="prevQuestion()" ' + disableKembali + '>← Kembali</button>' +
-      '</div>';
-  } else {
-    prosesDiagnosis();
-  }
+        dropdowns.forEach(dropdown => {
+            const id = dropdown.getAttribute('data-id');
+            if (userInput[id]) {
+                const val = userInput[id];
+                dropdown.setAttribute('data-value', val);
+                
+                const options = dropdown.querySelectorAll('.dropdown-options li');
+                const selected = dropdown.querySelector('.dropdown-selected');
+                
+                options.forEach(opt => {
+                    opt.classList.remove('selected-item');
+                    if (parseFloat(opt.getAttribute('data-value')) === val) {
+                        opt.classList.add('selected-item');
+                        // FIX BUG GEPENG SAAT RESTORE
+                        selected.textContent = opt.textContent;
+                    }
+                });
+            }
+        });
+        
+        // Cek jika user sudah pernah klik tombol Analisis sebelumnya tanpa merubah form lagi
+        if (sessionStorage.getItem('isAnalyzed') === 'true') {
+            hitungCF(true); // Run mode background (tanpa auto-scroll)
+        }
+    }
 }
 
-// --- FUNGSI UNTUK PILIH GEJALA OTOMATIS ---
-function pilihGejala(isYa) {
-  let kode = gejalaKeys[currentGejalaIndex];
-  
-  // Bersihkan jawaban sebelumnya untuk gejala ini jika ada
-  let jawabanBersih = [];
-  for (let i = 0; i < selectedGejala.length; i++) {
-    if (selectedGejala[i] !== kode && selectedGejala[i] !== '!' + kode) {
-      jawabanBersih.push(selectedGejala[i]);
+function resetDiagnosis() {
+    // Sabuk pengaman: Minta konfirmasi sebelum menghapus memori
+    const konfirmasi = confirm("Yakin ingin mereset semua data diagnosis? Form gejala dan hasil analisis akan dihapus.");
+    
+    // Jika user klik "OK", eksekusi pembersihan
+    if (konfirmasi) {
+        sessionStorage.removeItem('savedDiagnosis');
+        sessionStorage.removeItem('isAnalyzed');
+        window.scrollTo(0, 0);
+        location.reload();
     }
-  }
-  selectedGejala = jawabanBersih;
+    // Jika user klik "Cancel", blok kode dihentikan dan tidak terjadi apa-apa
+}
+/* ---------------------------------------- */
 
-  // Masukkan jawaban baru
-  if (isYa) {
-    selectedGejala.push(kode);
-  } else {
-    selectedGejala.push('!' + kode);
-  }
+function hitungCF(isAutoRestore = false) {
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    let userInput = {};
+    let adaInput = false;
 
-  // Otomatis maju ke pertanyaan berikutnya
-  currentGejalaIndex++;
-  tampilkanPertanyaan();
+    dropdowns.forEach(dropdown => {
+        const val = parseFloat(dropdown.getAttribute('data-value'));
+        if (val > 0) {
+            userInput[dropdown.getAttribute('data-id')] = val;
+            adaInput = true;
+        }
+    });
+
+    if (!adaInput) {
+        // Jangan munculin alert kalau cuma lagi nge-restore dari halaman lain
+        if (!isAutoRestore) {
+            alert("Pilih minimal satu gejala yang terlihat pada tanaman cabai Anda!");
+        }
+        return;
+    }
+
+    // Tandai status bahwa hasil sudah dieksekusi untuk cache memori
+    sessionStorage.setItem('isAnalyzed', 'true');
+    saveStateLive();
+
+    let hasilDiagnosis = [];
+
+    pakarData.rules.forEach(rule => {
+        let cfGabungan = 0;
+
+        rule.gejala.forEach(g => {
+            if (userInput[g.id_gejala]) {
+                let cfHE = g.cf_pakar * userInput[g.id_gejala];
+
+                if (cfGabungan === 0) {
+                    cfGabungan = cfHE;
+                } else {
+                    cfGabungan = cfGabungan + cfHE * (1 - cfGabungan);
+                }
+            }
+        });
+
+        if (cfGabungan > 0) {
+            const detailPenyakit = pakarData.penyakit.find(p => p.id === rule.id_penyakit);
+            hasilDiagnosis.push({
+                id: rule.id_penyakit,
+                nama: detailPenyakit.nama,
+                deskripsi: detailPenyakit.deskripsi,
+                solusi: detailPenyakit.solusi,
+                persentase: (cfGabungan * 100).toFixed(2)
+            });
+        }
+    });
+
+    hasilDiagnosis.sort((a, b) => b.persentase - a.persentase);
+    tampilkanHasil(hasilDiagnosis, isAutoRestore);
 }
 
-function prevQuestion() {
-  if (currentGejalaIndex > 0) {
-    currentGejalaIndex--;
-    tampilkanPertanyaan();
-  }
-}
+function tampilkanHasil(hasil, isAutoRestore = false) {
+    const hasilContainer = document.getElementById('hasil');
 
-function prosesDiagnosis() {
-  // SIMPAN JAWABAN KE SESSION STORAGE
-  sessionStorage.setItem('savedDiagnosis', JSON.stringify(selectedGejala));
-
-  let faktaTerpilih = [];
-  for (let i = 0; i < selectedGejala.length; i++) {
-    if (selectedGejala[i][0] !== '!') {
-      faktaTerpilih.push(selectedGejala[i]);
+    if (hasil.length === 0) {
+        hasilContainer.innerHTML = `
+        <div class="alert alert-warning text-center shadow-sm">
+            <h5 class="alert-heading font-weight-bold mb-2"><i class="fas fa-exclamation-triangle"></i> Diagnosis Tidak Ditemukan</h5>
+            <p class="mb-0">Gejala yang Anda masukkan tidak cocok dengan basis data penyakit cabai kami.</p>
+        </div>`;
+        if (!isAutoRestore) hasilContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
     }
-  }
 
-  let hasilFC = forwardChaining(faktaTerpilih);
-  let hasilArray = [];
+    const penyakitUtama = hasil[0];
 
-  let daftarKode = Object.keys(knowledgeBase.penyakit);
-  for (let i = 0; i < daftarKode.length; i++) {
-    let kode = daftarKode[i];
+    // Mulai kerangka hasil
+    let html = `
+    <div id="print-area">
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-danger text-white py-3">
+                <h4 class="mb-0 font-weight-bold text-center"><i class="fas fa-poll-h mr-2"></i> Hasil Diagnosis Sistem Pakar</h4>
+            </div>
+            <div class="card-body p-4 text-center">
+                <p class="text-muted font-weight-bold mb-1">TINGKAT KEYAKINAN:</p>
+                <h1 class="display-4 font-weight-bold text-danger">${penyakitUtama.persentase}%</h1>
+                <h3 class="text-dark font-weight-bold mt-3">${penyakitUtama.nama}</h3>
+                
+                <div class="text-left mt-5">
+                    <h5 class="font-weight-bold text-dark"><i class="fas fa-info-circle text-danger mr-2"></i> Deskripsi Singkat</h5>
+                    <p class="text-secondary">${penyakitUtama.deskripsi}</p>
+                    
+                    <h5 class="font-weight-bold text-dark mt-4"><i class="fas fa-prescription-bottle-alt text-danger mr-2"></i> Solusi & Penanganan</h5>
+                    <p class="text-secondary" style="white-space: pre-line;">${penyakitUtama.solusi}</p>
+                </div>
+            </div>
+        </div>`;
 
-    if (hasilFC[kode] !== undefined) {
-      hasilArray.push({
-        nama         : knowledgeBase.penyakit[kode].nama,
-        jumlahAturan : hasilFC[kode].length,
-        link         : knowledgeBase.penyakit[kode].link
-      });
+    if (hasil.length > 1) {
+        html += `
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-white pt-4 pb-2">
+                <h6 class="mb-0 font-weight-bold text-secondary">Kemungkinan Penyakit Lainnya:</h6>
+            </div>
+            <ul class="list-group list-group-flush">`;
+        
+        for (let i = 1; i < Math.min(hasil.length, 4); i++) {
+            html += `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="font-weight-bold text-dark">${hasil[i].nama}</span>
+                <span class="badge badge-warning text-dark px-3 py-2">${hasil[i].persentase}%</span>
+            </li>`;
+        }
+        
+        html += `</ul></div>`;
     }
-  }
 
-  for (let i = 0; i < hasilArray.length - 1; i++) {
-    for (let j = 0; j < hasilArray.length - 1 - i; j++) {
-      if (hasilArray[j].jumlahAturan < hasilArray[j + 1].jumlahAturan) {
-        let temp          = hasilArray[j];
-        hasilArray[j]     = hasilArray[j + 1];
-        hasilArray[j + 1] = temp;
-      }
+    html += `</div>`; // Tutup div print-area
+
+    // Tombol Cetak PDF dan Diagnosis Ulang (Akan disembunyikan pakai CSS saat mode print)
+    html += `
+    <div class="text-center mt-4 mb-5 d-print-none action-buttons">
+        <button class="btn btn-outline-danger px-4 py-2 font-weight-bold" onclick="window.print()">
+            <i class="fas fa-print mr-2"></i> Cetak Laporan PDF
+        </button>
+        <button class="btn btn-secondary px-4 py-2 font-weight-bold ml-2" onclick="resetDiagnosis()">
+            <i class="fas fa-redo-alt mr-2"></i> Diagnosis Ulang
+        </button>
+    </div>`;
+
+    hasilContainer.innerHTML = html;
+    
+    // Jangan nge-scroll paksa ke bawah kalau user cuma pencet tombol Back browser
+    if (!isAutoRestore) {
+        setTimeout(() => {
+            hasilContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
     }
-  }
-
-  let htmlGejala = '';
-  if (faktaTerpilih.length === 0) {
-    htmlGejala = '<li><em>Tidak ada gejala yang dipilih</em></li>';
-  } else {
-    for (let i = 0; i < faktaTerpilih.length; i++) {
-      let kodeGejala = faktaTerpilih[i];
-      let teksGejala = knowledgeBase.gejala[kodeGejala].teks;
-      htmlGejala += '<li>' + teksGejala + '</li>';
-    }
-  }
-
-  let output = document.getElementById('hasil');
-
-  output.innerHTML =
-    '<h5 class="mt-3">Fakta yang dimasukkan:</h5>' +
-    '<ul style="padding-left:20px;margin-top:8px;">' + htmlGejala + '</ul>' +
-    '<h4 class="mt-4">Hasil Diagnosis (Forward Chaining):</h4>';
-
-  if (hasilArray.length === 0) {
-    output.innerHTML +=
-      '<div class="alert alert-warning mt-2">' +
-        '<strong>Tidak terdiagnosis.</strong> Gejala yang dipilih tidak memenuhi kondisi ' +
-        'aturan manapun dalam basis pengetahuan. Silakan ulangi dan periksa gejala lebih teliti.' +
-      '</div>';
-  } else {
-    for (let i = 0; i < hasilArray.length; i++) {
-      let item = hasilArray[i];
-
-      let labelUrutan;
-      if (i === 0) { labelUrutan = 'Diagnosis Utama';  }
-      else         { labelUrutan = 'Kemungkinan ' + (i + 1); }
-
-      output.innerHTML +=
-        '<div class="card mb-3 p-3 shadow-sm border-0">' +
-          '<div class="d-flex align-items-center justify-content-between mb-2">' +
-            '<h5 class="mb-0">' + item.nama + '</h5>' +
-            '<span style="color: #2f281e; font-weight: 500;">' + labelUrutan + '</span>' +
-          '</div>' +
-          // '<a href="' + item.link + '" class="btn btn-lihat-info btn-sm mt-2">Lihat informasi</a>' +
-             '<a href="' + item.link + '?ref=diagnosis" class="btn btn-lihat-info btn-sm mt-2">Lihat informasi</a>' +
-        '</div>';
-    }
-  }
-
-  // TAMBAHKAN TOMBOL UNTUK MENGULANG DIAGNOSIS BARU
-  output.innerHTML += 
-    '<div class="mt-4 mb-5 text-center">' +
-        '<button class="btn btn-outline-success px-4 py-2" onclick="ulangiDiagnosis()" style="border-radius:10px; font-weight:600;">' +
-            '↻ Mulai Diagnosis Baru' +
-        '</button>' +
-    '</div>';
-
-  document.getElementById('diagnosisForm').style.display = 'none';
-}
-
-// --- FUNGSI UNTUK MERESET (MENGHAPUS SESI) ---
-function ulangiDiagnosis() {
-    sessionStorage.removeItem('savedDiagnosis'); // Hapus memori jawaban
-    currentGejalaIndex = 0;
-    selectedGejala = [];
-    document.getElementById('hasil').innerHTML = ''; // Kosongkan hasil
-    document.getElementById('diagnosisForm').style.display = 'block'; // Tampilkan ulang form
-    tampilkanPertanyaan();
 }

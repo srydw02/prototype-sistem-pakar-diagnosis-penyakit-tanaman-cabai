@@ -1,0 +1,133 @@
+const pakarData = {
+  "penyakit": [
+    {
+      "id": "P01",
+      "nama": "Antraknosa (Patek / Busuk Buah)",
+      "deskripsi": "Penyakit ini disebabkan oleh jamur Colletotrichum spp. Gejala awalnya berupa bercak coklat kehitaman pada permukaan buah yang kemudian meluas menjadi busuk lunak dan keriput.",
+      "solusi": "1. Musnahkan buah yang terinfeksi.\n2. Perbaiki drainase tanah agar tidak lembab.\n3. Gunakan fungisida berbahan aktif propineb atau mankozeb sesuai dosis."
+    },
+    {
+      "id": "P02",
+      "nama": "Virus Kuning (Gemini Virus)",
+      "deskripsi": "Penyakit yang ditularkan oleh kutu kebul (Bemisia tabaci). Menyebabkan klorosis (kuning) pada daun, tulang daun menebal, dan pertumbuhan tanaman menjadi kerdil.",
+      "solusi": "1. Cabut dan musnahkan tanaman yang terinfeksi.\n2. Kendalikan vektor kutu kebul dengan insektisida.\n3. Gunakan varietas benih yang tahan terhadap virus kuning."
+    },
+    {
+      "id": "P03",
+      "nama": "Layu Fusarium",
+      "deskripsi": "Penyakit layu yang disebabkan oleh jamur Fusarium oxysporum. Gejalanya kelayuan yang dimulai dari daun bagian bawah lalu menjalar ke atas, dan jaringan pembuluh akar/batang berwarna coklat.",
+      "solusi": "1. Cabut dan bakar tanaman yang sakit.\n2. Lakukan pergiliran/rotasi tanaman dengan famili selain Solanaceae.\n3. Aplikasikan agens hayati Trichoderma spp. pada saat pengolahan lahan."
+    },
+    {
+      "id": "P04",
+      "nama": "Layu Bakteri",
+      "deskripsi": "Penyakit yang disebabkan oleh bakteri Ralstonia solanacearum. Tanaman akan layu secara tiba-tiba di siang hari padahal daun masih hijau, dan jika pangkal batang dipotong akan terasa lunak/berlendir.",
+      "solusi": "1. Perbaiki sanitasi kebun dan saluran air.\n2. Cabut tanaman layu beserta tanah di sekitar akarnya.\n3. Aplikasikan bakterisida berbahan aktif tembaga hidroksida."
+    },
+    {
+      "id": "P05",
+      "nama": "Bercak Daun (Cercospora)",
+      "deskripsi": "Penyakit akibat jamur Cercospora capsici. Menimbulkan bercak bulat kecil pada daun dengan pusat berwarna pucat kebasah-basahan dan tepi gelap. Menyebabkan daun gugur prematur.",
+      "solusi": "1. Kurangi kelembapan dengan mengatur jarak tanam.\n2. Bersihkan gulma di sekitar tanaman.\n3. Semprotkan fungisida kontak dan sistemik secara berkala."
+    },
+    {
+      "id": "P06",
+      "nama": "Hama Thrips",
+      "deskripsi": "Serangga kecil yang mengisap cairan daun. Serangan ditandai dengan bercak keperakan pada permukaan bawah daun, daun mengeriting ke atas, dan berubah warna kecoklatan/tembaga.",
+      "solusi": "1. Pasang perangkap lekat kuning/biru (Yellow/Blue Sticky Trap).\n2. Gunakan mulsa plastik perak untuk memantulkan cahaya.\n3. Semprotkan insektisida berbahan aktif abamektin."
+    },
+    {
+      "id": "P07",
+      "nama": "Hama Kutu Daun (Aphids)",
+      "deskripsi": "Hama pengisap cairan tanaman yang juga bisa menjadi vektor pembawa virus. Menyebabkan daun mengerut, melengkung ke bawah, dan sering memunculkan embun jelaga hitam.",
+      "solusi": "1. Manfaatkan musuh alami seperti kepik (Ladybug).\n2. Jaga kebersihan lahan pertanian.\n3. Gunakan insektisida sistemik jika serangan sudah masuk fase parah."
+    },
+    {
+      "id": "P08",
+      "nama": "Hama Lalat Buah",
+      "deskripsi": "Lalat buah betina menusuk buah untuk meletakkan telur. Larva yang menetas akan memakan daging buah dari dalam sehingga muncul titik hitam, buah membusuk, dan gugur sebelum waktunya.",
+      "solusi": "1. Kumpulkan dan kubur buah yang busuk/jatuh ke tanah.\n2. Pasang perangkap atraktan (contoh: Metil Eugenol).\n3. Lakukan pembungkusan buah sejak dini jika luasan lahan memungkinkan."
+    }
+  ],
+  "gejala": [
+    { "id": "G01", "nama": "Terdapat bercak melingkar agak mengkilap (hitam/orange/coklat) pada buah" },
+    { "id": "G02", "nama": "Buah menjadi keriput, mengering, atau membusuk lunak" },
+    { "id": "G03", "nama": "Muncul titik hitam (bekas tusukan) pada pangkal buah" },
+    { "id": "G04", "nama": "Buah menjadi pucat dan gugur ke tanah sebelum waktunya" },
+    { "id": "G05", "nama": "Pucuk dan helaian daun berubah menjadi kuning terang (klorosis)" },
+    { "id": "G06", "nama": "Tulang daun menebal dan daun menggulung ke atas" },
+    { "id": "G07", "nama": "Pertumbuhan tanaman menjadi kerdil dan sulit berbuah" },
+    { "id": "G08", "nama": "Tanaman mengalami kelayuan mulai dari daun bagian bawah yang perlahan menjalar ke atas" },
+    { "id": "G09", "nama": "Warna jaringan pembuluh pada akar dan batang berubah menjadi coklat" },
+    { "id": "G10", "nama": "Tanaman layu secara tiba-tiba (walaupun daun belum menguning / masih hijau)" },
+    { "id": "G11", "nama": "Pangkal batang terasa lunak, berair, dan berisiko rebah" },
+    { "id": "G12", "nama": "Terdapat bercak-bercak bulat, kecil, dan basah pada daun" },
+    { "id": "G13", "nama": "Daun yang terserang perlahan layu lalu rontok/gugur" },
+    { "id": "G14", "nama": "Permukaan bawah daun terdapat bercak berwarna keperakan" },
+    { "id": "G15", "nama": "Daun berubah menjadi warna coklat tembaga, mengeriting, dan keriput" },
+    { "id": "G16", "nama": "Daun melengkung ke bawah, mengkerut, dan terdapat bintik putih / jelaga hitam" }
+  ],
+  "rules": [
+    {
+      "id_penyakit": "P01",
+      "gejala": [
+        { "id_gejala": "G01", "cf_pakar": 0.8 },
+        { "id_gejala": "G02", "cf_pakar": 0.7 }
+      ]
+    },
+    {
+      "id_penyakit": "P02",
+      "gejala": [
+        { "id_gejala": "G05", "cf_pakar": 0.8 },
+        { "id_gejala": "G06", "cf_pakar": 0.9 },
+        { "id_gejala": "G07", "cf_pakar": 0.6 }
+      ]
+    },
+    {
+      "id_penyakit": "P03",
+      "gejala": [
+        { "id_gejala": "G08", "cf_pakar": 0.9 },
+        { "id_gejala": "G09", "cf_pakar": 0.8 },
+        { "id_gejala": "G07", "cf_pakar": 0.4 }
+      ]
+    },
+    {
+      "id_penyakit": "P04",
+      "gejala": [
+        { "id_gejala": "G10", "cf_pakar": 0.9 },
+        { "id_gejala": "G09", "cf_pakar": 0.6 },
+        { "id_gejala": "G11", "cf_pakar": 0.7 }
+      ]
+    },
+    {
+      "id_penyakit": "P05",
+      "gejala": [
+        { "id_gejala": "G12", "cf_pakar": 0.9 },
+        { "id_gejala": "G13", "cf_pakar": 0.7 }
+      ]
+    },
+    {
+      "id_penyakit": "P06",
+      "gejala": [
+        { "id_gejala": "G14", "cf_pakar": 0.9 },
+        { "id_gejala": "G15", "cf_pakar": 0.8 },
+        { "id_gejala": "G07", "cf_pakar": 0.4 }
+      ]
+    },
+    {
+      "id_penyakit": "P07",
+      "gejala": [
+        { "id_gejala": "G16", "cf_pakar": 0.9 },
+        { "id_gejala": "G07", "cf_pakar": 0.4 }
+      ]
+    },
+    {
+      "id_penyakit": "P08",
+      "gejala": [
+        { "id_gejala": "G03", "cf_pakar": 0.9 },
+        { "id_gejala": "G02", "cf_pakar": 0.5 },
+        { "id_gejala": "G04", "cf_pakar": 0.8 }
+      ]
+    }
+  ]
+};

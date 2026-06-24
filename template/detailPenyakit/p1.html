@@ -14,287 +14,282 @@
 </head>
 
 <body class="detail-page">
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-xl d-flex justify-content-between align-items-center">
+        <div class="container-xl">
 
-            <!-- Logo tetap di kiri -->
             <a class="navbar-brand d-flex align-items-center" href="/template/informasi.html">
-                <img src="/static/images/logo2.png" alt="Logo SiPadi"
-                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-                <h3 style="color: green; margin: 0;">SiPadi</h3>
+                <img src="/static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
-            
-            <button id="menu-toggle" class="btn-back-home" title="Kembali">
-                ✕
-            </button>
+
+            <div id="menu-toggle" class="btn btn-back shadow-sm">
+                <i class="fas fa-arrow-left mt-1"></i>Back
+            </div>
 
         </div>
-    </nav>
+    </nav>  
 
-    <!-- Content -->
     <div class="container-xl detail-container">
-
-        <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom mb-4">
-            <i class="fas fa-home"></i>
-            <a href="/">Beranda</a>
-
+            <i class="fas fa-home" style="color: #b91e1e;"></i>
+            <a href="/">Home    </a>
             <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i>
-
             <a href="/template/informasi.html">Informasi</a>
-
-            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i>
-
-            Penyakit Blas (Blast)
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem; color: #b91e1e;"></i>
+            Penyakit Antraknosa (Patek / Busuk Buah)
         </nav>
+                
+        <div class="img-wrapper">
+            <div class="img-slider">
+                <div class="slide active">
+                  <img src="/static/images/assetPenyakit/BusukBuahAntraknosa.jpg" class="img-detail" alt="Antraknosa 1" />
+                </div>
+                <div class="slide">
+                  <img src="/static/images/assetPenyakit/Antraknosa2.jpg" class="img-detail" alt="Antraknosa 2" />
+                </div>
+                <div class="slide">
+                  <img src="/static/images/assetPenyakit/Antraknosa3.png" class="img-detail" alt="Antraknosa 3" />
+                </div>
+                <div class="slide">
+                  <img src="/static/images/assetPenyakit/Antraknosa4.png" class="img-detail" alt="Antraknosa 4" />
+                </div>
 
-        <!-- Title -->
-        <h2 class="fw-bold mb-4">
-            Penyakit Blas (Blast)
+                <button class="slider-btn slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn slider-next"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="slider-dots">
+                </div> 
+            </div>
+        </div>
+
+        <h2 class="font-weight-bold" style="padding-top: 30px; padding-bottom: 30px;">
+            Penyakit Antraknosa (Patek / Busuk Buah)
         </h2>
 
-        <div class="row align-items-start">
-
-            <!-- Left Side -->
-            <div class="col-lg-5 mb-4">
-                <div class="left-side">
-
-                    <img
-                        src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Blas (Blast).png"
-                        class="img-detail shadow-sm"
-                        alt="Penyakit Blas (Blast)"
-                    />
-
-                    <div class="mt-4">
-
-                        <h5 class="section-title">
-                            Deskripsi Singkat
-                        </h5>
-
-                        <p class="description-text">
-                            Penyakit blas merupakan salah satu penyakit utama pada tanaman padi
-                            yang sangat merugikan petani karena dapat menyebabkan penurunan hasil
-                            panen hingga gagal panen pada serangan berat. Penyakit ini disebabkan
-                            oleh jamur Magnaporthe oryzae yang mampu menyerang tanaman padi sejak
-                            fase persemaian hingga menjelang panen.
-
-                            Blas dapat menyerang hampir seluruh bagian tanaman di atas permukaan
-                            tanah, terutama daun, batang, pelepah, ruas batang, dan leher malai.
-                            Penyakit ini sering muncul pada kondisi lingkungan yang lembap dan
-                            mudah menyebar dengan cepat ke area pertanaman lain apabila tidak
-                            segera dikendalikan.
-                        </p>
-
-                    </div>
+        <!-- Tab Navigation -->
+        <div class="detail-tabs">
+            <button class="tab-btn active" data-tab="deskripsi">
+              <i class="fas fa-info-circle"></i> Deskripsi
+            </button>
+            <button class="tab-btn" data-tab="gejala">
+              <i class="fas fa-stethoscope"></i> Gejala
+            </button>
+            <button class="tab-btn" data-tab="penyebab">
+              <i class="fas fa-bug"></i> Penyebab
+            </button>
+            <button class="tab-btn" data-tab="bagian">
+              <i class="fas fa-leaf"></i> Bagian Diserang
+            </button>
+            <button class="tab-btn" data-tab="penanganan">
+              <i class="fas fa-shield-alt"></i> Penanganan
+            </button>
+        </div>
+    
+        <!-- Tab Content -->
+        <div class="tab-content-wrapper">
+    
+            <div class="tab-pane active" id="tab-deskripsi">
+        <p class="font-weight-narrow">
+          Antraknosa atau yang sering disebut Patek merupakan salah satu penyakit paling merugikan pada tanaman cabai yang disebabkan oleh jamur dari genus Colletotrichum, terutama Colletotrichum capsici dan Colletotrichum gloeosporioides. Penyakit ini dapat menyerang tanaman sejak fase pembungaan hingga pascapanen. Serangan paling umum terjadi pada buah cabai sehingga menyebabkan pembusukan dan penurunan kualitas hasil panen.
+        </p>
+        <p class="font-weight-narrow">
+          Penyakit ini berkembang sangat cepat pada kondisi lingkungan yang lembap, curah hujan tinggi, serta sirkulasi udara yang buruk. Spora jamur dapat menyebar melalui percikan air hujan, angin, alat pertanian, benih yang terkontaminasi, dan kontak antar tanaman.
+        </p>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-gejala">
+        <ul class="detail-list">
+          <li>
+            <div class="list-icon"></div>
+            <div>
+              <b>Gejala Awal</b>
+              <ul class="isi-gejala">
+                <li>Muncul bercak kecil berbentuk bulat pada permukaan buah.</li>
+                <li>Bercak berwarna coklat muda hingga coklat tua.</li>
+                <li>Permukaan bercak terlihat agak mengkilap.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="list-icon"></div>
+            <div>
+              <b>Gejala Lanjutan</b>
+              <ul class="isi-gejala">
+                  <li>Bercak membesar dan menjadi cekung ke dalam.</li>
+                <li>Warna bercak berubah menjadi hitam kecoklatan.</li>
+                <li>Buah mulai mengeriput dan kehilangan kesegaran.</li>
+                <li>Muncul lingkaran konsentris (berlapis-lapis) pada area yang terinfeksi.</li>
+                <li>Pada kondisi lembap muncul massa spora berwarna jingga atau merah muda.</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="list-icon"></div>
+        <div>
+            <b>Gejala Serangan Berat</b>
+            <ul class="isi-gejala">
+                <li>Buah membusuk secara menyeluruh.</li>
+                <li>Buah rontok sebelum dipanen.</li>
+                <li>Infeksi dapat menyebar ke tangkai buah dan bunga.</li>
+                <li>Hasil panen menurun drastis.</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-penyebab">
+        <div class="kotak-penyebab">
+            <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">
+                Penyakit Antraknosa disebabkan oleh jamur.
+            </p>
+            <div class="daftar-penyebab">
+                <div class="item-penyebab">
+                    <img src="/static/images/foto_penyebab/1_ColletotrichumCapsici.jpg"
+                    class="rounded-circle"
+                    width="150"
+                    height="150">
+                    <p><i>Colletotrichum capsici</i></p>
+                </div>
+                
+                <div class="item-penyebab">
+                    <img src="/static/images/foto_penyebab/2_ColletotrichumGloeosporioides.jpg"
+                         class="rounded-circle"
+                         width="150"
+                         height="150">
+                    <p><i>Colletotrichum gloeosporioides</i></p>
+                </div>
+                
+                <div class="item-penyebab">
+                    <img src="/static/images/foto_penyebab/3_ColletotrichumAcutatum.jpg"
+                    class="rounded-circle"
+                    width="150"
+                    height="150">
+                    <p><i>Colletotrichum acutatum</i></p>
                 </div>
             </div>
+            <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">
+                <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">
+                    Penyakit Antraknosa disebabkan oleh jamur.
+                </p>
+            </p>
+            <div class="table-responsive px-4">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-danger">
+                        <tr>
+                            <th>Faktor</th>
+                            <th>Kondisi yang Mendukung Antraknosa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Suhu</td>
+                            <td>25°C – 30°C</td>
+                        </tr>
+                        <tr>
+                            <td>Kelembapan</td>
+                            <td>> 80%</td>
+                        </tr>
+                        <tr>
+                            <td>Curah Hujan</td>
+                            <td>Tinggi</td>
+                        </tr>
+                        <tr>
+                            <td>Drainase</td>
+                            <td>Buruk</td>
+                        </tr>
+                        <tr>
+                            <td>Sirkulasi Udara</td>
+                            <td>Kurang baik</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <!-- Right Side -->
-            <div class="col-lg-7">
+        </div>
+            </div>
+        
+            <div class="tab-pane" id="tab-bagian">
+        <p class="font-weight-narrow">
+            Penyakit Antraknosa menyerang hampir seluruh bagian tanaman cabai, namun serangan paling parah          umumnya terjadi pada buah. Gejala awal dapat muncul pada daun, batang, bunga, dan tangkai buah          berupa bercak kecil berwarna cokelat kehitaman. Pada buah, bercak akan berkembang menjadi cekung,       membusuk, dan menyebabkan buah mengering atau gugur sebelum panen. Serangan pada bunga dan tangkai       buah juga dapat menghambat pembentukan buah sehingga menurunkan produktivitas tanaman secara            signifikan.
+        </p>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-penanganan">
+        <div class="penanganan-box">
+          <p>Cabut dan buang tanaman yang terserang berat.</p>
+        </div>
+        <div class="penanganan-box">
+          <p>Gunakan fungisida sesuai dosis dan anjuran.</p>
+        </div>
+        <div class="penanganan-box">
+          <p>Lakukan rotasi tanaman secara berkala.</p>
+        </div>
+        <div class="penanganan-box">
+          <p>Jaga lahan agar tidak terlalu lembap.</p>
+        </div>
+        <div class="penanganan-box">
+          <p>Lakukan pemantauan rutin sejak dini.</p>
+        </div>
+            </div>
+        
+        </div>
 
-                <div class="card card-custom border-0 p-4 p-lg-5">
-
-                    <!-- Bagian Diserang -->
-                    <h5 class="section-title">
-                        Bagian Yang Diserang
-                    </h5>
-
-                    <ul>
-                        <li class="mb-2">Daun</li>
-                        <li class="mb-2">Batang</li>
-                        <li class="mb-2">Pelepah</li>
-                        <li class="mb-2">Leher Malai</li>
-                    </ul>
-
-                    <!-- Gejala -->
-                    <h5 class="section-title">
-                        Gejala
-                    </h5>
-
-                    <ul>
-                        <li class="mb-2">
-                            <b>Distorsi Daun:</b>
-                            Daun mengalami perubahan bentuk.
-                        </li>
-
-                        <li class="mb-2">
-                            <b>Pertumbuhan Terhambat:</b>
-                            Tanaman menjadi kerdil.
-                        </li>
-
-                        <li class="mb-2">
-                            <b>Bercak:</b>
-                            Muncul bercak coklat pada daun.
-                        </li>
-                    </ul>
-
-                    <!-- Detail Gejala -->
-                    <h5 class="section-title">
-                        Detail Gejala
-                    </h5>
-
-                    <p class="description-text">
-                        Gejala awal penyakit blas biasanya muncul pada daun berupa bercak kecil
-                        berwarna coklat kehijauan yang kemudian berkembang menjadi bercak lebih
-                        besar berbentuk belah ketupat.
-
-                        Bagian tengah bercak umumnya berwarna abu-abu atau putih keabu-abuan,
-                        sedangkan tepinya berwarna coklat tua atau hitam. Pada kondisi serangan
-                        berat, bercak dapat menyatu sehingga daun tampak mengering seperti
-                        terbakar.
-
-                        Selain menyerang daun, blas juga dapat menyerang leher malai yang
-                        ditandai dengan perubahan warna menjadi coklat kehitaman pada pangkal
-                        malai. Akibatnya, aliran nutrisi menuju bulir terganggu sehingga bulir
-                        padi menjadi hampa atau tidak terisi sempurna.
-
-                        Tanaman yang terserang parah biasanya terlihat lemah dan mudah patah.
-                    </p>
-
-                    <!-- Dampak -->
-                    <h5 class="section-title">
-                        Dampak
-                    </h5>
-
-                    <p class="description-text">
-                        Serangan penyakit blas dapat menyebabkan kerusakan besar pada tanaman
-                        padi. Daun yang terinfeksi akan kehilangan kemampuan melakukan
-                        fotosintesis secara optimal sehingga pertumbuhan tanaman menjadi
-                        terganggu.
-
-                        Jika jamur menyerang leher malai, proses pengisian bulir akan gagal dan
-                        menyebabkan banyak gabah menjadi kosong atau hampa. Pada tingkat serangan
-                        tinggi, hasil panen dapat menurun drastis bahkan menyebabkan gagal panen.
-
-                        Selain itu, kualitas gabah yang dihasilkan juga menjadi lebih rendah
-                        sehingga nilai jual hasil panen menurun.
-                    </p>
-
-                    <!-- Penanganan -->
-                    <h5 class="section-title">
-                        Penanganan
-                    </h5>
-
-                    <div class="warna p-4 rounded">
-
-                        <h6 class="fw-bold text-success mb-3">
-                            Solusi Pengendalian
-                        </h6>
-
-                        <p class="description-text mb-0">
-                            Pengendalian penyakit blas dapat dilakukan secara terpadu dengan
-                            menggabungkan metode kultur teknis, biologis, dan kimiawi.
-
-                            Tanaman yang terserang berat sebaiknya segera dicabut dan dibuang
-                            agar tidak menjadi sumber penyebaran penyakit. Penggunaan fungisida
-                            dapat dilakukan sesuai dosis dan anjuran untuk menekan perkembangan
-                            jamur.
-
-                            Selain itu, petani juga disarankan melakukan rotasi tanaman dan
-                            menjaga kondisi lahan agar tidak terlalu lembap sehingga perkembangan
-                            jamur dapat dikurangi.
-
-                            Pemantauan rutin pada tanaman sangat penting agar penanganan dapat
-                            dilakukan lebih cepat sebelum penyakit menyebar luas.
-                        </p>
-
-                    </div>
-
-                    <!-- Penyebab -->
-                    <h5 class="section-title mt-4">
-                        Penyebab
-                    </h5>
-
-                    <p class="description-text">
-                        Penyakit blas disebabkan oleh jamur Magnaporthe oryzae. Jamur ini
-                        berkembang dengan baik pada lingkungan yang memiliki kelembapan tinggi,
-                        suhu sekitar 25–28°C, curah hujan tinggi, dan sirkulasi udara yang kurang
-                        baik.
-
-                        Selain faktor lingkungan, penggunaan pupuk nitrogen secara berlebihan
-                        juga dapat meningkatkan risiko serangan penyakit blas karena tanaman
-                        menjadi lebih rentan terhadap infeksi jamur.
-
-                        Penyebaran jamur dapat terjadi melalui benih yang terinfeksi, percikan
-                        air hujan, angin, serta sisa jerami atau tanaman sakit yang masih berada
-                        di lahan.
-                    </p>
-
-                </div>
+        <div class="fact-card">
+            <div class="fact-content">
+                <h5>Tahukah Anda?</h5>
+                <p class="isi">
+                    Penyakit Antraknosa dapat menyebabkan kehilangan hasil panen
+                    hingga 50% jika tidak ditangani sejak gejala awal muncul.
+                </p>
             </div>
         </div>
+
     </div>
 
-        <footer class="footer-modern">
+    <footer class="footer-modern">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-4 mb-4">
+                <a class="footer-brand d-flex align-items-center" href="index.html">
+                    <img src="/static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 200px; height: 50px; object-fit: contain; margin-right: 10px; margin-left: 0%;">
+                </a>
+                <p class="text-white-50" style="font-size: 17px;">
+                    Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
+                </p>
+                <div class="social-links">
+                    </div>
+            </div>
 
-    <div class="container-xl">
+            <div class="col-lg-2 col-md-4 mb-4">
+                <h5 class="text-white mb-3">Produk</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="jenisPadi.html">Jenis Padi</a></li>
+                    <li><a href="informasi.html">Informasi</a></li>
+                </ul>
+            </div>
 
-      <div class="footer-top">
-
-        <div class="footer-brand">
-
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
-
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
-
+            <div class="col-lg-4 col-md-4 mb-4">
+                <h5 class="text-white mb-3">Solusi</h5>
+                <p class="text-white-50" style="font-size: 17px;">
+                    Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.
+                    </p>
+            </div>
+        </div>
+        
+        <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        
+        <div class="text-center">
+            <p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">
+                ©2026 ChiliCare - All Rights Reserved
+            </p>
         </div>
 
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
+        <div class="footer-brand-watermark">
+            ChiliCare
         </div>
-
-      </div>
-
-      <hr>
-
-      <div class="footer-bottom">
-
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
+    </div>
     </footer>
 
     <!-- Script -->
@@ -344,6 +339,64 @@
                 // JALUR B: Jika dari Informasi, dibiarkan saja (default)
             }
         });
+
+
+        // ================================
+        // Slider logic
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.querySelector('.slider-dots');
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+        
+            if (i === 0) {
+                dot.classList.add('active');
+            }
+        
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        let current = 0;
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+        
+            current = (index + slides.length) % slides.length;
+        
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        document.querySelector('.slider-prev')
+            .addEventListener('click', () => goTo(current - 1));
+
+        document.querySelector('.slider-next')
+            .addEventListener('click', () => goTo(current + 1));
+
+        // ================================
+        
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.dataset.tab;
+                
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById('tab-' + target).classList.add('active');
+            });
+        });
+        
+        // ================================
+        
     </script>
 
 </body>

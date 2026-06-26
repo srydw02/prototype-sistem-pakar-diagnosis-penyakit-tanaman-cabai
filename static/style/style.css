@@ -448,7 +448,7 @@ section {
 }
 
 /* =========================
-   CARD GRID INFORMASI
+   CARD GRID INFORMASI (SHOWCASE HIGHLIGHT)
 ========================= */
 
 .card-grid {
@@ -462,11 +462,9 @@ section {
     .card-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-
     .col-md-span-2 {
         grid-column: span 2;
     }
-
     .row-md-span-2 {
         grid-row: span 2;
     }
@@ -476,26 +474,48 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 24px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .5s ease;
+    /* DEFAULT: Gambar jadi abu-abu */
+    filter: grayscale(100%); 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* KETIKA KARTU DI-HOVER: Warna asli muncul dan nge-zoom */
 .info-card:hover img {
+    filter: grayscale(0%);
     transform: scale(1.08);
+}
+
+/* MAGIC SHOWCASE: Saat grid di-hover, kartu yang TIDAK ditunjuk mouse jadi makin gelap */
+.card-grid:hover .info-card:not(:hover) img {
+    filter: grayscale(100%) brightness(0.5);
 }
 
 .card-overlay {
     position: absolute;
     inset: 0;
+    /* DEFAULT: Overlay pakai warna hitam netral untuk mendukung efek abu-abu */
     background: linear-gradient(
         to top,
-        rgba(137,10,10,.85),
-        rgba(137,10,10,.2),
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.1),
+        transparent
+    );
+    transition: all 0.5s ease;
+}
+
+/* KETIKA KARTU DI-HOVER: Overlay berubah jadi warna merah/tema cabai */
+.info-card:hover .card-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(137,10,10,0.9),
+        rgba(137,10,10,0.2),
         transparent
     );
 }
@@ -507,6 +527,14 @@ section {
     width: 100%;
     padding: 24px;
     color: white;
+    /* Sedikit tersembunyi ke bawah (animasi naik) */
+    transform: translateY(10px);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* KETIKA KARTU DI-HOVER: Teks naik ke posisi normal */
+.info-card:hover .card-info {
+    transform: translateY(0);
 }
 
 .card-info h4 {

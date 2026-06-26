@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="gambar/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/images/icon/icon.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="static/style/style.css">
     <title>ChiliCare</title>
 </head>
 
 <body>
-    <!-- NAVBAR DARI INFORMASI.HTML (TEMA CABAI) -->
+    <!-- NAVBAR (TEMA CABAI) -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-xl">
             <a class="navbar-brand d-flex align-items-center" href="#home">
-                <img src="/static/images/icon/icon.svg" alt="ChiliCare Logo">
+                <img src="static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mainNavbarMenu"
@@ -45,37 +45,57 @@
         </div>
     </nav>
 
-    <section id="home" class="heroBWA">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-lg-7 col-12 align-self-center">
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;">
-                        SISTEM PAKAR PENYAKIT CABAI</p>
-                    <h1 class="mb-3 heading" style="color: #fff;">ChiliCare</h1>
-                    <h6 class="font-weight-normal mb-4">Diagnosis Penyakit Tanaman Cabai Menggunakan <br>Metode Forward
-                        Chaining</h6>
-                    <div class="d-flex flex-wrap mt-2" style="gap: 12px;">
-                        <a class="btn btn-primary" href="/template/diagnosis.html" role="button">Diagnosis Sekarang</a>
-                        <a class="btn btn-outline-hero" href="/template/caraKerja.html">Cara Kerja</a>
-                    </div>
-                </div>
+    <!-- HERO SECTION (TEKS) -->
+    <section id="home" class="hero-container">
+        <div class="hero-content" id="hero-heading-container">
+            <p class="hero-subtitle">SOLUSI CERDAS PETANI CABAI</p>
+            <h1 class="hero-main-heading">ChiliCare</h1>
+            <p class="hero-description">Identifikasi penyakit pada tanaman cabai Anda dengan cepat dan akurat untuk hasil panen yang maksimal.</p>
+            <div class="hero-buttons">
+                <a class="btn btn-primary hero-btn" href="template/diagnosis.html">Diagnosis Sekarang</a>
+                <a class="btn btn-outline-hero hero-btn" href="template/caraKerja.html">Cara Kerja</a>
             </div>
         </div>
     </section>
 
-    <section id="berita" class="berita">
-        <!-- KODE LAMA SECTION BERITA (DIKOMENTAR) -->
-        <!-- 
-        <div class="container-xl">
-            <h1 class="font-weight 700 sub-heading text-center" style="color: #000000;">Caritahu Berita Terkini</h1>
-            <p class="text-center font-weight-light mb-3">Update terbaru seputar dunia pertanian padi dan kesehatan tanaman</p>
-            <div class="headline-card animate-fade-in delay-1 mb-5">
-                ...
+    <!-- SECTION ALUR PREVIEW (ANIMASI JS ADA DI SINI) -->
+    <div class="hero-image-container" id="alur-preview">
+        <div class="alur-container">
+            <div class="text-center mb-5">
+                <p class="alur-label" style="color: #b91e1e; font-weight: 700; letter-spacing: 2px;">CARA KERJA</p>
+                <h1 class="sub-heading font-weight-bold" style="color: #000000;">Tiga Langkah Mudah<br>Menuju Hasil Akurat</h1>
             </div>
-        </div> 
-        -->
+            <div class="alur-grid">
+                <div class="alur-card">
+                    <div class="alur-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="alur-num">01</div>
+                    <h5 class="alur-step-title">Pilih Gejala</h5>
+                    <p class="alur-step-desc">Pilih gejala-gejala yang terlihat pada tanaman cabai Anda dari daftar yang tersedia.</p>
+                </div>
+                <div class="alur-connector">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="alur-card">
+                    <div class="alur-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="alur-num">02</div>
+                    <h5 class="alur-step-title">Analisis Sistem</h5>
+                    <p class="alur-step-desc">Sistem akan memproses data dan mencocokkan pola penyakit secara otomatis.</p>
+                </div>
+                <div class="alur-connector">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="alur-card">
+                    <div class="alur-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="alur-num">03</div>
+                    <h5 class="alur-step-title">Terima Hasil</h5>
+                    <p class="alur-step-desc">Dapatkan diagnosis lengkap disertai rekomendasi penanganan yang perlu dilakukan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- KODE BARU SECTION BERITA -->
+    <!-- SECTION BERITA -->
+    <section id="berita" class="berita">
         <div class="cb-container">
             <h1 class="font-weight 700 sub-heading text-center" style="color: #000000;">Caritahu Berita Terkini</h1>
             <p class="text-center font-weight-light mb-5">Update terbaru seputar dunia pertanian cabai dan kesehatan tanaman</p>
@@ -92,50 +112,15 @@
                 <div class="cb-dots-group">
                     <!-- Dots will be injected by Vanilla JS -->
                 </div>
-                <a href="./template/berita.html" class="cb-link" aria-label="Lihat Semua Berita">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 1rem; width: 1rem;">
-                        <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
-                        <path d="m21 3-9 9"></path>
-                        <path d="M15 3h6v6"></path>
-                    </svg>
-                </a>
+            </div>
+
+            <div class="text-center mt-5 mb-4 animate-fade-in delay-3">
+                <button class="btn btn-load-more shadow-sm" onclick="window.location.href='template/berita.html'">Lihat Semua Berita</button>
             </div>
         </div>
     </section>
 
     <section id="jenis-padi" class="jenis-padi-section bg-light">
-        <!-- KODE LAMA SECTION JENIS PADI (DIKOMENTAR) -->
-        <!-- 
-        <div class="container-xl">
-            <div class="text-center mb-3">
-                <h1 class="sub-heading" style="color: #000000;">Jenis Padi Populer</h1>
-                <p class="text-muted">Kenali beberapa varietas padi unggulan yang banyak dibudidayakan di Indonesia.</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="jenis-card">
-                        <div class="jenis-card-inner">
-                            <div class="jenis-card-front">
-                                <img src="/static/images/fotoJenisPadi/pandan.png" alt="Padi Pandan Wangi">
-                                <div class="front-overlay">
-                                    <h3>Pandan Wangi</h3>
-                                    <p>Aroma Pandan Alami</p>
-                                </div>
-                            </div>
-                            <div class="jenis-card-back">
-                                <h4>Pandan Wangi</h4>
-                                <p>Padi khas Cianjur dengan aroma wangi pandan yang alami dan rasa nasi yang sangat pulen.</p>
-                                <a href="/template/detailPadi/pandanWangi.html" class="btn-detail">Lihat Detail →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                ...
-            </div>
-        </div> 
-        -->
-
-        <!-- KODE BARU SECTION JENIS CABAI -->
         <div class="container-xl">
             <div class="text-center mb-4">
                 <h1 class="sub-heading" style="color: #000000;">Jenis Cabai Populer</h1>
@@ -143,35 +128,35 @@
             </div>
 
             <div class="ec-container">
-                <div class="ec-card active" style="background-image: url('/static/images/fotoJenisPadi/pandan.png');">
+                <div class="ec-card active" style="background-image: url('static/images/fotoJenisPadi/pandan.png');">
                     <div class="ec-overlay"></div>
                     <div class="ec-content">
                         <h3 class="ec-title">Cabai Rawit</h3>
                         <div class="ec-desc">
                             <p>Cabai rawit kecil namun pedasnya kuat, tahan penyakit dan sangat mudah dibudidayakan di berbagai iklim.</p>
-                            <a href="/template/detailPadi/pandanWangi.html" class="ec-btn">Lihat Detail →</a>
+                            <a href="template/detailPadi/pandanWangi.html" class="ec-btn">Lihat Detail →</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="ec-card" style="background-image: url('/static/images/fotoJenisPadi/mentiksusue.png');">
+                <div class="ec-card" style="background-image: url('static/images/fotoJenisPadi/mentiksusue.png');">
                     <div class="ec-overlay"></div>
                     <div class="ec-content">
                         <h3 class="ec-title">Cabai Merah Keriting</h3>
                         <div class="ec-desc">
                             <p>Sering digunakan untuk bahan baku industri, memiliki ukuran sedang dan warna merah cerah yang menarik.</p>
-                            <a href="/template/detailPadi/mentikSusu.html" class="ec-btn">Lihat Detail →</a>
+                            <a href="template/detailPadi/mentikSusu.html" class="ec-btn">Lihat Detail →</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="ec-card" style="background-image: url('/static/images/fotoJenisPadi/siamunus.png');">
+                <div class="ec-card" style="background-image: url('static/images/fotoJenisPadi/siamunus.png');">
                     <div class="ec-overlay"></div>
                     <div class="ec-content">
                         <h3 class="ec-title">Cabai Hijau Besar</h3>
                         <div class="ec-desc">
                             <p>Cocok untuk dijadikan cabai goreng, memiliki rasa yang sedikit manis dan daging buah yang tebal.</p>
-                            <a href="/template/detailPadi/siamUnus.html" class="ec-btn">Lihat Detail →</a>
+                            <a href="template/detailPadi/siamUnus.html" class="ec-btn">Lihat Detail →</a>
                         </div>
                     </div>
                 </div>
@@ -191,8 +176,8 @@
             </div>
             <div class="card-grid">
                 <div class="info-card col-md-span-2 row-md-span-2">
-                    <a href="/template/detailPenyakit/p1.html" class="d-block w-100 h-100">
-                        <img src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Blas (Blast).png">
+                    <a href="template/detailPenyakit/p1.html" class="d-block w-100 h-100">
+                        <img src="static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Blas (Blast).png">
                         <div class="card-overlay"></div>
                         <div class="card-info">
                             <h4>Busuk Buah Antraknosa</h4>
@@ -201,8 +186,8 @@
                     </a>
                 </div>
                 <div class="info-card">
-                    <a href="/template/detailPenyakit/p2.html" class="d-block w-100 h-100">
-                        <img src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Hawar Daun Bakteri (BLB).png">
+                    <a href="template/detailPenyakit/p2.html" class="d-block w-100 h-100">
+                        <img src="static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Hawar Daun Bakteri (BLB).png">
                         <div class="card-overlay"></div>
                         <div class="card-info">
                             <h4>Virus Kuning (Gemini)</h4>
@@ -211,8 +196,8 @@
                     </a>
                 </div>
                 <div class="info-card row-md-span-2">
-                    <a href="/template/detailPenyakit/p3.html" class="d-block w-100 h-100">
-                        <img src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Tungro.png">
+                    <a href="template/detailPenyakit/p3.html" class="d-block w-100 h-100">
+                        <img src="static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Tungro.png">
                         <div class="card-overlay"></div>
                         <div class="card-info">
                             <h4>Layu Fusarium</h4>
@@ -221,8 +206,8 @@
                     </a>
                 </div>
                 <div class="info-card">
-                    <a href="/template/detailPenyakit/p4.html" class="d-block w-100 h-100">
-                        <img src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Busuk Pelepah (Sheath Blight).png">
+                    <a href="template/detailPenyakit/p4.html" class="d-block w-100 h-100">
+                        <img src="static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Busuk Pelepah (Sheath Blight).png">
                         <div class="card-overlay"></div>
                         <div class="card-info">
                             <h4>Bercak Daun Cercospora</h4>
@@ -237,49 +222,13 @@
         </div>
     </section>
 
-    <!-- SECTION ALUR DIPINDAHKAN KE SINI (SETELAH INFORMASI) -->
-    <section id="alur" class="alur-section">
-        <div class="container-xl">
-            <div class="text-center mb-5">
-                <p class="alur-label">CARA KERJA</p>
-                <h1 class="sub-heading font-weight-bold" style="color: #000000;">Tiga Langkah Mudah<br>Menuju Hasil Akurat</h1>
-            </div>
-            <div class="alur-grid">
-                <div class="alur-card">
-                    <div class="alur-icon"><i class="fas fa-clipboard-list"></i></div>
-                    <div class="alur-num">01</div>
-                    <h5 class="alur-step-title">Pilih Gejala</h5>
-                    <p class="alur-step-desc">Pilih gejala-gejala yang terlihat pada tanaman cabai Anda dari daftar yang tersedia.</p>
-                </div>
-                <div class="alur-connector">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="alur-card">
-                    <div class="alur-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="alur-num">02</div>
-                    <h5 class="alur-step-title">Analisis Sistem</h5>
-                    <p class="alur-step-desc">Sistem Forward Chaining memproses data dan mencocokkan pola penyakit secara otomatis.</p>
-                </div>
-                <div class="alur-connector">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="alur-card">
-                    <div class="alur-icon"><i class="fas fa-check-circle"></i></div>
-                    <div class="alur-num">03</div>
-                    <h5 class="alur-step-title">Terima Hasil</h5>
-                    <p class="alur-step-desc">Dapatkan diagnosis lengkap disertai rekomendasi penanganan yang perlu dilakukan.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER DARI INFORMASI.HTML (TEMA CABAI) -->
+    <!-- FOOTER (TEMA CABAI) -->
     <footer class="footer-modern">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-4 mb-4">
                     <a class="navbar-brand d-flex align-items-center" href="index.html">
-                        <img src="/static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+                        <img src="static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
                     </a>
                     <p class="text-white-50 mt-3" style="font-size: 17px;">
                         Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
@@ -358,11 +307,11 @@
 
             // 3D Card Stack Logic (Berita)
             const items = [
-                { title: "Waspada Hama Thrips", desc: "Antisipasi Serangan Thrips pada Musim Tanam Cabai Ini", date: "12 MEI 2026", img: "./static/images/fotoberita/pestisida2.png", link: "./template/beritacabai/beritathrips.html" },
-                { title: "Waspada Penyakit Antraknosa", desc: "Cuaca Ekstrem dan Kelembapan Tinggi Mengancam Panen Cabai", date: "12 MEI 2026", img: "./static/images/fotoberita/homeberita1.jpg", link: "./template/beritacabai/waspadaantraknosa.html" },
-                { title: "Solusi Irigasi Cerdas", desc: "Ratusan Hektar Lahan Cabai Terdampak Kekeringan, Ini Solusinya", date: "28 APR 2026", img: "./static/images/fotoberita/kering.jpg", link: "./template/beritacabai/irigasicabai.html" },
-                { title: "Teknologi Sistem Pakar", desc: "Deteksi Penyakit Cabai Lebih Cepat dengan Aplikasi ChiliCare", date: "15 APR 2026", img: "./static/images/fotoberita/homeberita3.jpg", link: "./template/beritacabai/sistempakarcabai.html" },
-                { title: "Tips Budidaya Cabai", desc: "Pengendalian Hama Terpadu untuk Meningkatkan Produksi Cabai", date: "10 APR 2026", img: "./static/images/fotoberita/pestisida2.png", link: "./template/beritacabai/tipsbudidayacabai.html" }
+                { title: "Waspada Hama Thrips", desc: "Antisipasi Serangan Thrips pada Musim Tanam Cabai Ini", date: "12 MEI 2026", img: "static/images/fotoberita/pestisida2.png", link: "template/beritapadi/beritamamah.html" },
+                { title: "Waspada Penyakit Antraknosa", desc: "Cuaca Ekstrem dan Kelembapan Tinggi Mengancam Panen Cabai", date: "12 MEI 2026", img: "static/images/fotoberita/homeberita1.jpg", link: "template/beritapadi/waspadaseranganblast.html" },
+                { title: "Solusi Irigasi Cerdas", desc: "Ratusan Hektar Lahan Cabai Terdampak Kekeringan, Ini Solusinya", date: "28 APR 2026", img: "static/images/fotoberita/kering.jpg", link: "template/beritapadi/irigasi.html" },
+                { title: "Teknologi Sistem Pakar", desc: "Deteksi Penyakit Cabai Lebih Cepat dengan Aplikasi ChiliCare", date: "15 APR 2026", img: "static/images/fotoberita/homeberita3.jpg", link: "template/beritapadi/sistempakarbantu.html" },
+                { title: "Tips Budidaya Cabai", desc: "Pengendalian Hama Terpadu untuk Meningkatkan Produksi Cabai", date: "10 APR 2026", img: "static/images/fotoberita/pestisida2.png", link: "template/beritapadi/kementan.html" }
             ];
 
             let currentIndex = 2;
@@ -450,7 +399,7 @@
                         if (wrapped) {
                             card.style.transition = 'none';
                             card.style.transform = finalTransform;
-                            card.offsetHeight; // Force reflow
+                            card.offsetHeight;
                             card.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease';
                         } else {
                             card.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease';
@@ -558,6 +507,53 @@
             });
 
             init();
+
+            // SCROLL ANIMATION (MENGGUNAKAN MATEMATIKA YANG AMAN)
+            const heroHeading = document.getElementById('hero-heading-container');
+            const alurPreview = document.getElementById('alur-preview');
+
+            if (heroHeading && alurPreview) {
+                let ticking = false;
+
+                function updateScrollAnimation() {
+                    const scrollY = window.scrollY;
+                    
+                    // 1. Animasi Teks Hero (Fades out dan naik ke atas secara perlahan)
+                    const headingProgress = Math.min(scrollY / 300, 1);
+                    heroHeading.style.transform = `translateY(${-headingProgress * 150}px)`;
+                    heroHeading.style.opacity = Math.max(0, 1 - headingProgress * 1.5);
+
+                    // 2. Animasi Container Alur (Scale up dari 0.85 ke 1.0 saat di-scroll ke bawah)
+                    const alurRect = alurPreview.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    // Hitung kapan elemen masuk ke layar
+                    let scaleProgress = (windowHeight - alurRect.top) / (windowHeight * 0.85);
+                    scaleProgress = Math.max(0, Math.min(scaleProgress, 1)); 
+                    
+                    // Scale membesar saat di-scroll
+                    const currentScale = 0.85 + (scaleProgress * 0.15);
+                    
+                    // Efek dinamis pada border radius
+                    const currentRadius = 50 - (scaleProgress * 18);
+                    
+                    alurPreview.style.transform = `scale(${currentScale})`;
+                    alurPreview.style.borderRadius = `${currentRadius}px`;
+                    
+                    ticking = false;
+                }
+
+                function requestTick() {
+                    if (!ticking) {
+                        requestAnimationFrame(updateScrollAnimation);
+                        ticking = true;
+                    }
+                }
+
+                window.addEventListener('scroll', requestTick);
+                window.addEventListener('resize', requestTick);
+                updateScrollAnimation(); 
+            }
         });
     </script>
 </body>

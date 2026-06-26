@@ -10,8 +10,9 @@ body {
     scroll-behavior: smooth;
 }
 
-html {
-    overflow-y: scroll;
+html, body {
+    overflow-x: hidden; /* Mencegah kemunculan scrollbar horizontal */
+    width: 100%;
 }
 
 body {      
@@ -28,15 +29,156 @@ section {
 }
 
 /* =========================
-   HOME
+   HERO CONTAINER (FLUID FLOW - CSS MURNI)
 ========================= */
 
-#home {
-    min-height: 100vh;
+#home.hero-container {
+    position: relative;
+    background: #0a0000;
+    z-index: 1;
+    /* Jarak pasti aman dari Navbar (120px) + padding proporsional */
+    padding-top: calc(120px + 6vh); 
+    padding-bottom: 220px; 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    padding: 0 20px;
+    will-change: transform, opacity;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.hero-main-heading {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #ffffff 30%, #ff3939 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.hero-btn {
+    padding: 12px 30px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hero-container .btn-primary.hero-btn {
+    background: #b91e1e;
+    color: white;
+    border: none;
+}
+
+.hero-container .btn-primary.hero-btn:hover {
+    background: white;
+    color: #b91e1e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-container .btn-outline-hero.hero-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.7);
+}
+
+.hero-container .btn-outline-hero.hero-btn:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* CONTAINER ALUR (EFEK TUMPUK AMAN) */
+.hero-image-container {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    /* Negative margin narik dia ke atas nindih background hero */
+    margin: -160px auto 0 auto; 
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    padding: 50px 20px;
+    will-change: transform, border-radius;
+    transform-origin: center center;
+    transform: scale(0.85); /* Starting scale */
+}
+
+.hero-image-container .alur-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #home.hero-container {
+        padding-top: 130px;
+        padding-bottom: 180px;
+    }
+    
+    .hero-image-container {
+        margin-top: -100px;
+        padding: 30px 15px;
+    }
+
+    .hero-main-heading {
+        font-size: 3rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
 }
 
 /* =========================
@@ -44,11 +186,14 @@ section {
 ========================= */
 
 #berita {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 100px !important;
     padding-bottom: 100px !important;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    overflow-x: hidden; 
 }
 
 #berita .container-xl {
@@ -73,6 +218,9 @@ section {
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    background-color: #f8f9fa;
 }
 
 .jenis-padi-section {
@@ -97,6 +245,9 @@ section {
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
 }
 
 .info {
@@ -121,23 +272,7 @@ section {
 }
 
 /* =========================
-   ALUR
-========================= */
-
-#alur {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-#alur .container-xl {
-    width: 100%;
-}
-
-/* =========================
-   NAVBAR (TEMA CABAI DARI STYLE2.CSS)
+   NAVBAR (TEMA CABAI)
 ========================= */
 
 .navbar {
@@ -190,17 +325,18 @@ section {
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
     position: relative;
+    background-color: transparent !important; 
 }
 
 .navbar-nav .nav-link:hover {
     color: #a72828 !important;
-    background-color: #f8e9e9;
+    background-color: transparent !important; 
 }
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-link.active {
     color: #5e1b1b !important;
-    background-color: #f5e8e8;
+    background-color: transparent !important; 
     font-weight: 700;
 }
 
@@ -213,7 +349,7 @@ section {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #b91e1e; /* WARNA CABAI MERAH */
+    background: #b91e1e;
     transform: translateX(-50%) scale(0);
     opacity: 0;
     transition: .3s ease;
@@ -278,94 +414,6 @@ section {
 }
 
 /* =========================
-   HERO
-========================= */
-
-.heroBWA {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80') center center / cover no-repeat;
-}
-
-.heroBWA::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(137, 10, 10, 0.85) 0%,
-        rgba(137, 10, 10, 0.5) 60%,
-        rgba(137, 10, 10, 0.2) 100%
-    );
-    z-index: 0;
-}
-
-.heroBWA .container-xl {
-    position: relative;
-    z-index: 1;
-}
-
-.heroBWA h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #ffffff !important;
-}
-
-.heroBWA h6 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.85);
-}
-
-.heroBWA .btn-primary {
-    background: #b91e1e;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 14px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: .3s ease;
-    margin-top: 8px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.heroBWA .btn-primary:hover {
-    background: white;
-    color: #b91e1e;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.btn-outline-hero {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid rgba(255,255,255,0.7);
-    padding: 12px 30px;
-    border-radius: 14px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: .3s ease;
-    margin-top: 8px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-outline-hero:hover {
-    background: rgba(255,255,255,0.15);
-    border-color: #ffffff;
-    color: #ffffff;
-    transform: translateY(-3px);
-    text-decoration: none;
-}
-
-/* =========================
    BUTTON
 ========================= */
 
@@ -398,62 +446,6 @@ section {
 .card:hover {
     transform: translateY(-6px);
 }
-
-/* =========================
-   BERITA CARD (LAMA - DIKOMENTAR)
-========================= */
-/*
-.berita {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.berita-card {
-    background: white;
-    box-shadow: 0 6px 20px rgba(40,167,69,.08);
-}
-
-.berita-card:hover {
-    box-shadow: 0 12px 28px rgba(40,167,69,.15);
-}
-
-.berita-img {
-    height: 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-}
-
-.badge-kategori {
-    background: #28a745;
-    color: white;
-    border-radius: 20px;
-    padding: 5px 12px;
-    font-size: .75rem;
-    display: inline-block;
-}
-
-.card-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #1d3d1d;
-    line-height: 1.5;
-}
-
-.card-text {
-    color: #666;
-    line-height: 1.7;
-}
-
-.card-footer-meta {
-    padding: 14px 18px;
-    background: #f4fbf4;
-    border-top: 1px solid #e6f3e6;
-    font-size: .82rem;
-}
-*/
 
 /* =========================
    CARD GRID INFORMASI
@@ -527,7 +519,7 @@ section {
 }
 
 /* =========================
-   FOOTER (TEMA CABAI DARI STYLE2.CSS)
+   FOOTER (TEMA CABAI)
 ========================= */
 
 .footer-modern {
@@ -539,6 +531,7 @@ section {
     border-top-right-radius: 40px;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .footer-modern::before {
@@ -614,122 +607,6 @@ section {
 }
 
 /* =========================
-   FLIP CARD (LAMA - DIKOMENTAR)
-========================= */
-/*
-.jenis-card {
-    width: 100%;
-    height: 430px;
-    perspective: 1200px;
-}
-
-.jenis-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform .8s;
-    transform-style: preserve-3d;
-}
-
-.jenis-card:hover .jenis-card-inner {
-    transform: rotateY(180deg);
-}
-
-.jenis-card-front,
-.jenis-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
-    overflow: hidden;
-    backface-visibility: hidden;
-    box-shadow: 0 12px 30px rgba(0,0,0,.08);
-}
-
-.jenis-card-front {
-    background: white;
-}
-
-.jenis-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s ease;
-}
-
-.jenis-card:hover img {
-    transform: scale(1.08);
-}
-
-.front-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,.85),
-        rgba(0,0,0,.2),
-        transparent
-    );
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 24px;
-}
-
-.front-overlay h3 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.front-overlay p {
-    color: rgba(255,255,255,.85);
-    margin: 0;
-}
-
-.jenis-card-back {
-    background: linear-gradient(135deg, #ffffff, #ffffff);
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-}
-
-.jenis-card-back h4 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #0b8f1f;
-    margin-bottom: 16px;
-}
-
-.jenis-card-back p {
-    color: #444;
-    line-height: 1.9;
-    margin-bottom: 24px;
-}
-
-.btn-detail {
-    display: inline-block;
-    width: fit-content;
-    background: #0b8f1f;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: .3s ease;
-}
-
-.btn-detail:hover {
-    background: #087017;
-    color: white;
-    text-decoration: none;
-    transform: translateY(-2px);
-}
-*/
-
-/* =========================
    ANIMASI BERITA
 ========================= */
 
@@ -742,78 +619,6 @@ section {
 .delay-1 { animation-delay: 0.2s; opacity: 0; }
 .delay-2 { animation-delay: 0.4s; opacity: 0; }
 .delay-3 { animation-delay: 0.6s; opacity: 0; }
-
-/* KODE LAMA NEWS CARD (DIKOMENTAR) */
-/*
-.news-card {
-    background: white;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-radius: 20px;
-    transition: all 0.4s ease;
-    height: 100%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
-    overflow: hidden;
-    text-align: left;
-}
-
-.news-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(45, 106, 79, 0.15);
-    border-color: rgba(116, 198, 157, 0.2);
-}
-
-.news-card-img-wrapper {
-    overflow: hidden;
-    position: relative;
-}
-
-.news-card img {
-    height: 180px;
-    object-fit: cover;
-    width: 100%;
-    transition: transform 0.5s ease;
-    background: #e0e0e0;
-}
-
-.news-card:hover img {
-    transform: scale(1.08);
-}
-
-.badge-overlay {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 6px 12px;
-    font-size: 0.8rem;
-    z-index: 10;
-}
-
-.badge-hama { background: rgba(254, 226, 226, 0.85); color: #dc2626; border: 1px solid rgba(254, 202, 202, 0.5); }
-.badge-tips { background: rgba(220, 252, 231, 0.85); color: #16a34a; border: 1px solid rgba(187, 247, 208, 0.5); }
-.badge-pasar { background: rgba(254, 249, 195, 0.85); color: #854d0e; border: 1px solid rgba(254, 240, 138, 0.5); }
-
-.card-title {
-    font-weight: 800;
-    line-height: 1.4;
-    font-size: 1.15rem;
-    margin-top: 10px;
-    color: #1b4332;
-}
-
-.read-link {
-    color: #74c69d;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.news-card:hover .read-link {
-    color: #2d6a4f;
-}
-*/
 
 @keyframes pulseGlow {
     0% { box-shadow: 0 0 0 0 rgba(185, 30, 30, 0.4); }
@@ -844,95 +649,20 @@ section {
     animation: pulseGlow 1.5s infinite;
 }
 
-/* KODE LAMA HEADLINE CARD (DIKOMENTAR) */
-/*
-.headline-card {
-    background: white;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-bottom: 60px;
-    border: 1px solid rgba(0,0,0,0.03);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.headline-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(45, 106, 79, 0.15);
-}
-
-.headline-card .img-wrapper {
-    overflow: hidden;
-    height: 100%;
-}
-
-.headline-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.7s ease;
-    background: #e0e0e0;
-}
-
-.headline-card:hover .headline-img {
-    transform: scale(1.05);
-}
-
-.btn-read-more {
-    background: #d8f3dc;
-    color: #2d6a4f;
-    font-weight: 700;
-    border-radius: 12px;
-    padding: 12px 24px;
-    transition: all 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    width: fit-content;
-}
-
-.btn-read-more:hover {
-    background: #2d6a4f;
-    color: white;
-    text-decoration: none;
-}
-
-.btn-read-more i { transition: transform 0.3s; }
-.btn-read-more:hover i { transform: translateX(5px); }
-*/
-
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (UMUM)
 ========================= */
 
 @media screen and (max-width: 768px) {
-
-    #home,
     #berita,
     #jenis-padi,
-    #informasi,
-    #alur {
+    #informasi {
         padding-top: 90px;
         padding-bottom: 60px;
     }
 
-    .heroBWA {
-        text-align: center;
-    }
-
-    .heroBWA h1,
-    .heading {
-        font-size: 2.5rem;
-    }
-
     .sub-heading {
         font-size: 2rem;
-    }
-
-    .heroBWA img {
-        width: 100%;
-        margin-top: 40px;
     }
 
     .navbar-nav {
@@ -964,23 +694,6 @@ section {
     .jenis-padi-section {
         padding: 0;
     }
-
-    .jenis-card {
-        height: 360px;
-    }
-
-    .front-overlay h3 {
-        font-size: 1.5rem;
-    }
-
-    .jenis-card-back h4 {
-        font-size: 1.5rem;
-    }
-
-    .jenis-card-back p {
-        font-size: .95rem;
-        line-height: 1.7;
-    }
 }
 
 button.btn-outline-hero {
@@ -994,8 +707,10 @@ button.btn-outline-hero {
     }
 }
 
-/* berita card */
-/* Scoped CSS for 3D Card Stack */
+/* =========================
+   BERITA CARD SCSS (3D STACK)
+========================= */
+
 .cb-container {
     width: 100%;
     max-width: 64rem;
@@ -1147,8 +862,10 @@ button.btn-outline-hero {
 }
 .cb-link:hover { color: #b91e1e; }
 
-/* jenis card */
-/* Scoped CSS for Expand Cards */
+/* =========================
+   JENIS CABAI CARD (EXPAND)
+========================= */
+
 .ec-container {
     display: flex;
     width: 100%;

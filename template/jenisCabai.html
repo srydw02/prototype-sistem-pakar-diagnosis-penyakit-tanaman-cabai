@@ -10,314 +10,776 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="/static/style/style4.css" />
-
-  <title>Jenis Padi │ SiPadi</title>
+  <title>Jenis Cabai │ ChiliCare</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-xl">
-      <a class="navbar-brand d-flex align-items-center">
-        <img src="/static/images/logo2.png" alt="Logo SiPadi"
-          style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-        <h3 style="color: green; margin: 0;">SiPadi</h3>
-      </a>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-xl">
 
-      <!-- Button Mobile -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Menu -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav ml-auto">
-
-          <li class="nav-item align-self-center">
-            <a class="nav-link" href="/index.html">Home</a>
-          </li>
-
-          <li class="nav-item align-self-center">
-            <a class="nav-link" href="/template/berita.html">Berita</a>
-          </li>
-
-          <li class="nav-item align-self-center active">
-            <a class="nav-link active" href="/template/jenisPadi.html">Jenis Padi</a>
-          </li>
-
-          <li class="nav-item align-self-center">
-            <a class="nav-link" href="/template/informasi.html">Informasi</a>
-          </li>
-
-
-
-          <li class="nav-item align-self-center active">
-            <a class="btn px-4 btn-primary ml-2 btn-register" href='/template/diagnosis.html' role="button">
-
-              Diagnosis
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
-          </li>
 
-        </ul>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mainNavbarMenu"
+                aria-controls="mainNavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      </div>
+            <div class="collapse navbar-collapse" id="mainNavbarMenu">
+                <div class="d-lg-flex w-100 justify-content-between align-items-center">
+
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/template/berita.html">Berita</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/template/jenisPadi.html">Jenis Cabai</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/template/informasi.html">Informasi</a></li>
+                    </ul>
+
+                    <div class="navbar-action-btn-group my-2 my-lg-0">
+                        <a class="btn btn-diagnosis-nav shadow-sm" href="diagnosis.html" role="button">
+                            <i class="fas fa-stethoscope"></i>Diagnosis
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="container-fluid p-0" style="margin-top: 30px; margin-bottom: 90px;">
+        <div class="hero-folder-wrapper">
+         
+            <div class="hero-folder-front">
+                <!-- <div class="hero-tab-front">Penyakit Cabai</div> -->
+
+                <div class="container">
+                    <div class="hero-content align-items-right">
+                        <div class="col-lg-12 text-lg-left">
+                            <h1 class="display-4 font-weight-bold text-white mb-3" style="font-size: 2.8rem; line-height: 1.2; margin-top: 40px;">
+                                 Jenis Jenis Cabai <br>
+                            </h1>
+                            <p class="lead col-lg-12 text-white" style="font-size: 1.08rem; font-weight: 400; opacity: 0.9;">Jelajahi berbagai spesies cabai beserta karakteristik, tingkat kepedasan, serta beragam varietas yang dibudidayakan di berbagai belahan dunia.
+                            </p>
+                        </div>
+                        <div class="button-header mt-4 flex-wrap">
+                            <a href="#jenis-cabai" class="btn-header btn-lg me-3">
+                                Lihat Jenis
+                            </a>
+                        
+                            <!-- <a href="#cari-varietas" class="btn-header btn-outline-header btn-lg">
+                                Cari Varietas
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hero-polygon-left"></div>
+        </div>
+    </header>
+
+
+    <!-- =========================
+    TENTANG JENIS CABAI
+        ========================= -->
+    <section id="tentang-cabai" class="py-5">
+        <div class="container">
+
+            <div class="row align-items-center">
+                <!-- Gambar -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="about-image">
+                        <img src="/static/images/jenis_cabai/cabai_Capsicum.png"
+                            alt="Jenis Cabai"
+                            class="img-fluid">
+                            <p></p>
+                    </div>
+                </div>
+
+                <!-- Konten -->
+                <div class="col-lg-7">
+                    <h2 class="section-title">
+                        Mengenal Jenis-Jenis Cabai
+                    </h2>
+                    <p class="section-description">
+                        Cabai (<i>Capsicum</i>) merupakan tanaman hortikultura yang memiliki
+                        berbagai spesies dengan karakteristik berbeda, mulai dari bentuk buah,
+                        ukuran, warna, hingga tingkat kepedasan. Perbedaan tersebut menjadikan
+                        setiap jenis cabai memiliki keunggulan dan potensi budidaya yang
+                        berbeda-beda.
+                    </p>
+                    <p class="section-description">
+                        ChiliCare mengorganisasi informasi cabai berdasarkan lima spesies budidaya utama, sehingga setiap varietas lokal dapat dikenali dengan lebih terstruktur dan praktis.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-card">
+                            <h3>5</h3>
+                            <span>Spesies Utama</span>
+                        </div>
+                        <div class="info-card">
+                            <h3>20+</h3>
+                            <span>Varietas Lokal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+    JENIS CABAI
+    ========================= -->
+    <section id="jenis-cabai" class="jenis-cabai-section">
+
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    Lima Spesies Utama
+                </h2>
+                <p class="section-description mx-auto" style="text-align: center; font-size: 17px;">
+                    Cabai budidaya dikelompokkan menjadi lima spesies utama berdasarkan
+                    karakteristik morfologi, tingkat kepedasan, serta potensi budidayanya.
+                    Pilih salah satu untuk mempelajari lebih lanjut.
+                </p>
+            </div>
+            <div class="row cabai g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="jenis-card">
+                        <img src="/static/images/jenis_cabai/capsium_annuum.jpg" alt="Capsicum annuum">
+                        <div class="jenis-content">
+                            <span class="jenis-badge">
+                                Cabai Merah & Keriting
+                            </span>
+                            <h3>Capsicum annuum</h3>
+                            <p>
+                                Spesies cabai yang paling banyak dibudidayakan di Indonesia,
+                                meliputi cabai merah besar, cabai keriting, dan paprika.
+                            </p>
+                            <a href="javascript:void(0)"
+                               class="btn-jenis"
+                               onclick="openModal('modal-annuum')">
+                                Pelajari →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="jenis-card">
+                        <img src="/static/images/jenis_cabai/Capsicum_frutescens.png" alt="Capsicum frutescens">
+                        <div class="jenis-content">
+                            <span class="jenis-badge">
+                                Cabai Rawit
+                            </span>
+                            <h3>Capsicum frutescens</h3>
+                            <p>
+                                Dikenal sebagai cabai rawit dengan ukuran kecil,
+                                rasa sangat pedas, dan produktivitas tinggi.
+                            </p>
+                            <a href="javascript:void(0)"
+                               class="btn-jenis"
+                               onclick="openModal('modal-frutescens')">
+                                Pelajari →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="jenis-card">
+                        <img src="/static/images/jenis_cabai/Capsicum_chinense.jpg" alt="Capsicum chinense">
+                        <div class="jenis-content">
+                            <span class="jenis-badge">
+                                Katokkon & Cotoh
+                            </span>
+                            <h3>Capsicum chinense</h3>
+                            <p>
+                                Memiliki aroma khas, bentuk buah beragam,
+                                dan dikenal memiliki tingkat kepedasan tinggi.
+                            </p>
+                            <a href="javascript:void(0)"
+                               class="btn-jenis"
+                               onclick="openModal('modal-chinense')">
+                                Pelajari →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="jenis-card">
+                        <img src="/static/images/jenis_cabai/capsicum_baccatum.jpg" alt="Capsicum baccatum">
+                        <div class="jenis-content">
+                            <span class="jenis-badge">
+                                Cabai Baccatum
+                            </span>
+                            <h3>Capsicum baccatum</h3>
+                            <p>
+                                Memiliki bunga putih dengan bercak kuning
+                                dan lebih banyak ditemukan di wilayah Amerika Selatan.
+                            </p>
+                            <a href="javascript:void(0)"
+                               class="btn-jenis"
+                               onclick="openModal('modal-baccatum')">
+                                Pelajari →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="jenis-card">
+                        <img src="/static/images/jenis_cabai/capsicum_pubescens.jpg" alt="Capsicum pubescens">
+                        <div class="jenis-content">
+                            <span class="jenis-badge">
+                                Bodong & Wudel
+                            </span>
+                            <h3>Capsicum pubescens</h3>
+                            <p>
+                                Cabai dataran tinggi yang memiliki bunga ungu
+                                dan biji berwarna hitam kecokelatan.
+                            </p>
+                            <a href="javascript:void(0)"
+                               class="btn-jenis"
+                               onclick="openModal('modal-pubescens')">
+                                Pelajari →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Capsicum annuum -->
+    <div id="modal-annuum" class="cabai-modal">
+        <div class="cabai-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+
+                <div class="image-slider">
+                    <button class="slide-btn prev" onclick="plusSlides('modal-annuum',-1)">&#10094;</button>
+                    <div class="slide active">
+                        <img src="/static/images/jenis_cabai/annuum/CabaiKeriting.png" alt="">
+                        <div class="slide-caption">
+                            Cabai Keriting
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/CabaiMerahBesar2.jpeg" alt="">
+                        <div class="slide-caption">
+                            Cabai Merah Besar
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/Paprika.png" alt="">
+                        <div class="slide-caption">
+                            Paprika
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/cheongyang.jpg" alt="">
+                        <div class="slide-caption">
+                            Cheongyang
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/medusa.jpg" alt="">
+                        <div class="slide-caption">
+                            Medusa
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/Serranochilis.jpg" alt="">
+                        <div class="slide-caption">
+                            Serrano
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/Anaheim_Chili_Peppers.jpg" alt="">
+                        <div class="slide-caption">
+                            Anaheim
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/annuum/C_annuum_black_hungarian_fruits.jpg" alt="">
+                        <div class="slide-caption">
+                            Black Hungarian
+                        </div>
+                    </div>
+                    <button class="slide-btn next" onclick="plusSlides('modal-annuum',1)">&#10095;</button>
+                </div>
+            </div>
+            <h2>Capsicum annuum</h2>
+            <p>
+                Capsicum annuum adalah spesies cabai paling luas dibudidayakan di Indonesia dan dunia. Termasuk cabai merah besar, cabai keriting, paprika, serta banyak varietas lokal. Spesies ini dikenal dengan produktivitas tinggi dan variasi bentuk buah yang beragam.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Karakteristik</h5>
+                        <ul>
+                            <li>Buah panjang hingga besar, bentuk keriting atau blocky (paprika).</li>
+                            <li>Warna buah hijau → merah saat matang.</li>
+                            <li>Tingkat kepedasan sedang, lebih rendah dibanding C. frutescens atau C. chinense.</li>
+                            <li>Adaptif di dataran rendah maupun menengah.</li>
+                            <li>Produktivitas tinggi, banyak varietas unggul lokal.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Varietas</h5>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Indonesia</span><br>
+                        <span class="chip">Tanjung-2</span>
+                        <span class="chip">Lingga</span>
+                        <span class="chip">Kencana</span>
+                        <span class="chip">Andalas</span>
+                        <span class="chip">Keriting Bukittinggi</span>
+                        <span class="chip">Kopay</span>
+                        <hr>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Internasional</span><br>
+                        <span class="chip">Huacle (Meksiko)</span>
+                        <span class="chip">Mirasol (Amerika Latin)</span>
+                        <span class="chip">Paprika (global)</span>
+                    </div>
+                </div>
+                <div class="sumber" style="color: dimgrey; font-size: 13px; padding-left: 20px;  padding-top: 15px;">
+                    <p>Nugroho et al., 2019 – Analisis keragaman genetik cabai Indonesia. | Terryana et al., 2020 – DNA fingerprint varietas lokal. | Ediwirman et al., 2023 – Uji penampilan genotipe cabai Sumatra Barat. | Budiyanti et al., 2024 – Keragaman genetik cabai lokal Sumatra.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <section class="bg-light" id="hero">
+    <!-- Modal Capsicum frutescens -->
+    <div id="modal-frutescens" class="cabai-modal">
+        <div class="cabai-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+
+                <div class="image-slider">
+                    <button class="slide-btn prev" onclick="plusSlides('modal-frutescens',-1)">&#10094;</button>
+                    <div class="slide active">
+                        <img src="/static/images/jenis_cabai/frutescens/CabaiRawit.png" alt="">
+                        <div class="slide-caption">
+                            Cabai Rawit
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/frutescens/Tabasco.png" alt="">
+                        <div class="slide-caption">
+                            Tabasco
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/frutescens/African_red_devil_peppers.jpg" alt="">
+                        <div class="slide-caption">
+                            Peri-peri(African Birdseye)
+                        </div>
+                    </div>
+                    <button class="slide-btn next" onclick="plusSlides('modal-frutescens',1)">&#10095;</button>
+                </div>
+            </div>
+            <h2>Capsicum frutescens</h2>
+            <p>
+                Capsicum frutescens adalah cabai liar yang memiliki kedekatan genetik dengan cabai budidaya Capsicum chinense .Cabai ini berasal dari Amerika Tengah dan Selatan serta Meksiko. Kultivar cabai C. frutescens dapat berupa tanaman tahunan atau tanaman tahunan berumur pendek. Buahnya kecil, ramping, dengan tingkat kepedasan tinggi. Spesies ini banyak dipakai dalam sambal dan masakan Nusantara, serta memiliki varietas lokal khas di berbagai daerah.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Karakteristik</h5>
+                        <ul>
+                            <li>Buah kecil, ramping, panjang ±2–5 cm.</li>
+                            <li>Warna buah hijau → merah saat matang.</li>
+                            <li>Tingkat kepedasan tinggi (lebih pedas dari C. annuum).</li>
+                            <li>Cocok dibudidayakan di dataran rendah hingga menengah.</li>
+                            <li>Produktivitas sedang, tapi nilai ekonomis tinggi karena permintaan pasar stabil.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Varietas</h5>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Indonesia</span><br>
+                        <span class="chip"> Prima Agrihorti</span>
+                        <span class="chip">Tripang</span>
+                        <span class="chip">Madun</span>
+                        <span class="chip">Midun</span>
+                        <span class="chip">Tunduk</span>
+                        <span class="chip">Rama</span>
+                        <span class="chip">Hiyung (varietas khas Kalimantan Selatan).</span>
+                        <hr>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Internasional</span><br>
+                        <span class="chip">Bird’s eye chilli (Asia Tenggara)</span>
+                        <span class="chip">Donne’ (Guam)</span>
+                        <span class="chip">tabasco(Portuguese)</span>
+                    </div>
+                </div>
+                <div class="sumber" style="color: dimgrey; font-size: 13px; padding-left: 20px;  padding-top: 15px;">
+                    <p>Nugroho et al., 2019 – Analisis keragaman genetik cabai rawit Indonesia. | Mahmudah & Badruzsaufari, 2020 – Studi fenetik cabai Hiyung. | Jaiswal et al., 2021 – Genetika dan pemuliaan cabai Capsicum frutescens. | Carvalho et al., 2014 – Hubungan morfologi dan genetik antara bentuk liar dan domestikasi C. frutescens dan C. chinense. | wikipedia.org</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Capsicum chinense -->
+    <div id="modal-chinense" class="cabai-modal">
+        <div class="cabai-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+
+                <div class="image-slider">
+                    <button class="slide-btn prev" onclick="plusSlides('modal-chinense',-1)">&#10094;</button>
+                    <div class="slide active">
+                        <img src="/static/images/jenis_cabai/chinense/habanero.jpg" alt="">
+                        <div class="slide-caption">
+                            Habanero
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/Capsicum_chinense_flower.jpg" alt="">
+                        <div class="slide-caption">
+                            Bunga C. Chinense (Madame Jeanette)
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/CarolinaReaper.jpg" alt="">
+                        <div class="slide-caption">
+                            Carolina Reaper
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/GhostPeppe(BhutJolokia).jpg" alt="">
+                        <div class="slide-caption">
+                            Ghost Pepper (Bhut Jolokia)
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/Madame_Jeanette_chili.jpg" alt="">
+                        <div class="slide-caption">
+                            Madame Jeanette
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/Scotch Bonnet.png" alt="">
+                        <div class="slide-caption">
+                            Scotch Bonnet (Karibia)
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/Naga_jolokia_chili.jpg" alt="">
+                        <div class="slide-caption">
+                            Naga Morich
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/Capsicum_chinense_NuMex_Suave_Oran.jpg" alt="">
+                        <div class="slide-caption">
+                            NuMex peppers
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/chinense/Pots_of_Trinidad_Scorpion.jpg" alt="">
+                        <div class="slide-caption">
+                            Trinidad Scorpion 'Butch T'
+                        </div>
+                    </div>
+                    <button class="slide-btn next" onclick="plusSlides('modal-chinense',1)">&#10095;</button>
+                </div>
+            </div>
+            <h2>Capsium Chinense</h2>
+            <p>
+                Capsicum chinense, umumnya dikenal sebagai "cabai jenis habanero", adalah spesies cabai asli Amerika. Varietas C. chinense terkenal karena rasa uniknya dan dalam banyak kasus, tingkat kepedasannya yang luar biasa. Cabai terpedas di dunia adalah anggota spesies ini, dengan skor unit panas Scoville sebesar 2,69 juta yang diukur padakultivar C. chinense Pepper X pada tahun 2023. <br>
+                Spesies ini mencakup cabai Katokkon (Toraja), Cotoh (Batu), serta varietas internasional seperti Habanero dan Bhut Jolokia. Buahnya sering beraroma khas dan bentuk blocky/berlekuk.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Karakteristik</h5>
+                        <ul>
+                            <li>Buah blocky atau berlekuk, ukuran sedang.</li>
+                            <li>Warna buah hijau → oranye/merah saat matang.</li>
+                            <li>Tingkat kepedasan sangat tinggi (lebih tinggi dari C. annuum dan C. frutescens).</li>
+                            <li>Aroma khas fruity atau smoky.</li>
+                            <li>Adaptasi kuat di daerah tropis, terutama kantong keragaman lokal di Toraja.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Varietas</h5>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Indonesia</span><br>
+                        <span class="chip"> Katokkon (Toraja)</span>
+                        <span class="chip">Cotoh (Batu, Malang)</span>
+                        <span class="chip">Limbong Sangpolo</span>
+                        <span class="chip">Leatung 1 & 2</span>
+                        <span class="chip">Jumbo</span>
+                        <hr>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Internasional</span><br>
+                        <span class="chip">Habanero (Amerika Tengah)</span>
+                        <span class="chip">Bhut Jolokia (India)</span>
+                        <span class="chip">Scotch Bonnet (Karibia)</span>
+                    </div>
+                </div>
+                <div class="sumber" style="color: dimgrey; font-size: 13px; padding-left: 20px;  padding-top: 15px;">
+                    <p>Amanah et al., 2024 – Analisis molekuler Katokkon dengan ISSR markers. | Prayuda et al., 2024 – Karakterisasi kuantitatif varietas Katokkon Toraja. | Yamamoto et al., 2014 – Sejarah dan distribusi C. chinense di Indonesia. | Carvalho et al., 2014 – Hubungan morfologi dan genetik C. frutescens dan C. chinense. | wikipedia.org</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Capsicum baccatum -->
+    <div id="modal-baccatum" class="cabai-modal">
+        <div class="cabai-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+
+                <div class="image-slider">
+                    <button class="slide-btn prev" onclick="plusSlides('modal-baccatum',-1)">&#10094;</button>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/baccatum/Aji_amarillo.jpg" alt="">
+                        <div class="slide-caption">
+                            Aji Amarillo
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/baccatum/Capsicum_baccatum_flower.jpg" alt="">
+                        <div class="slide-caption">
+                            Capsicum Baccatum Flower
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/baccatum/C_baccatum_lemon_drop.jpg" alt="">
+                        <div class="slide-caption">
+                            Aji Lemon Drop (Bolivia)
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/baccatum/Pimiento_campanilla.jpg" alt="">
+                        <div class="slide-caption">
+                            Bishop's Crown
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/baccatum/Peppadew.jpg" alt="">
+                        <div class="slide-caption">
+                            Piquante pepper
+                        </div>
+                    </div>
+                    <button class="slide-btn next" onclick="plusSlides('modal-baccatum',1)">&#10095;</button>
+                </div>
+            </div>
+            <h2>Capsium Baccatum</h2>
+            <p>
+                Capsicum baccatum , juga disebut sebagai ají (bahasa Spanyol:[aˈxi]), adalah anggota genus Capsicum , dan merupakan salah satu dari lima spesies cabai yang dibudidayakan. Buahnya cenderung sangat pedas dan memiliki tingkat kepedasan 30.000 hingga 50.000 pada skala satuan panas Scoville. <br>
+                Varietas cabai dalam spesies C. baccatum memiliki bunga berwarna putih atau krem ​​dan biasanya memiliki mahkota bunga berwarna hijau atau emas. Bunga-bunga tersebut diserbuki oleh serangga atau penyerbukan sendiri. Buah cabai dari spesies baccatum telah dibudidayakan menjadi berbagai bentuk dan ukuran, tidak seperti spesies capsicum lainnya yang cenderung memiliki bentuk yang khas. Tidak seperti tanaman Capsicum frutescens , buah cabai biasanya menggantung ke bawah dan dapat memiliki rasa jeruk atau buah-buahan.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Karakteristik</h5>
+                        <ul>
+                            <li>Buah berukuran sedang, sering berbentuk lonceng atau melengkung.</li>
+                            <li>Warna buah bervariasi: hijau → merah, oranye, atau kuning.</li>
+                            <li>Tingkat kepedasan sedang hingga tinggi, dengan rasa fruity.</li>
+                            <li>Bunga biasanya memiliki bercak kuning khas pada mahkota.</li>
+                            <li>Lebih banyak ditemukan di dataran menengah hingga tinggi.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Varietas</h5>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Internasional</span><br>
+                        <span class="chip">Aji Amarillo (Peru)</span>
+                        <span class="chip">Aji Cristal (Chile)</span>
+                        <span class="chip">Aji Lemon Drop (Bolivia)</span>
+                        <span class="chip">Aji Panca (Peru)</span>
+                    </div>
+                </div>
+                <div class="sumber" style="color: dimgrey; font-size: 13px; padding-left: 20px;  padding-top: 15px;">
+                    <p>Liu et al., 2023 – Genom Capsicum budidaya dan liar, termasuk C. baccatum. | Ibiza et al., 2012 – Taksonomi dan keragaman genetik cabai di Andes. | wikipedia.org</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Capsicum pubescens -->
+    <div id="modal-pubescens" class="cabai-modal">
+        <div class="cabai-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+
+                <div class="image-slider">
+                    <button class="slide-btn prev" onclick="plusSlides('modal-pubescens',-1)">&#10094;</button>
+                    <div class="slide active">
+                        <img src="/static/images/jenis_cabai/pubescens/Capsicum_pubescens_(Rocoto).JPG" alt="">
+                        <div class="slide-caption">
+                            Rocoto
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/static/images/jenis_cabai/pubescens/Capsicum_pubescens_canario.jpg" alt="">
+                        <div class="slide-caption">
+                            Canário
+                        </div>
+                    </div>
+                    <button class="slide-btn next" onclick="plusSlides('modal-pubescens',1)">&#10095;</button>
+                </div>
+            </div>
+            <h2>Capsium Pubescens</h2>
+            <p>
+                Capsicum pubescens adalah tanaman dari genus Capsicum (cabai). Nama spesiesnya, pubescens , merujuk pada daun cabai ini yang berbulu. Keberbuluan daun, bersama dengan bijinya yang berwarna hitam, membuat Capsicum pubescens dapat dibedakan darispesies Capsicum lainnya. Capsicum pubescens memiliki buah berwarna kuning, oranye, merah, hijau, atau cokelat yang pedas. <br>
+                Seperti semua spesies lain dari genus Capsicum , tanaman dari spesies Capsicum pubescens tumbuh sebagai semak, tetapi kadang-kadang sebagai tanaman merambat. Mereka tumbuh menjadi tanaman berkayu setinggi empat meter dengan relatif cepat, dan hidup hingga 15 tahun, yang memberi mereka, terutama seiring bertambahnya usia, penampilan yang hampir seperti pohon.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Karakteristik</h5>
+                        <ul>
+                            <li>Daun berbulu halus (pubescent).</li>
+                            <li>Biji berwarna hitam (unik dibanding spesies lain).</li>
+                            <li>Buah bulat atau lonjong, ukuran sedang–besar.</li>
+                            <li>Adaptasi kuat di dataran tinggi (≥1.000 mdpl).</li>
+                            <li>Tingkat kepedasan sedang–tinggi dengan rasa agak “smoky”.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <h5>Varietas</h5>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Indonesia</span><br>
+                        <span class="chip"> Bodong</span>
+                        <span class="chip">Wudel (Jawa Timur, lereng Semeru)</span>
+                        <span class="chip" style="color: white; font-weight: 700; background-color: red;">Internasional</span><br>
+                        <span class="chip">Rocoto (Peru)</span>
+                        <span class="chip">Manzano (Meksiko)</span>
+                        <span class="chip">Locoto (Bolivia)</span>
+                    </div>
+                </div>
+                <div class="sumber" style="color: dimgrey; font-size: 13px; padding-left: 20px;  padding-top: 15px;">
+                    <p>Yamamoto et al., 2013 – Sejarah, taksonomi, dan distribusi C. pubescens di Indonesia. | Liu et al., 2023 – Genom cabai budidaya dan liar, termasuk C. pubescens. | wikipedia.org
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <footer class="footer-modern">
     <div class="container">
-      <div id="wrapper">
-        <div class="col margin-top d-flex justify-content-center flex-column text-center">
-          <h1 class="font-weight-normal sub-heading">Jenis-Jenis Padi</h1>
-          <p class="font-weight-light">
-            Berikut merupakan daftar jenis-jenis padi yang sangat populer di
-            indonesia
-          </p>
+        <div class="row justify-content-between">
+            <div class="col-lg-4 mb-4">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="/static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+                </a>
+                <p class="text-white-50" style="font-size: 17px;">
+                    Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
+                </p>
+                <div class="social-links">
+                    </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 mb-4">
+                <h5 class="text-white mb-3">Produk</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="jenisPadi.html">Jenis Padi</a></li>
+                    <li><a href="informasi.html">Informasi</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 mb-4">
+                <h5 class="text-white mb-3">Solusi</h5>
+                <p class="text-white-50" style="font-size: 17px;">
+                    Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.
+                    </p>
+            </div>
         </div>
-      </div>
-
-      <section id="jenis ">
-        <div id="jenis-row" class="row row-cols-1 row-cols-md-3 g-4 mb-4 justify-content-center">
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/rojolele.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Rojolole</h5>
-                <p class="card-text">
-                  Padi Rojolele merupakan varietas padi unggul lokal yang
-                  terkenal karena menghasilkan beras pulen, beraroma harum,
-                  dan memiliki kualitas nasi yang baik.
-                </p>
-                <a href="/template/detailPadi/rojolele.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/pandan.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">
-                  Pandan Wangi
-                </h5>
-                <p class="card-text">
-                  Padi Pandan Wangi merupakan varietas padi khas yang terkenal
-                  karena menghasilkan beras beraroma wangi alami seperti daun
-                  pandan dan memiliki tekstur nasi yang pulen.
-                </p>
-                <a href="/template/detailPadi/pandanWangi.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/mentikwangi.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Mentik Wangi</h5>
-                <p class="card-text">
-                  Padi Mentik Wangi merupakan varietas padi aromatik yang
-                  menghasilkan beras berukuran kecil, harum alami, dan
-                  memiliki rasa nasi yang pulen serta lezat.
-                </p>
-                <a href="/template/detailPadi/mentikWangi.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/mentiksusue.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Mentik Susu</h5>
-                <p class="card-text">
-                  Padi Mentik Susu merupakan varietas padi lokal yang
-                  menghasilkan beras berwarna putih seperti susu dengan
-                  tekstur nasi pulen dan rasa yang gurih.
-                </p>
-                <a href="/template/detailPadi/mentikSusu.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/genjaharum.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Genjah Harum</h5>
-                <p class="card-text">
-                  Padi Genjah Harum merupakan varietas padi unggul yang
-                  dikenal memiliki masa panen lebih cepat serta menghasilkan
-                  beras harum dan pulen.
-                </p>
-                <a href="/template/detailPadi/genjahArum.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/paregropak.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Pare Gropak</h5>
-                <p class="card-text">
-                  Padi Pare Gropak merupakan varietas padi lokal yang dikenal
-                  memiliki bulir besar, hasil panen melimpah, dan menghasilkan
-                  nasi yang pulen.
-                </p>
-                <a href="/template/detailPadi/pareGropak.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/adankrayan.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Adan Krayan</h5>
-                <p class="card-text">
-                  Padi Adan Krayan merupakan varietas padi khas dataran tinggi
-                  Krayan yang terkenal karena aroma harum, tekstur pulen, dan
-                  kualitas beras premium.
-                </p>
-                <a href="/template/detailPadi/adanKrayan.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/siamunus.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Siam Unus</h5>
-                <p class="card-text">
-                  Padi Siam Unus merupakan varietas padi lokal yang dikenal
-                  adaptif di lahan rawa serta menghasilkan beras dengan
-                  tekstur nasi pulen dan rasa yang enak.
-                </p>
-                <a href="/template/detailPadi/siamUnus.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/siam mutiara.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Siam Mutiara</h5>
-                <p class="card-text">
-                  Padi Siam Mutiara merupakan varietas padi lokal yang
-                  menghasilkan beras berwarna cerah seperti mutiara dengan
-                  tekstur nasi pulen dan aroma yang khas.
-                </p>
-                <a href="/template/detailPadi/siamMutiara.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/static/images/fotoJenisPadi/kukubalam.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Kuku Balam</h5>
-                <p class="card-text">
-                  Padi Kuku Balam merupakan varietas padi lokal yang dikenal
-                  memiliki bentuk bulir khas serta mampu tumbuh baik di lahan
-                  tradisional dengan hasil beras yang pulen.
-                </p>
-                <a href="/template/detailPadi/kukuBalam.html" class="btn btn-primary mt-auto">Lihat Selengkapnya</a>
-              </div>
-            </div>
-          </div>
+        
+        <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        
+        <div class="text-center">
+            <p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">
+                ©2026 ChiliCare - All Rights Reserved
+            </p>
         </div>
-      </section>
+
+        <div class="footer-brand-watermark">
+            ChiliCare
+        </div>
     </div>
-  </section>
+    </footer>
 
-  <footer class="footer-modern">
+    <script>
+        const slideIndexes = {};
+        function openModal(id) {
+            document.getElementById(id).classList.add("show");
+            document.getElementById("navbar").classList.add("hide-navbar");
+            slideIndexes[id] = 0;
+            showSlide(id);
+        }
 
-    <div class="container-xl">
+        document.querySelectorAll(".close-modal").forEach(btn => {
+            btn.addEventListener("click", function () {
+                this.closest(".cabai-modal").classList.remove("show");
+                document.getElementById("navbar").classList.remove("hide-navbar");
+            });
+        });
 
-      <!-- Footer Top -->
-      <div class="footer-top">
+        // klik luar card modal, ora nganggo icon x
+        // window.addEventListener("click", function(e){
+        //     document.querySelectorAll(".cabai-modal").forEach(modal=>{
+        //         if(e.target === modal){
+        //             modal.classList.remove("show");
+        //             document.getElementById("navbar").classList.remove("hide-navbar");
+        //         }
+        //     });
+        // });
 
-        <!-- Logo -->
-        <div class="footer-brand">
+        function showSlide(modalId){
+            const modal = document.getElementById(modalId);
+            const slides = modal.querySelectorAll(".slide");
+            if(slideIndexes[modalId] == null){
+                slideIndexes[modalId] = 0;
+            }
+            if(slideIndexes[modalId] >= slides.length){
+                slideIndexes[modalId] = 0;
+            }
+            if(slideIndexes[modalId] < 0){
+                slideIndexes[modalId] = slides.length - 1;
+            }
+            slides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+            slides[slideIndexes[modalId]].classList.add("active");
+        }
 
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
+        function plusSlides(modalId,n){
+            slideIndexes[modalId] += n;
+            showSlide(modalId);
+        }
 
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
+    </script>
 
-        </div>
-
-        <!-- Tentang -->
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
-        </div>
-
-      </div>
-
-      <hr>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-
-        <!-- Lokasi -->
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <!-- Copyright -->
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <!-- Nomor -->
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+>>>>>>> 92e3313 (Menambahkan halaman jenis cabai dan aset gambar)
 </body>
 
 </html>

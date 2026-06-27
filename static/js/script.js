@@ -1,8 +1,20 @@
 /**
  * SISTEM PAKAR DIAGNOSIS PENYAKIT CABAI
  * Metode: Certainty Factor (CF)
- * Mode: Local / Offline (Bypass CORS) + Custom Dropdown UI + The Ultimate Logic Memory
+ * Mode: Local / Offline (Relative Path) + Sliding Pill Radio UI + The Ultimate Logic Memory
  */
+
+// MAPPING FOTO PENYAKIT (ID Penyakit -> Relative Path File Gambar)
+const fotoPenyakitMap = {
+    'P01': '../static/images/assetPenyakit/BusukBuahAntraknosa.jpg',
+    'P02': '../static/images/assetPenyakit/PenyakitVirusKuning.png',
+    'P03': '../static/images/assetPenyakit/LayuFusarium.png',
+    'P04': '../static/images/assetPenyakit/LayuBakteri.jpg',
+    'P05': '../static/images/assetPenyakit/BercakDaun.png',
+    'P06': '../static/images/assetPenyakit/HamaThrips.jpg',
+    'P07': '../static/images/assetPenyakit/KutuDaun.png',
+    'P08': '../static/images/assetPenyakit/KutuBuah.png'
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     // Validasi apakah data.js sudah berhasil di-load oleh HTML
@@ -22,11 +34,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Fungsi pembantu untuk menggerakkan animasi pill selector
+function updateSliderPill(radio) {
+    if (!radio.checked) return;
+    const group = radio.closest('.slider-radio-group');
+    const pill = group.querySelector('.slider-pill');
+    const labels = group.querySelectorAll('.slider-opt-label');
+    
+    let index = 0;
+    labels.forEach((label, i) => {
+        if (label.contains(radio)) {
+            index = i;
+        }
+    });
+    
+    // Meluncurkan pill menggunakan transform translateX berdasarkan index
+    pill.style.transform = `translateX(${index * 100}%)`;
+}
+
 function renderForm() {
     const formContainer = document.getElementById('gejala-list');
     let html = '';
 
-    // Generate Custom Dropdown (Div & UL/LI)
+    // Keterangan Pilihan (LEGEND)
+    html += `
+    <div class="legend-opsi mb-4">
+        <strong>Keterangan Pilihan:</strong>
+        <div><span>[SY]</span> Sangat Yakin</div>
+        <div><span>[Y]</span> Yakin</div>
+        <div><span>[CY]</span> Cukup Yakin</div>
+        <div><span>[R]</span> Ragu-ragu</div>
+        <div><span>[T]</span> Tidak</div>
+    </div>`;
+
+    // Generate Sliding Pill Radio UI
     pakarData.gejala.forEach((g, index) => {
         html += `
         <div class="card mb-3 shadow-sm">
@@ -35,16 +76,32 @@ function renderForm() {
                     <span class="badge badge-danger mr-2">${index + 1}</span> Apakah ${g.nama}?
                 </h6>
                 
-                <div class="custom-dropdown" data-id="${g.id}" data-value="0.0">
-                    <div class="dropdown-selected">Tidak (0%)</div>
-                    <ul class="dropdown-options">
-                        <li data-value="0.0" class="selected-item">Tidak (0%)</li>
-                        <li data-value="0.2">Tidak Tahu (20%)</li>
-                        <li data-value="0.4">Sedikit Yakin (40%)</li>
-                        <li data-value="0.6">Cukup Yakin (60%)</li>
-                        <li data-value="0.8">Yakin (80%)</li>
-                        <li data-value="1.0">Sangat Yakin (100%)</li>
-                    </ul>
+                <div class="slider-radio-group">
+                    <div class="slider-track">
+                        <div class="slider-pill"></div>
+                    </div>
+                    <div class="slider-options">
+                        <label class="slider-opt-label">
+                            <input type="radio" name="${g.id}" value="1.0">
+                            <span>SY</span>
+                        </label>
+                        <label class="slider-opt-label">
+                            <input type="radio" name="${g.id}" value="0.8">
+                            <span>Y</span>
+                        </label>
+                        <label class="slider-opt-label">
+                            <input type="radio" name="${g.id}" value="0.6">
+                            <span>CY</span>
+                        </label>
+                        <label class="slider-opt-label">
+                            <input type="radio" name="${g.id}" value="0.4">
+                            <span>R</span>
+                        </label>
+                        <label class="slider-opt-label">
+                            <input type="radio" name="${g.id}" value="0.0" checked>
+                            <span>T</span>
+                        </label>
+                    </div>
                 </div>
                 
             </div>
@@ -60,68 +117,36 @@ function renderForm() {
 
     formContainer.innerHTML = html;
 
-    // Inisialisasi event listener untuk dropdown
-    initCustomDropdowns();
-}
-
-function initCustomDropdowns() {
-    const dropdowns = document.querySelectorAll('.custom-dropdown');
-
-    dropdowns.forEach(dropdown => {
-        const selected = dropdown.querySelector('.dropdown-selected');
-        const options = dropdown.querySelectorAll('.dropdown-options li');
-
-        // Buka/Tutup dropdown saat diklik
-        selected.addEventListener('click', (e) => {
-            e.stopPropagation(); 
-            document.querySelectorAll('.custom-dropdown').forEach(d => {
-                if (d !== dropdown) d.classList.remove('active');
-            });
-            dropdown.classList.toggle('active');
-        });
-
-        // Pilih opsi
-        options.forEach(option => {
-            option.addEventListener('click', (e) => {
-                e.stopPropagation();
-                
-                // FIX BUG GEPENG: Gunakan textContent bukan innerText
-                selected.textContent = option.textContent;
-                dropdown.setAttribute('data-value', option.getAttribute('data-value'));
-                
-                options.forEach(opt => opt.classList.remove('selected-item'));
-                option.classList.add('selected-item');
-                dropdown.classList.remove('active');
-
-                // Simpan perubahan ke memori browser secara live
-                saveStateLive();
-
-                // THE ULTIMATE LOGIC: Hapus kotak hasil jika user merubah data iseng-iseng setelah diagnosis
-                const hasilContainer = document.getElementById('hasil');
-                if (hasilContainer && hasilContainer.innerHTML.trim() !== '') {
-                    hasilContainer.innerHTML = ''; // Hapus tampilan
-                    sessionStorage.removeItem('isAnalyzed'); // Hapus status memori hitungan
-                }
-            });
+    // Inisialisasi event listener
+    const radios = document.querySelectorAll('.slider-opt-label input[type="radio"]');
+    radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            updateSliderPill(this);
+            saveStateLive();
+            
+            // THE ULTIMATE LOGIC: Hapus kotak hasil jika user merubah data iseng-iseng setelah diagnosis
+            const hasilContainer = document.getElementById('hasil');
+            if (hasilContainer && hasilContainer.innerHTML.trim() !== '') {
+                hasilContainer.innerHTML = ''; 
+                sessionStorage.removeItem('isAnalyzed'); 
+            }
         });
     });
 
-    // Fitur Click Outside
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.custom-dropdown').forEach(d => {
-            d.classList.remove('active');
-        });
+    // Set posisi awal pill pada opsi default (T / value 0.0)
+    document.querySelectorAll('.slider-opt-label input[type="radio"]:checked').forEach(radio => {
+        updateSliderPill(radio);
     });
 }
 
 /* --- MANAJEMEN MEMORI SESSION STORAGE --- */
 function saveStateLive() {
-    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    const selectedRadios = document.querySelectorAll('.slider-opt-label input[type="radio"]:checked');
     let userInput = {};
-    dropdowns.forEach(dropdown => {
-        const val = parseFloat(dropdown.getAttribute('data-value'));
+    selectedRadios.forEach(radio => {
+        const val = parseFloat(radio.value);
         if (val > 0) { 
-            userInput[dropdown.getAttribute('data-id')] = val;
+            userInput[radio.name] = val;
         }
     });
     sessionStorage.setItem('savedDiagnosis', JSON.stringify(userInput));
@@ -131,25 +156,13 @@ function restoreStateMemory() {
     const savedState = sessionStorage.getItem('savedDiagnosis');
     if (savedState) {
         const userInput = JSON.parse(savedState);
-        const dropdowns = document.querySelectorAll('.custom-dropdown');
         
-        dropdowns.forEach(dropdown => {
-            const id = dropdown.getAttribute('data-id');
-            if (userInput[id]) {
-                const val = userInput[id];
-                dropdown.setAttribute('data-value', val);
-                
-                const options = dropdown.querySelectorAll('.dropdown-options li');
-                const selected = dropdown.querySelector('.dropdown-selected');
-                
-                options.forEach(opt => {
-                    opt.classList.remove('selected-item');
-                    if (parseFloat(opt.getAttribute('data-value')) === val) {
-                        opt.classList.add('selected-item');
-                        // FIX BUG GEPENG SAAT RESTORE
-                        selected.textContent = opt.textContent;
-                    }
-                });
+        Object.keys(userInput).forEach(name => {
+            const val = userInput[name];
+            const radio = document.querySelector(`.slider-opt-label input[type="radio"][name="${name}"][value="${val}"]`);
+            if (radio) {
+                radio.checked = true;
+                updateSliderPill(radio); // Animasikan pill ke posisi terseleksi
             }
         });
         
@@ -161,35 +174,31 @@ function restoreStateMemory() {
 }
 
 function resetDiagnosis() {
-    // Sabuk pengaman: Minta konfirmasi sebelum menghapus memori
     const konfirmasi = confirm("Yakin ingin mereset semua data diagnosis? Form gejala dan hasil analisis akan dihapus.");
     
-    // Jika user klik "OK", eksekusi pembersihan
     if (konfirmasi) {
         sessionStorage.removeItem('savedDiagnosis');
         sessionStorage.removeItem('isAnalyzed');
         window.scrollTo(0, 0);
         location.reload();
     }
-    // Jika user klik "Cancel", blok kode dihentikan dan tidak terjadi apa-apa
 }
 /* ---------------------------------------- */
 
 function hitungCF(isAutoRestore = false) {
-    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    const selectedRadios = document.querySelectorAll('.slider-opt-label input[type="radio"]:checked');
     let userInput = {};
     let adaInput = false;
 
-    dropdowns.forEach(dropdown => {
-        const val = parseFloat(dropdown.getAttribute('data-value'));
+    selectedRadios.forEach(radio => {
+        const val = parseFloat(radio.value);
         if (val > 0) {
-            userInput[dropdown.getAttribute('data-id')] = val;
+            userInput[radio.name] = val;
             adaInput = true;
         }
     });
 
     if (!adaInput) {
-        // Jangan munculin alert kalau cuma lagi nge-restore dari halaman lain
         if (!isAutoRestore) {
             alert("Pilih minimal satu gejala yang terlihat pada tanaman cabai Anda!");
         }
@@ -247,6 +256,9 @@ function tampilkanHasil(hasil, isAutoRestore = false) {
     }
 
     const penyakitUtama = hasil[0];
+    
+    // Ambil foto dari mapping menggunakan relative path
+    const imgSrc = fotoPenyakitMap[penyakitUtama.id] || '';
 
     // Mulai kerangka hasil
     let html = `
@@ -256,6 +268,15 @@ function tampilkanHasil(hasil, isAutoRestore = false) {
                 <h4 class="mb-0 font-weight-bold text-center"><i class="fas fa-poll-h mr-2"></i> Hasil Diagnosis Sistem Pakar</h4>
             </div>
             <div class="card-body p-4 text-center">
+                
+                ${imgSrc ? `
+                <img id="hasil-foto-penyakit" 
+                     src="${imgSrc}" 
+                     alt="Foto ${penyakitUtama.nama}"
+                     onerror="this.style.display='none';"
+                     style="border-radius: 15px; box-shadow: 0 6px 20px rgba(185, 30, 30, 0.15); max-width: 100%; width: 320px; height: auto; object-fit: cover; margin-bottom: 25px; border: 4px solid #f8e9e9;">
+                ` : ''}
+                     
                 <p class="text-muted font-weight-bold mb-1">TINGKAT KEYAKINAN:</p>
                 <h1 class="display-4 font-weight-bold text-danger">${penyakitUtama.persentase}%</h1>
                 <h3 class="text-dark font-weight-bold mt-3">${penyakitUtama.nama}</h3>
@@ -291,7 +312,7 @@ function tampilkanHasil(hasil, isAutoRestore = false) {
 
     html += `</div>`; // Tutup div print-area
 
-    // Tombol Cetak PDF dan Diagnosis Ulang (Akan disembunyikan pakai CSS saat mode print)
+    // Tombol Cetak PDF dan Diagnosis Ulang
     html += `
     <div class="text-center mt-4 mb-5 d-print-none action-buttons">
         <button class="btn btn-outline-danger px-4 py-2 font-weight-bold" onclick="window.print()">
@@ -304,7 +325,6 @@ function tampilkanHasil(hasil, isAutoRestore = false) {
 
     hasilContainer.innerHTML = html;
     
-    // Jangan nge-scroll paksa ke bawah kalau user cuma pencet tombol Back browser
     if (!isAutoRestore) {
         setTimeout(() => {
             hasilContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });

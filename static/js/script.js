@@ -1,21 +1,3 @@
-/**
- * SISTEM PAKAR DIAGNOSIS PENYAKIT CABAI
- * Metode: Certainty Factor (CF)
- * Mode: Local / Offline (Relative Path) + Sliding Pill Radio UI + The Ultimate Logic Memory
- */
-
-// MAPPING FOTO PENYAKIT (ID Penyakit -> Relative Path File Gambar)
-const fotoPenyakitMap = {
-    'P01': '../static/images/assetPenyakit/BusukBuahAntraknosa.jpg',
-    'P02': '../static/images/assetPenyakit/PenyakitVirusKuning.png',
-    'P03': '../static/images/assetPenyakit/LayuFusarium.png',
-    'P04': '../static/images/assetPenyakit/LayuBakteri.jpg',
-    'P05': '../static/images/assetPenyakit/BercakDaun.png',
-    'P06': '../static/images/assetPenyakit/HamaThrips.jpg',
-    'P07': '../static/images/assetPenyakit/KutuDaun.png',
-    'P08': '../static/images/assetPenyakit/KutuBuah.png'
-};
-
 document.addEventListener('DOMContentLoaded', () => {
     // Validasi apakah data.js sudah berhasil di-load oleh HTML
     if (typeof pakarData !== 'undefined') {
@@ -124,11 +106,11 @@ function renderForm() {
             updateSliderPill(this);
             saveStateLive();
             
-            // THE ULTIMATE LOGIC: Hapus kotak hasil jika user merubah data iseng-iseng setelah diagnosis
+            // THE ULTIMATE LOGIC: Hapus kotak hasil dan cache HTML jika user merubah data
             const hasilContainer = document.getElementById('hasil');
             if (hasilContainer && hasilContainer.innerHTML.trim() !== '') {
                 hasilContainer.innerHTML = ''; 
-                sessionStorage.removeItem('isAnalyzed'); 
+                sessionStorage.removeItem('hasilDiagnosisHTML'); 
             }
         });
     });
@@ -165,10 +147,14 @@ function restoreStateMemory() {
                 updateSliderPill(radio); // Animasikan pill ke posisi terseleksi
             }
         });
-        
-        // Cek jika user sudah pernah klik tombol Analisis sebelumnya tanpa merubah form lagi
-        if (sessionStorage.getItem('isAnalyzed') === 'true') {
-            hitungCF(true); // Run mode background (tanpa auto-scroll)
+    }
+    
+    // BFCache Fix: Restore langsung dari HTML yang tersimpan jika ada
+    const savedHTML = sessionStorage.getItem('hasilDiagnosisHTML');
+    if (savedHTML) {
+        const hasilContainer = document.getElementById('hasil');
+        if (hasilContainer) {
+            hasilContainer.innerHTML = savedHTML;
         }
     }
 }
@@ -178,14 +164,14 @@ function resetDiagnosis() {
     
     if (konfirmasi) {
         sessionStorage.removeItem('savedDiagnosis');
-        sessionStorage.removeItem('isAnalyzed');
+        sessionStorage.removeItem('hasilDiagnosisHTML');
         window.scrollTo(0, 0);
         location.reload();
     }
 }
 /* ---------------------------------------- */
 
-function hitungCF(isAutoRestore = false) {
+function hitungCF() {
     const selectedRadios = document.querySelectorAll('.slider-opt-label input[type="radio"]:checked');
     let userInput = {};
     let adaInput = false;
@@ -199,14 +185,10 @@ function hitungCF(isAutoRestore = false) {
     });
 
     if (!adaInput) {
-        if (!isAutoRestore) {
-            alert("Pilih minimal satu gejala yang terlihat pada tanaman cabai Anda!");
-        }
+        alert("Pilih minimal satu gejala yang terlihat pada tanaman cabai Anda!");
         return;
     }
 
-    // Tandai status bahwa hasil sudah dieksekusi untuk cache memori
-    sessionStorage.setItem('isAnalyzed', 'true');
     saveStateLive();
 
     let hasilDiagnosis = [];
@@ -233,16 +215,17 @@ function hitungCF(isAutoRestore = false) {
                 nama: detailPenyakit.nama,
                 deskripsi: detailPenyakit.deskripsi,
                 solusi: detailPenyakit.solusi,
-                persentase: (cfGabungan * 100).toFixed(2)
+                persentase: (cfGabungan * 100).toFixed(2),
+                gambar: detailPenyakit.gambar
             });
         }
     });
 
     hasilDiagnosis.sort((a, b) => b.persentase - a.persentase);
-    tampilkanHasil(hasilDiagnosis, isAutoRestore);
+    tampilkanHasil(hasilDiagnosis);
 }
 
-function tampilkanHasil(hasil, isAutoRestore = false) {
+function tampilkanHasil(hasil) {
     const hasilContainer = document.getElementById('hasil');
 
     if (hasil.length === 0) {
@@ -251,14 +234,14 @@ function tampilkanHasil(hasil, isAutoRestore = false) {
             <h5 class="alert-heading font-weight-bold mb-2"><i class="fas fa-exclamation-triangle"></i> Diagnosis Tidak Ditemukan</h5>
             <p class="mb-0">Gejala yang Anda masukkan tidak cocok dengan basis data penyakit cabai kami.</p>
         </div>`;
-        if (!isAutoRestore) hasilContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sessionStorage.removeItem('hasilDiagnosisHTML');
         return;
     }
 
     const penyakitUtama = hasil[0];
     
-    // Ambil foto dari mapping menggunakan relative path
-    const imgSrc = fotoPenyakitMap[penyakitUtama.id] || '';
+    // Path relative untuk offline mode
+    const imgSrc = penyakitUtama.gambar ? `../static/images/assetPenyakit/${penyakitUtama.gambar}` : '';
 
     // Mulai kerangka hasil
     let html = `
@@ -325,9 +308,10 @@ function tampilkanHasil(hasil, isAutoRestore = false) {
 
     hasilContainer.innerHTML = html;
     
-    if (!isAutoRestore) {
-        setTimeout(() => {
-            hasilContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-    }
+    // BFCache Fix: Simpan HTML hasil ke sessionStorage
+    sessionStorage.setItem('hasilDiagnosisHTML', html);
+    
+    setTimeout(() => {
+        hasilContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
 }

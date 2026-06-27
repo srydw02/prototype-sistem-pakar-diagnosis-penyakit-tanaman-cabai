@@ -4,49 +4,57 @@ const pakarData = {
       "id": "P01",
       "nama": "Antraknosa (Patek / Busuk Buah)",
       "deskripsi": "Penyakit ini disebabkan oleh jamur Colletotrichum spp. Gejala awalnya berupa bercak coklat kehitaman pada permukaan buah yang kemudian meluas menjadi busuk lunak dan keriput.",
-      "solusi": "1. Musnahkan buah yang terinfeksi.\n2. Perbaiki drainase tanah agar tidak lembab.\n3. Gunakan fungisida berbahan aktif propineb atau mankozeb sesuai dosis."
+      "solusi": "1. Musnahkan buah yang terinfeksi.\n2. Perbaiki drainase tanah agar tidak lembab.\n3. Gunakan fungisida berbahan aktif propineb atau mankozeb sesuai dosis.",
+      "gambar": "BusukBuahAntraknosa.jpg"
     },
     {
       "id": "P02",
       "nama": "Virus Kuning (Gemini Virus)",
       "deskripsi": "Penyakit yang ditularkan oleh kutu kebul (Bemisia tabaci). Menyebabkan klorosis (kuning) pada daun, tulang daun menebal, dan pertumbuhan tanaman menjadi kerdil.",
-      "solusi": "1. Cabut dan musnahkan tanaman yang terinfeksi.\n2. Kendalikan vektor kutu kebul dengan insektisida.\n3. Gunakan varietas benih yang tahan terhadap virus kuning."
+      "solusi": "1. Cabut dan musnahkan tanaman yang terinfeksi.\n2. Kendalikan vektor kutu kebul dengan insektisida.\n3. Gunakan varietas benih yang tahan terhadap virus kuning.",
+      "gambar": "PenyakitVirusKuning.png"
     },
     {
       "id": "P03",
       "nama": "Layu Fusarium",
       "deskripsi": "Penyakit layu yang disebabkan oleh jamur Fusarium oxysporum. Gejalanya kelayuan yang dimulai dari daun bagian bawah lalu menjalar ke atas, dan jaringan pembuluh akar/batang berwarna coklat.",
-      "solusi": "1. Cabut dan bakar tanaman yang sakit.\n2. Lakukan pergiliran/rotasi tanaman dengan famili selain Solanaceae.\n3. Aplikasikan agens hayati Trichoderma spp. pada saat pengolahan lahan."
+      "solusi": "1. Cabut dan bakar tanaman yang sakit.\n2. Lakukan pergiliran/rotasi tanaman dengan famili selain Solanaceae.\n3. Aplikasikan agens hayati Trichoderma spp. pada saat pengolahan lahan.",
+      "gambar": "LayuFusarium.png"
     },
     {
       "id": "P04",
       "nama": "Layu Bakteri",
       "deskripsi": "Penyakit yang disebabkan oleh bakteri Ralstonia solanacearum. Tanaman akan layu secara tiba-tiba di siang hari padahal daun masih hijau, dan jika pangkal batang dipotong akan terasa lunak/berlendir.",
-      "solusi": "1. Perbaiki sanitasi kebun dan saluran air.\n2. Cabut tanaman layu beserta tanah di sekitar akarnya.\n3. Aplikasikan bakterisida berbahan aktif tembaga hidroksida."
+      "solusi": "1. Perbaiki sanitasi kebun dan saluran air.\n2. Cabut tanaman layu beserta tanah di sekitar akarnya.\n3. Aplikasikan bakterisida berbahan aktif tembaga hidroksida.",
+      "gambar": "LayuBakteri.jpg"
     },
     {
       "id": "P05",
       "nama": "Bercak Daun (Cercospora)",
       "deskripsi": "Penyakit akibat jamur Cercospora capsici. Menimbulkan bercak bulat kecil pada daun dengan pusat berwarna pucat kebasah-basahan dan tepi gelap. Menyebabkan daun gugur prematur.",
-      "solusi": "1. Kurangi kelembapan dengan mengatur jarak tanam.\n2. Bersihkan gulma di sekitar tanaman.\n3. Semprotkan fungisida kontak dan sistemik secara berkala."
+      "solusi": "1. Kurangi kelembapan dengan mengatur jarak tanam.\n2. Bersihkan gulma di sekitar tanaman.\n3. Semprotkan fungisida kontak dan sistemik secara berkala.",
+      "gambar": "BercakDaun.png"
     },
     {
       "id": "P06",
       "nama": "Hama Thrips",
       "deskripsi": "Serangga kecil yang mengisap cairan daun. Serangan ditandai dengan bercak keperakan pada permukaan bawah daun, daun mengeriting ke atas, dan berubah warna kecoklatan/tembaga.",
-      "solusi": "1. Pasang perangkap lekat kuning/biru (Yellow/Blue Sticky Trap).\n2. Gunakan mulsa plastik perak untuk memantulkan cahaya.\n3. Semprotkan insektisida berbahan aktif abamektin."
+      "solusi": "1. Pasang perangkap lekat kuning/biru (Yellow/Blue Sticky Trap).\n2. Gunakan mulsa plastik perak untuk memantulkan cahaya.\n3. Semprotkan insektisida berbahan aktif abamektin.",
+      "gambar": "HamaThrips.jpg"
     },
     {
       "id": "P07",
       "nama": "Hama Kutu Daun (Aphids)",
       "deskripsi": "Hama pengisap cairan tanaman yang juga bisa menjadi vektor pembawa virus. Menyebabkan daun mengerut, melengkung ke bawah, dan sering memunculkan embun jelaga hitam.",
-      "solusi": "1. Manfaatkan musuh alami seperti kepik (Ladybug).\n2. Jaga kebersihan lahan pertanian.\n3. Gunakan insektisida sistemik jika serangan sudah masuk fase parah."
+      "solusi": "1. Manfaatkan musuh alami seperti kepik (Ladybug).\n2. Jaga kebersihan lahan pertanian.\n3. Gunakan insektisida sistemik jika serangan sudah masuk fase parah.",
+      "gambar": "KutuDaun.png"
     },
     {
       "id": "P08",
       "nama": "Hama Lalat Buah",
       "deskripsi": "Lalat buah betina menusuk buah untuk meletakkan telur. Larva yang menetas akan memakan daging buah dari dalam sehingga muncul titik hitam, buah membusuk, dan gugur sebelum waktunya.",
-      "solusi": "1. Kumpulkan dan kubur buah yang busuk/jatuh ke tanah.\n2. Pasang perangkap atraktan (contoh: Metil Eugenol).\n3. Lakukan pembungkusan buah sejak dini jika luasan lahan memungkinkan."
+      "solusi": "1. Kumpulkan dan kubur buah yang busuk/jatuh ke tanah.\n2. Pasang perangkap atraktan (contoh: Metil Eugenol).\n3. Lakukan pembungkusan buah sejak dini jika luasan lahan memungkinkan.",
+      "gambar": "KutuBuah.png"
     }
   ],
   "gejala": [

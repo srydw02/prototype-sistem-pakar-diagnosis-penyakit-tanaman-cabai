@@ -27,7 +27,8 @@ html {
     width: 100%;
     background: rgb(255, 255, 255) !important;
     padding-top: 0.6rem !important;    
-    padding-bottom: 0.2 !important; 
+    /* FIX TYPO: Ditambah rem agar navbar tidak gepeng */
+    padding-bottom: 0.6rem !important; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     z-index: 10000 !important; 
     transition: all 0.3s ease;
@@ -69,22 +70,44 @@ html {
     padding: 8px 10px !important;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
+    /* Tambahan dari style.css agar titik merah pas posisinya */
+    position: relative;
+    background-color: transparent !important; 
 }
 
 .navbar-nav .nav-link:hover {
     color: #a72828 !important;
-    background-color: #f8e9e9;
+    /* Diubah ke transparent agar hover tidak ada kotak background */
+    background-color: transparent !important; 
 }
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-link.active {
     color: #5e1b1b !important;
-    background-color: #f5e8e8;
+    /* Diubah ke transparent agar active tidak ada kotak background */
+    background-color: transparent !important; 
     font-weight: 700;
 }
 
+/* TITIK MERAH NAVBAR AKTIF (DICOPY PERSIS DARI STYLE.CSS) */
 .navbar-nav .nav-link::after {
-    display: none !important; 
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #b91e1e;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
 }
 
 .btn-diagnosis-nav {

@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="gambar/icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../static/images/icon/icon.svg" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="/static/style/style4.css" />
+  <!-- FIX PATH KE RELATIF -->
+  <link rel="stylesheet" href="../static/style/style4.css" />
   <title>Jenis Cabai │ ChiliCare</title>
 </head>
 
@@ -31,9 +32,10 @@
 
                     <ul class="navbar-nav mx-lg-auto">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/template/berita.html">Berita</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/template/jenisPadi.html">Jenis Cabai</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/template/informasi.html">Informasi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                        <!-- TAMBAHKAN CLASS ACTIVE DISINI -->
+                        <li class="nav-item"><a class="nav-link active" href="jenisCabai.html">Jenis Cabai</a></li>
+                        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
                     </ul>
 
                     <div class="navbar-action-btn-group my-2 my-lg-0">
@@ -67,10 +69,6 @@
                             <a href="#jenis-cabai" class="btn-header btn-lg me-3">
                                 Lihat Jenis
                             </a>
-                        
-                            <!-- <a href="#cari-varietas" class="btn-header btn-outline-header btn-lg">
-                                Cari Varietas
-                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -91,7 +89,7 @@
                 <!-- Gambar -->
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <div class="about-image">
-                        <img src="/static/images/jenis_cabai/cabai_Capsicum.png"
+                        <img src="../static/images/jenis_cabai/cabai_Capsicum.png"
                             alt="Jenis Cabai"
                             class="img-fluid">
                             <p></p>
@@ -149,7 +147,7 @@
                 <!-- Card 1 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="jenis-card">
-                        <img src="/static/images/jenis_cabai/capsium_annuum.jpg" alt="Capsicum annuum">
+                        <img src="../static/images/jenis_cabai/capsium_annuum.jpg" alt="Capsicum annuum">
                         <div class="jenis-content">
                             <span class="jenis-badge">
                                 Cabai Merah & Keriting
@@ -171,7 +169,7 @@
                 <!-- Card 2 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="jenis-card">
-                        <img src="/static/images/jenis_cabai/Capsicum_frutescens.png" alt="Capsicum frutescens">
+                        <img src="../static/images/jenis_cabai/Capsicum_frutescens.png" alt="Capsicum frutescens">
                         <div class="jenis-content">
                             <span class="jenis-badge">
                                 Cabai Rawit
@@ -193,7 +191,7 @@
                 <!-- Card 3 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="jenis-card">
-                        <img src="/static/images/jenis_cabai/Capsicum_chinense.jpg" alt="Capsicum chinense">
+                        <img src="../static/images/jenis_cabai/Capsicum_chinense.jpg" alt="Capsicum chinense">
                         <div class="jenis-content">
                             <span class="jenis-badge">
                                 Katokkon & Cotoh
@@ -215,7 +213,7 @@
                 <!-- Card 4 -->
                 <div class="col-lg-6 mb-4">
                     <div class="jenis-card">
-                        <img src="/static/images/jenis_cabai/capsicum_baccatum.jpg" alt="Capsicum baccatum">
+                        <img src="../static/images/jenis_cabai/capsicum_baccatum.jpg" alt="Capsicum baccatum">
                         <div class="jenis-content">
                             <span class="jenis-badge">
                                 Cabai Baccatum
@@ -237,7 +235,7 @@
                 <!-- Card 5 -->
                 <div class="col-lg-6 mb-4">
                     <div class="jenis-card">
-                        <img src="/static/images/jenis_cabai/capsicum_pubescens.jpg" alt="Capsicum pubescens">
+                        <img src="../static/images/jenis_cabai/capsicum_pubescens.jpg" alt="Capsicum pubescens">
                         <div class="jenis-content">
                             <span class="jenis-badge">
                                 Bodong & Wudel
@@ -268,49 +266,49 @@
                 <div class="image-slider">
                     <button class="slide-btn prev" onclick="plusSlides('modal-annuum',-1)">&#10094;</button>
                     <div class="slide active">
-                        <img src="/static/images/jenis_cabai/annuum/CabaiKeriting.png" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/CabaiKeriting.png" alt="">
                         <div class="slide-caption">
                             Cabai Keriting
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/CabaiMerahBesar2.jpeg" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/CabaiMerahBesar2.jpeg" alt="">
                         <div class="slide-caption">
                             Cabai Merah Besar
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/Paprika.png" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/Paprika.png" alt="">
                         <div class="slide-caption">
                             Paprika
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/cheongyang.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/cheongyang.jpg" alt="">
                         <div class="slide-caption">
                             Cheongyang
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/medusa.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/medusa.jpg" alt="">
                         <div class="slide-caption">
                             Medusa
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/Serranochilis.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/Serranochilis.jpg" alt="">
                         <div class="slide-caption">
                             Serrano
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/Anaheim_Chili_Peppers.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/Anaheim_Chili_Peppers.jpg" alt="">
                         <div class="slide-caption">
                             Anaheim
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/annuum/C_annuum_black_hungarian_fruits.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/annuum/C_annuum_black_hungarian_fruits.jpg" alt="">
                         <div class="slide-caption">
                             Black Hungarian
                         </div>
@@ -368,19 +366,19 @@
                 <div class="image-slider">
                     <button class="slide-btn prev" onclick="plusSlides('modal-frutescens',-1)">&#10094;</button>
                     <div class="slide active">
-                        <img src="/static/images/jenis_cabai/frutescens/CabaiRawit.png" alt="">
+                        <img src="../static/images/jenis_cabai/frutescens/CabaiRawit.png" alt="">
                         <div class="slide-caption">
                             Cabai Rawit
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/frutescens/Tabasco.png" alt="">
+                        <img src="../static/images/jenis_cabai/frutescens/Tabasco.png" alt="">
                         <div class="slide-caption">
                             Tabasco
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/frutescens/African_red_devil_peppers.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/frutescens/African_red_devil_peppers.jpg" alt="">
                         <div class="slide-caption">
                             Peri-peri(African Birdseye)
                         </div>
@@ -439,55 +437,55 @@
                 <div class="image-slider">
                     <button class="slide-btn prev" onclick="plusSlides('modal-chinense',-1)">&#10094;</button>
                     <div class="slide active">
-                        <img src="/static/images/jenis_cabai/chinense/habanero.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/habanero.jpg" alt="">
                         <div class="slide-caption">
                             Habanero
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/Capsicum_chinense_flower.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/Capsicum_chinense_flower.jpg" alt="">
                         <div class="slide-caption">
                             Bunga C. Chinense (Madame Jeanette)
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/CarolinaReaper.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/CarolinaReaper.jpg" alt="">
                         <div class="slide-caption">
                             Carolina Reaper
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/GhostPeppe(BhutJolokia).jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/GhostPeppe(BhutJolokia).jpg" alt="">
                         <div class="slide-caption">
                             Ghost Pepper (Bhut Jolokia)
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/Madame_Jeanette_chili.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/Madame_Jeanette_chili.jpg" alt="">
                         <div class="slide-caption">
                             Madame Jeanette
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/Scotch Bonnet.png" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/Scotch Bonnet.png" alt="">
                         <div class="slide-caption">
                             Scotch Bonnet (Karibia)
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/Naga_jolokia_chili.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/Naga_jolokia_chili.jpg" alt="">
                         <div class="slide-caption">
                             Naga Morich
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/Capsicum_chinense_NuMex_Suave_Oran.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/Capsicum_chinense_NuMex_Suave_Oran.jpg" alt="">
                         <div class="slide-caption">
                             NuMex peppers
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/chinense/Pots_of_Trinidad_Scorpion.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/chinense/Pots_of_Trinidad_Scorpion.jpg" alt="">
                         <div class="slide-caption">
                             Trinidad Scorpion 'Butch T'
                         </div>
@@ -545,31 +543,31 @@
                 <div class="image-slider">
                     <button class="slide-btn prev" onclick="plusSlides('modal-baccatum',-1)">&#10094;</button>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/baccatum/Aji_amarillo.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/baccatum/Aji_amarillo.jpg" alt="">
                         <div class="slide-caption">
                             Aji Amarillo
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/baccatum/Capsicum_baccatum_flower.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/baccatum/Capsicum_baccatum_flower.jpg" alt="">
                         <div class="slide-caption">
                             Capsicum Baccatum Flower
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/baccatum/C_baccatum_lemon_drop.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/baccatum/C_baccatum_lemon_drop.jpg" alt="">
                         <div class="slide-caption">
                             Aji Lemon Drop (Bolivia)
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/baccatum/Pimiento_campanilla.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/baccatum/Pimiento_campanilla.jpg" alt="">
                         <div class="slide-caption">
                             Bishop's Crown
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/baccatum/Peppadew.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/baccatum/Peppadew.jpg" alt="">
                         <div class="slide-caption">
                             Piquante pepper
                         </div>
@@ -621,13 +619,13 @@
                 <div class="image-slider">
                     <button class="slide-btn prev" onclick="plusSlides('modal-pubescens',-1)">&#10094;</button>
                     <div class="slide active">
-                        <img src="/static/images/jenis_cabai/pubescens/Capsicum_pubescens_(Rocoto).JPG" alt="">
+                        <img src="../static/images/jenis_cabai/pubescens/Capsicum_pubescens_(Rocoto).JPG" alt="">
                         <div class="slide-caption">
                             Rocoto
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/static/images/jenis_cabai/pubescens/Capsicum_pubescens_canario.jpg" alt="">
+                        <img src="../static/images/jenis_cabai/pubescens/Capsicum_pubescens_canario.jpg" alt="">
                         <div class="slide-caption">
                             Canário
                         </div>
@@ -678,8 +676,8 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-4 mb-4">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="/static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="../static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
                 </a>
                 <p class="text-white-50" style="font-size: 17px;">
                     Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
@@ -691,9 +689,9 @@
             <div class="col-lg-2 col-md-4 mb-4">
                 <h5 class="text-white mb-3">Produk</h5>
                 <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="berita.html">Berita</a></li>
-                    <li><a href="jenisPadi.html">Jenis Padi</a></li>
+                    <li><a href="jenisCabai.html">Jenis Cabai</a></li>
                     <li><a href="informasi.html">Informasi</a></li>
                 </ul>
             </div>
@@ -736,16 +734,6 @@
             });
         });
 
-        // klik luar card modal, ora nganggo icon x
-        // window.addEventListener("click", function(e){
-        //     document.querySelectorAll(".cabai-modal").forEach(modal=>{
-        //         if(e.target === modal){
-        //             modal.classList.remove("show");
-        //             document.getElementById("navbar").classList.remove("hide-navbar");
-        //         }
-        //     });
-        // });
-
         function showSlide(modalId){
             const modal = document.getElementById(modalId);
             const slides = modal.querySelectorAll(".slide");
@@ -779,7 +767,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
->>>>>>> 92e3313 (Menambahkan halaman jenis cabai dan aset gambar)
 </body>
 
 </html>

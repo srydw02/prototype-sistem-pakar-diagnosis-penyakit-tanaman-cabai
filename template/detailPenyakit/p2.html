@@ -1,253 +1,223 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Penyakit</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Detail Penyakit - Virus Kuning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
-    <link rel="stylesheet" href="/static/style/style3.css" />
+    <link rel="stylesheet" href="../../static/style/style3.css" />
 </head>
-
 <body class="detail-page">
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-xl d-flex justify-content-between align-items-center">
-
-            <!-- Logo tetap di kiri -->
-            <a class="navbar-brand d-flex align-items-center" href="/template/informasi.html">
-                <img src="/static/images/logo2.png" alt="Logo SiPadi"
-                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-                <h3 style="color: green; margin: 0;">SiPadi</h3>
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="../informasi.html">
+                <img src="../../static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
-
-            <button id="menu-toggle" class="btn-back-home" title="Kembali">
-                ✕
-            </button>
-
+            <div id="menu-toggle" class="btn btn-back shadow-sm"><i class="fas fa-arrow-left mt-1"></i>Back</div>
         </div>
-    </nav>
-    
+    </nav>  
 
     <div class="container-xl detail-container">
-
         <nav aria-label="breadcrumb" class="breadcrumb-custom mb-4">
-                <i class="fas fa-home"></i> <a href="/">Beranda</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> <a
-                    href="/template/informasi.html">Informasi</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> Penyakit Hawar Daun Bakteri (BLB)
+            <i class="fas fa-home" style="color: #b91e1e;"></i>
+            <a href="../../index.html">Home</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i>
+            <a href="../informasi.html">Informasi</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem; color: #b91e1e;"></i>
+            Virus Kuning (Gemini Virus)
         </nav>
+                
+        <div class="img-wrapper">
+            <div class="img-slider">
+                <div class="slide active">
+                  <img src="../../static/images/assetPenyakit/PenyakitVirusKuning.png" class="img-detail" alt="Virus Kuning 1" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/PenyakitVirusKuning2.jpg" class="img-detail" alt="Virus Kuning 2" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/PenyakitVirusKuning3.jpg" class="img-detail" alt="Virus Kuning 3" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/PenyakitVirusKuning4.jpg" class="img-detail" alt="Virus Kuning 4" />
+                </div>
+                <button class="slider-btn slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn slider-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots"></div> 
+            </div>
+        </div>
 
-        <h2 class="fw-bold mb-4">
-            Penyakit Hawar Daun Bakteri (BLB)
-        </h2>
-        <div class="row align-items-start">
-            <div class="col-lg-5 mb-4">
-                <div class="left-side">
-                    <img
-                        src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Hawar Daun Bakteri (BLB).png"
-                        class="img-detail shadow-sm"
-                        alt="Penyakit Hawar Daun Bakteri (BLB)"
-                    >
-                    <div class="mt-4">
-                        <h5 class="section-title">
-                            Deskripsi Singkat
-                        </h5>
-                        <p class="description-text">
-                            Penyakit hawar daun bakteri atau BLB merupakan salah satu penyakit penting pada tanaman padi yang disebabkan oleh bakteri Xanthomonas oryzae pv. oryzae. Penyakit ini banyak ditemukan pada daerah persawahan dengan kelembapan tinggi dan curah hujan besar. Hawar daun bakteri dapat menyerang tanaman sejak fase bibit hingga menjelang panen dan sering menyebabkan kerusakan serius pada daun sehingga proses fotosintesis terganggu. Penyakit ini dapat menyebar dengan cepat melalui air irigasi, angin, percikan hujan, alat pertanian, dan kontak antar tanaman.
-                        </p>
+        <h2 class="font-weight-bold" style="padding-top: 30px; padding-bottom: 30px;">Virus Kuning (Gemini Virus)</h2>
+
+        <div class="detail-tabs">
+            <button class="tab-btn active" data-tab="deskripsi"><i class="fas fa-info-circle"></i> Deskripsi</button>
+            <button class="tab-btn" data-tab="gejala"><i class="fas fa-stethoscope"></i> Gejala</button>
+            <button class="tab-btn" data-tab="penyebab"><i class="fas fa-bug"></i> Penyebab</button>
+            <button class="tab-btn" data-tab="bagian"><i class="fas fa-leaf"></i> Bagian Diserang</button>
+            <button class="tab-btn" data-tab="penanganan"><i class="fas fa-shield-alt"></i> Penanganan</button>
+        </div>
+    
+        <div class="tab-content-wrapper">
+            <div class="tab-pane active" id="tab-deskripsi">
+                <p class="font-weight-narrow">Virus Kuning atau Gemini Virus merupakan penyakit yang sangat merugikan pada tanaman cabai. Penyakit ini ditularkan oleh vektor kutu kebul (Bemisia tabaci). Serangan virus ini menyebabkan gangguan pada proses fotosintesis tanaman karena daun mengalami klorosis (menguning), tulang daun menebal, dan pertumbuhan tanaman menjadi kerdil.</p>
+                <p class="font-weight-narrow">Virus ini sulit dikendalikan secara langsung karena bersifat sistemik. Pengendalian paling efektif difokuskan pada vektor pembawa virus dan penggunaan benih yang tahan penyakit.</p>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-gejala">
+                <ul class="detail-list">
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                        <b>Gejala Awal</b>
+                        <ul class="isi-gejala">
+                          <li>Daun muda mulai menunjukkan warna kuning cerah (klorosis).</li>
+                          <li>Tulang daun terlihat menebal dan menonjol.</li>
+                          <li>Daun menggulung ke atas (cupping).</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                          <b>Gejala Lanjutan</b>
+                          <ul class="isi-gejala">
+                            <li>Pertumbuhan tanaman terhambat (kerdil).</li>
+                            <li>Daun menjadi keriting dan ukurannya mengecil.</li>
+                            <li>Bunga sering gugur sebelum menjadi buah.</li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="list-icon"></div>
+                        <div>
+                            <b>Gejala Serangan Berat</b>
+                            <ul class="isi-gejala">
+                                <li>Tanaman sangat kerdil dan gagal berbuah.</li>
+                                <li>Seluruh pucuk tanaman menguning dan mengkerut.</li>
+                                <li>Tanaman akhirnya mati jika infeksi terjadi sejak dini.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-penyebab">
+                <div class="kotak-penyebab">
+                    <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Virus Kuning disebabkan oleh Gemini Virus dan ditularkan oleh serangga vektor.</p>
+                    <div class="daftar-penyebab">
+                        <div class="item-penyebab">
+                            <img src="../../static/images/foto_penyebab/vektor_kutukebul.jpg" class="rounded-circle" width="150" height="150">
+                            <p><i>Bemisia tabaci (Kutu Kebul)</i></p>
+                        </div>
+                    </div>
+                    <div class="table-responsive px-4">
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-danger">
+                                <tr>
+                                    <th>Faktor</th>
+                                    <th>Kondisi yang Mendukung Penyebaran</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Vektor</td><td>Populasi kutu kebul tinggi</td></tr>
+                                <tr><td>Suhu</td><td>27°C – 32°C</td></tr>
+                                <tr><td>Kelembapan</td><td>Sedang hingga Rendah</td></tr>
+                                <tr><td>Umur Tanaman</td><td>Fase vegetatif awal (sangat rentan)</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="card card-custom border-0 p-4 p-lg-5">
-                    <h5 class="section-title">
-                        Bagian Yang Diserang
-                    </h5>
-                    <ul>
-                        <li class="mb-2">Daun</li>
-                        <li class="mb-2">Ujuang Daun</li>
-                        <li class="mb-2">Pelepah Daun</li>
-                        <li class="mb-2">Bibit Padi</li>
-                    </ul>
-                    <h5 class="section-title">
-                        Gejala
-                    </h5>
-                    <ul>
-                        <li class="mb-2">
-                            Daun menguning.
-                        </li>
-                        <li class="mb-2">
-                            Ujung daun mengering.
-                        </li>
-                        <li class="mb-2">
-                            Daun tampak terbakar.
-                        </li>
-                        <li class="mb-2">
-                            Daun menggulung.
-                        </li>
-                        <li class="mb-2">
-                            Tanaman layu.
-                        </li>
-                        <li class="mb-2">
-                            Pertumbuhan tanaman terganggu.
-                        </li>
-                    </ul>
-                    <h5 class="section-title">
-                        Detail Gejala
-                    </h5>
-                    <p class="description-text">
-                        Gejala awal penyakit biasanya muncul pada ujung daun berupa garis atau bercak kecil berwarna hijau keabu-abuan yang kemudian berubah menjadi kuning. Bercak tersebut terus memanjang mengikuti tulang daun hingga seluruh daun tampak menguning dan mengering seperti terbakar. Pada pagi hari sering muncul cairan berwarna kekuningan menyerupai embun pada permukaan daun yang merupakan lendir bakteri. Dalam kondisi serangan berat, daun menggulung, layu, dan akhirnya mati. Pada tanaman muda, serangan dapat menyebabkan gejala kresek yaitu tanaman layu mendadak dan mati seperti kekurangan air
-                    </p>
-                    <h5 class="section-title">
-                        Dampak
-                    </h5>
-                    <p class="description-text">
-                        Penyakit hawar daun bakteri dapat menyebabkan terganggunya proses fotosintesis karena kerusakan daun yang cukup parah. Akibatnya pertumbuhan tanaman menjadi tidak optimal, jumlah anakan berkurang, dan pengisian bulir tidak sempurna. Pada serangan berat, hasil panen dapat menurun drastis bahkan menyebabkan gagal panen. Selain menurunkan kuantitas hasil panen, kualitas gabah juga menjadi lebih rendah.
-                    </p>
-                    <h5 class="section-title">
-                        Penanganan
-                    </h5>
-                    <div class="warna p-4 rounded">
-                        <h6 class="fw-bold text-success mb-3">
-                            Solusi Pengendalian
-                        </h6>
-                        <p class="description-text mb-0">
-                            Pengendalian penyakit hawar daun bakteri dilakukan dengan menggunakan varietas tahan penyakit, menjaga kebersihan lahan, mengatur sistem pengairan, dan menghindari penggunaan pupuk nitrogen secara berlebihan. Petani juga disarankan melakukan tanam serempak untuk mengurangi penyebaran penyakit. Tanaman yang terserang berat sebaiknya segera dipotong atau dimusnahkan agar bakteri tidak menyebar ke tanaman lain. Penggunaan bakterisida dapat dilakukan sesuai dosis anjuran apabila serangan cukup parah.
-                        </p>
-                    </div>
-                    <h5 class="section-title mt-4">
-                        Penyebab
-                    </h5>
-                    <p class="description-text">
-                        Penyakit ini disebabkan oleh bakteri Xanthomonas oryzae pv. oryzae. Bakteri berkembang dengan baik pada kondisi sawah yang lembap, suhu hangat, curah hujan tinggi, dan drainase yang kurang baik. Penyebaran bakteri dapat terjadi melalui air irigasi, angin, percikan hujan, benih terinfeksi, alat pertanian, serta sisa tanaman sakit yang tertinggal di lahan.
-                    </p>
+        
+            <div class="tab-pane" id="tab-bagian">
+                <p class="font-weight-narrow">Virus Kuning terutama menyerang bagian daun dan pucuk tanaman cabai. Gangguan pada daun menyebabkan tanaman tidak bisa berfotosintesis dengan baik sehingga asupan makanan ke buah dan batang terhambat.</p>
+                <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Bagian yang diserang pada cabai.</p>
+                <div class="daftar-penyebab">
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/VirusKuning_bagiandaun.jpg" class="rounded-circle" width="150" height="150"></div>
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/VirusKuning_bagiandaun2.jpg" class="rounded-circle" width="150" height="150"></div>
                 </div>
+            </div>
+        
+            <div class="tab-pane px-4" id="tab-penanganan">
+                <div class="penanganan-card">
+                    <div class="penanganan-header"><h6>Cara Penanganan Penyakit</h6></div>
+                    <div class="penanganan-list">
+                        <div class="penanganan-item"><div class="penanganan-number">1</div><p>Cabut dan musnahkan (bakar) tanaman yang sudah terinfeksi virus agar tidak menular ke tanaman sehat.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">2</div><p>Kendalikan vektor kutu kebul menggunakan insektisida yang sesuai.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">3</div><p>Gunakan benih varietas cabai yang tahan terhadap serangan virus kuning.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">4</div><p>Pasang perangkap lekat kuning (yellow sticky trap) di sekitar lahan untuk memerangkap kutu kebul.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">5</div><p>Jaga kebersihan lahan dari gulma yang bisa menjadi inang alternatif virus.</p></div>
+                    </div>
+                </div>
+            
+                <h6 class="obat-title">Rekomendasi Obat / Insektisida Vektor</h6>
+                    <div class="obat-grid">
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_vektor1.jpg" alt="Imida 2 AS"></div>
+                            <div class="obat-info">
+                                <h6>Imida 2 AS</h6>
+                                <p><b>Bahan Aktif:</b> Imidakloprid 2%</p><p><b>Jenis:</b> Insektisida sistemik</p><p><b>Dosis:</b> 1-2 ml/L air</p><p><b>Fungsi:</b> Mengendalikan kutu kebul pembawa virus.</p>
+                            </div>
+                        </div>
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_vektor2.jpg" alt="Pegasus 500 SC"></div>
+                            <div class="obat-info">
+                                <h6>Pegasus 500 SC</h6>
+                                <p><b>Bahan Aktif:</b> Diafentiuron 500 g/L</p><p><b>Jenis:</b> Insektisida kontak & lambung</p><p><b>Dosis:</b> 1-1.5 ml/L air</p><p><b>Fungsi:</b> Mematikan kutu kebul dewasa dan telurnya.</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="obat-note"><i class="fas fa-exclamation-triangle mr-2"></i><span>Virus tidak bisa disembuhkan dengan fungisida. Pengendalian harus difokuskan pada vektor (kutu kebul) dan sanitasi lahan.</span></div>
+            </div>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-image">
+                <h5>Tahukah Anda?</h5>
+                <img src="../../static/images/foto_penyebab/fakta_viruskuning.jpg" alt="Virus Kuning Cabai">
+            </div>
+            <div class="fact-content">
+                <p class="isi">Kutu kebul (Bemisia tabaci) hanya perlu waktu 15-30 menit untuk menyebarkan Virus Kuning dari tanaman sakit ke tanaman sehat saat ia menusuk stylet mulutnya untuk mengisap cairan tanaman.</p>
+                <small class="fact-source">Sumber: Balai Penelitian Tanaman Sayuran, Kementan RI.</small>
             </div>
         </div>
     </div>
 
-        <footer class="footer-modern">
-
-    <div class="container-xl">
-
-      <div class="footer-top">
-
-        <div class="footer-brand">
-
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
-
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
-
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-4">
+                    <a class="navbar-brand d-flex align-items-center" href="../../index.html"><img src="../../static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;"></a>
+                    <p class="text-white-50" style="font-size: 17px;">Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html">Home</a></li><li><a href="../berita.html">Berita</a></li><li><a href="../jenisCabai.html">Jenis Cabai</a></li><li><a href="../informasi.html">Informasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4"><h5 class="text-white mb-3">Solusi</h5><p class="text-white-50" style="font-size: 17px;">Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.</p></div>
+            </div>
+            <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="text-center"><p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">©2026 ChiliCare - All Rights Reserved</p></div>
+            <div class="footer-brand-watermark">ChiliCare</div>
         </div>
-
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
-        </div>
-
-      </div>
-
-      <hr>
-
-      <div class="footer-bottom">
-
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
     </footer>
 
-    <script>
-        // 1. --- LOGIKA TOMBOL KEMBALI (X) ---
+   <script>
         const closeBtn = document.getElementById("menu-toggle");
-        if (closeBtn) {
-            closeBtn.addEventListener("click", function () {
-                if (document.referrer !== "") {
-                    window.history.back();
-                } else {
-                    window.location.href = "/index.html";
-                }
-            });
-        }
-
-        // 2. --- LOGIKA BREADCRUMB DINAMIS & KONDISIONAL ---
-        const urlParams = new URLSearchParams(window.location.search);
-        const refSource = urlParams.get('ref');
-        
-        // Deteksi Jalur Diagnosis
-        const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html');
-        // Deteksi Jalur Informasi
-        const isFromInformasi = document.referrer.includes('informasi.html');
-
-        // Ambil semua link di dalam breadcrumb
+        if (closeBtn) { closeBtn.addEventListener("click", function () { if (document.referrer !== "") { window.history.back(); } else { window.location.href = "../../index.html"; } }); }
+        const urlParams = new URLSearchParams(window.location.search); const refSource = urlParams.get('ref'); const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html'); const isFromInformasi = document.referrer.includes('informasi.html');
         const breadcrumbLinks = document.querySelectorAll('.breadcrumb-custom a');
-        
-        breadcrumbLinks.forEach(function(link) {
-            // Targetkan hanya link yang bertuliskan "Informasi"
-            if (link.innerText.trim() === "Informasi") {
-                if (isFromDiagnosis) {
-                    // JALUR A: Jika dari Diagnosis, ubah teksnya
-                    link.href = "/template/diagnosis.html";
-                    link.innerText = "Diagnosis";
-                } 
-                else if (!isFromInformasi) {
-                    // JALUR C: Jika BUKAN dari Informasi (artinya dari Beranda / index.html)
-                    // Ambil ikon chevron (panah) setelah kata "Informasi" lalu hapus
-                    const nextChevron = link.nextElementSibling;
-                    if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) {
-                        nextChevron.remove();
-                    }
-                    // Hapus link kata "Informasi" itu sendiri
-                    link.remove();
-                }
-                // JALUR B: Jika dari Informasi, dibiarkan saja (default)
-            }
-        });
+        breadcrumbLinks.forEach(function(link) { if (link.innerText.trim() === "Informasi") { if (isFromDiagnosis) { link.href = "../diagnosis.html"; link.innerText = "Diagnosis"; } else if (!isFromInformasi) { const nextChevron = link.nextElementSibling; if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) { nextChevron.remove(); } link.remove(); } } });
+        const slides = document.querySelectorAll('.slide'); const dotsContainer = document.querySelector('.slider-dots');
+        slides.forEach((_, i) => { const dot = document.createElement('span'); dot.classList.add('dot'); if (i === 0) dot.classList.add('active'); dot.addEventListener('click', () => goTo(i)); dotsContainer.appendChild(dot); });
+        const dots = document.querySelectorAll('.dot'); let current = 0;
+        function goTo(index) { slides[current].classList.remove('active'); dots[current].classList.remove('active'); current = (index + slides.length) % slides.length; slides[current].classList.add('active'); dots[current].classList.add('active'); }
+        document.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1)); document.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+        const tabBtns = document.querySelectorAll('.tab-btn'); const tabPanes = document.querySelectorAll('.tab-pane');
+        tabBtns.forEach(btn => { btn.addEventListener('click', () => { const target = btn.dataset.tab; tabBtns.forEach(b => b.classList.remove('active')); tabPanes.forEach(p => p.classList.remove('active')); btn.classList.add('active'); document.getElementById('tab-' + target).classList.add('active'); }); });
     </script>
 </body>
 </html>

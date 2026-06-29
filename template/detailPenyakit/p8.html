@@ -3,264 +3,220 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Penyakit</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Detail Penyakit - Hama Lalat Buah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
-    <link rel="stylesheet" href="/static/style/style3.css" />
+    <link rel="stylesheet" href="../../static/style/style3.css" />
 </head>
-
 <body class="detail-page">
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-xl d-flex justify-content-between align-items-center">
-
-            <!-- Logo tetap di kiri -->
-            <a class="navbar-brand d-flex align-items-center" href="/template/informasi.html">
-                <img src="/static/images/logo2.png" alt="Logo SiPadi"
-                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-                <h3 style="color: green; margin: 0;">SiPadi</h3>
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="../informasi.html">
+                <img src="../../static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
-
-            <button id="menu-toggle" class="btn-back-home" title="Kembali">
-                ✕
-            </button>
-
+            <div id="menu-toggle" class="btn btn-back shadow-sm"><i class="fas fa-arrow-left mt-1"></i>Back</div>
         </div>
-    </nav>
+    </nav>  
 
     <div class="container-xl detail-container">
-
         <nav aria-label="breadcrumb" class="breadcrumb-custom mb-4">
-                <i class="fas fa-home"></i> <a href="/">Beranda</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> <a
-                    href="/template/informasi.html">Informasi</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> Penyakit False Smut
+            <i class="fas fa-home" style="color: #b91e1e;"></i>
+            <a href="../../index.html">Home</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i>
+            <a href="../informasi.html">Informasi</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem; color: #b91e1e;"></i>
+            Hama Lalat Buah
         </nav>
+                
+        <div class="img-wrapper">
+            <div class="img-slider">
+                <div class="slide active">
+                  <img src="../../static/images/assetPenyakit/KutuBuah.png" class="img-detail" alt="Lalat Buah 1" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/KutuBuah2.jpg" class="img-detail" alt="Lalat Buah 2" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/KutuBuah3.jpg" class="img-detail" alt="Lalat Buah 3" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/KutuBuah4.jpg" class="img-detail" alt="Lalat Buah 4" />
+                </div>
+                <button class="slider-btn slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn slider-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots"></div> 
+            </div>
+        </div>
 
-        <h2 class="fw-bold mb-4">
-            Penyakit False Smut
-        </h2>
+        <h2 class="font-weight-bold" style="padding-top: 30px; padding-bottom: 30px;">Hama Lalat Buah</h2>
 
-        <div class="row align-items-start">
-            <div class="col-lg-5 mb-4">
-                <div class="left-side">
-                    <img
-                        src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit False Smut.png"
-                        class="img-detail shadow-sm"
-                        alt="Penyakit False Smut"
-                    >
-
-                    <div class="mt-4">
-                        <h5 class="section-title">
-                            Deskripsi Singkat
-                        </h5>
-
-                        <p class="description-text">
-                            Penyakit false smut merupakan penyakit jamur pada tanaman padi yang disebabkan oleh jamur Ustilaginoidea virens. Penyakit ini menyerang bulir padi dan menyebabkan terbentuknya gumpalan berwarna hijau kekuningan pada gabah. False smut biasanya muncul pada kondisi kelembapan tinggi dan pemupukan nitrogen berlebihan. Penyakit ini dapat menurunkan kualitas dan hasil panen padi. Penyebaran jamur terjadi melalui spora yang terbawa angin dan air. Pengendalian dilakukan dengan menjaga kebersihan lahan, penggunaan benih sehat, dan pengaturan pemupukan yang seimbang.
-                        </p>
+        <div class="detail-tabs">
+            <button class="tab-btn active" data-tab="deskripsi"><i class="fas fa-info-circle"></i> Deskripsi</button>
+            <button class="tab-btn" data-tab="gejala"><i class="fas fa-stethoscope"></i> Gejala</button>
+            <button class="tab-btn" data-tab="penyebab"><i class="fas fa-bug"></i> Penyebab</button>
+            <button class="tab-btn" data-tab="bagian"><i class="fas fa-leaf"></i> Bagian Diserang</button>
+            <button class="tab-btn" data-tab="penanganan"><i class="fas fa-shield-alt"></i> Penanganan</button>
+        </div>
+    
+        <div class="tab-content-wrapper">
+            <div class="tab-pane active" id="tab-deskripsi">
+                <p class="font-weight-narrow">Lalat buah adalah salah satu hama paling merugikan pada tanaman cabai yang sudah memasuki fase berbuah. Serangga betina menusuk kulit buah muda menggunakan ovipositor untuk meletakkan telur di dalam daging buah. Larva yang menetas akan memakan daging buah dari dalam, menyebabkan pembusukan dan kerontokan.</p>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-gejala">
+                <ul class="detail-list">
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                        <b>Gejala Awal</b>
+                        <ul class="isi-gejala">
+                          <li>Muncul titik bekas tusukan berwarna hitam/coklat pada kulit buah cabai.</li>
+                          <li>Area di sekitar tusukan terlihat agak memar atau berwarna lebih gelap.</li>
+                          <li> Buah muda berubah bentuk tidak beraturan.</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                          <b>Gejala Lanjutan</b>
+                          <ul class="isi-gejala">
+                            <li>Buah berubah warna menjadi kuning pucat atau oranye sebelum waktunya matang.</li>
+                            <li>Jika buah dibelah, terlihat belatung (larva putih) memakan daging buah.</li>
+                            <li>Tekstur buah menjadi lembek dan berair.</li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="list-icon"></div>
+                        <div>
+                            <b>Gejala Serangan Berat</b>
+                            <ul class="isi-gejala">
+                                <li>Buah membusuk total dan gugur ke tanah sebelum matang.</li>
+                                <li>Larva keluar dari buah yang jatuh dan berkepompong di dalam tanah.</li>
+                                <li>Hasil panen gagal total karena buah yang dihasilkan tidak layak jual.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-penyebab">
+                <div class="kotak-penyebab">
+                    <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Hama ini disebabkan oleh serangga lalat buah betina dan larvanya.</p>
+                    <div class="daftar-penyebab">
+                        <div class="item-penyebab">
+                            <img src="../../static/images/foto_penyebab/bactrocera_dorsalis.jpg" class="rounded-circle" width="150" height="150">
+                            <p><i>Bactrocera dorsalis</i></p>
+                        </div>
+                    </div>
+                    <div class="table-responsive px-4">
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-danger">
+                                <tr>
+                                    <th>Faktor</th>
+                                    <th>Kondisi yang Mendukung Hama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Musim</td><td>Panca buah (banyak tanaman berbuah)</td></tr>
+                                <tr><td>Suhu</td><td>27°C – 30°C</td></tr>
+                                <tr><td>Ketinggian</td><td>Dataran rendah hingga menengah</td></tr>
+                                <tr><td>Aktivitas</td><td>Sangat aktif di pagi dan sore hari</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-7">
-                <div class="card card-custom border-0 p-4 p-lg-5">
-
-                    <h5 class="section-title">
-                        Bagian Yang Diserang
-                    </h5>
-
-                    <ul>
-                        <li class="mb-2">Bulir Padi</li>
-                        <li class="mb-2">Malai Padi</li>
-                        <li class="mb-2">Gabah</li>
-                    </ul>
-
-                    <h5 class="section-title">
-                        Gejala
-                    </h5>
-
-                    <ul>
-                        <li class="mb-2">
-                            Muncul gumpalan hijau pada bulir.
-                        </li>
-                        <li class="mb-2">
-                            Bulir berubah warna menjadi kuning kehijauan.
-                        </li>
-                        <li class="mb-2">
-                            Gabah tidak berkembang sempurna.
-                        </li>
-                        <li class="mb-2">
-                            Malai tampak kotor oleh spora jamur.
-                        </li>
-                        <li class="mb-2">
-                            Kualitas gabah menurun.
-                        </li>
-                    </ul>
-
-                    <h5 class="section-title">
-                        Detail Gejala
-                    </h5>
-
-                    <p class="description-text">
-                        Gejala utama false smut ditandai dengan munculnya bola atau gumpalan berwarna hijau kekuningan pada bulir padi. Gumpalan tersebut merupakan kumpulan spora jamur yang berkembang pada gabah. Seiring waktu, warna gumpalan berubah menjadi hijau tua hingga hitam. Bulir yang terserang tidak dapat berkembang dengan baik sehingga kualitas dan hasil panen menurun. Penyakit ini lebih mudah berkembang pada kondisi sawah yang lembap dan penggunaan pupuk nitrogen berlebihan.
-                    </p>
-
-                    <h5 class="section-title">
-                        Dampak
-                    </h5>
-
-                    <p class="description-text">
-                        Penyakit false smut dapat menurunkan kualitas gabah dan hasil panen padi. Bulir yang terinfeksi tidak dapat berkembang sempurna sehingga jumlah gabah bernas berkurang. Selain itu, keberadaan jamur pada gabah juga dapat menurunkan nilai jual hasil panen dan menyebabkan kerugian bagi petani.
-                    </p>
-
-                    <h5 class="section-title">
-                        Penanganan
-                    </h5>
-
-                    <div class="warna p-4 rounded">
-                        <h6 class="fw-bold text-success mb-3">
-                            Solusi Pengendalian
-                        </h6>
-
-                        <p class="description-text mb-0">
-                            Pengendalian false smut dilakukan dengan menggunakan benih sehat, menjaga kebersihan lahan, dan mengatur penggunaan pupuk nitrogen agar tidak berlebihan. Selain itu, petani dapat melakukan pergiliran tanaman dan membuang bagian tanaman yang terinfeksi untuk mengurangi sumber penyebaran jamur. Penggunaan fungisida sesuai anjuran juga dapat membantu mengendalikan perkembangan penyakit.
-                        </p>
-                    </div>
-
-                    <h5 class="section-title mt-4">
-                        Penyebab
-                    </h5>
-
-                    <p class="description-text">
-                        Penyakit false smut disebabkan oleh jamur Ustilaginoidea virens yang menyerang bulir padi saat fase pembungaan hingga pengisian gabah. Jamur berkembang dengan cepat pada kondisi lingkungan lembap dan suhu hangat. Spora jamur dapat menyebar melalui angin, air, dan sisa tanaman yang terinfeksi.
-                    </p>
-
+        
+            <div class="tab-pane" id="tab-bagian">
+                <p class="font-weight-narrow">Lalat buah hanya menyerang bagian buah cabai. Mereka tertarik pada warna kuning/oranye buah yang mulai matang. Tidak ada kerusakan pada daun, batang, atau akar akibat serangga ini.</p>
+                <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Bagian yang diserang pada cabai.</p>
+                <div class="daftar-penyebab">
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/LalatBuah_bagianbuah1.jpg" class="rounded-circle" width="150" height="150"></div>
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/LalatBuah_bagianbuah2.jpg" class="rounded-circle" width="150" height="150"></div>
                 </div>
+            </div>
+        
+            <div class="tab-pane px-4" id="tab-penanganan">
+                <div class="penanganan-card">
+                    <div class="penanganan-header"><h6>Cara Penanganan Hama</h6></div>
+                    <div class="penanganan-list">
+                        <div class="penanganan-item"><div class="penanganan-number">1</div><p>Kumpulkan dan kubur dalam-dalam atau bakar buah-buahan yang busuk atau gugur ke tanah untuk mematikan larva di dalamnya.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">2</div><p>Pasang perangkap atraktan (seperti Metil Eugenol) di sekitar lahan untuk memerangkap lalat buah jantan.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">3</div><p>Lakukan pembungkusan buah (bagging) menggunakan kantung plastik atau kertas saat buah masih muda.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">4</div><p>Semprot insektisida berbahan aktif siflutrin jika populasi lalat buah sangat tinggi.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">5</div><p>Jangan menanam cabai berdekatan dengan tanaman inang lalat buah lainnya seperti belimbing atau jeruk.</p></div>
+                    </div>
+                </div>
+            
+                <h6 class="obat-title">Rekomendasi Obat / Insektisida</h6>
+                    <div class="obat-grid">
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_lalatbuah1.jpg" alt="Decis 2.5 EC"></div>
+                            <div class="obat-info">
+                                <h6>Decis 2.5 EC</h6>
+                                <p><b>Bahan Aktif:</b> Deltametrin 25 g/L</p><p><b>Jenis:</b> Insektisida kontak</p><p><b>Dosis:</b> 1-2 ml/L air</p><p><b>Fungsi:</b> Membunuh lalat buah dewasa yang hinggap di buah.</p>
+                            </div>
+                        </div>
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_lalatbuah2.jpg" alt="Prevathon 5 SC"></div>
+                            <div class="obat-info">
+                                <h6>Prevathon 5 SC</h6>
+                                <p><b>Bahan Aktif:</b> Klorantraniliprol 50 g/L</p><p><b>Jenis:</b> Insektisida sistemik</p><p><b>Dosis:</b> 0.5-1 ml/L air</p><p><b>Fungsi:</b> Mematikan larva lalat buah di dalam daging buah.</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="obat-note"><i class="fas fa-exclamation-triangle mr-2"></i><span>Pembungkusan buah (bagging) adalah cara paling ramah lingkungan dan efektif 100% mencegah lalat buah bertelur.</span></div>
+            </div>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-image">
+                <h5>Tahukah Anda?</h5>
+                <img src="../../static/images/foto_penyebab/fakta_lalatbuah.jpg" alt="Lalat Buah Cabai">
+            </div>
+            <div class="fact-content">
+                <p class="isi">Lalat buah betina mampu mendeteksi senyawa volatil yang dikeluarkan oleh buah cabai yang mulai matang dari jarak puluhan meter. Atraktan buatan seperti Metil Eugenol meniru aroma seksual lalat betina untuk menjebak lalat jantan.</p>
+                <small class="fact-source">Sumber: Balai Penelitian Tanaman Pemanis dan Serat.</small>
             </div>
         </div>
     </div>
 
     <footer class="footer-modern">
-
-    <div class="container-xl">
-
-      <div class="footer-top">
-
-        <div class="footer-brand">
-
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
-
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
-
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-4">
+                    <a class="navbar-brand d-flex align-items-center" href="../../index.html"><img src="../../static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;"></a>
+                    <p class="text-white-50" style="font-size: 17px;">Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html">Home</a></li><li><a href="../berita.html">Berita</a></li><li><a href="../jenisCabai.html">Jenis Cabai</a></li><li><a href="../informasi.html">Informasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4"><h5 class="text-white mb-3">Solusi</h5><p class="text-white-50" style="font-size: 17px;">Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.</p></div>
+            </div>
+            <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="text-center"><p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">©2026 ChiliCare - All Rights Reserved</p></div>
+            <div class="footer-brand-watermark">ChiliCare</div>
         </div>
-
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
-        </div>
-
-      </div>
-
-      <hr>
-
-      <div class="footer-bottom">
-
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
     </footer>
 
-    <script>
-        // 1. --- LOGIKA TOMBOL KEMBALI (X) ---
+   <script>
         const closeBtn = document.getElementById("menu-toggle");
-        if (closeBtn) {
-            closeBtn.addEventListener("click", function () {
-                if (document.referrer !== "") {
-                    window.history.back();
-                } else {
-                    window.location.href = "/index.html";
-                }
-            });
-        }
-
-        // 2. --- LOGIKA BREADCRUMB DINAMIS & KONDISIONAL ---
-        const urlParams = new URLSearchParams(window.location.search);
-        const refSource = urlParams.get('ref');
-        
-        // Deteksi Jalur Diagnosis
-        const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html');
-        // Deteksi Jalur Informasi
-        const isFromInformasi = document.referrer.includes('informasi.html');
-
-        // Ambil semua link di dalam breadcrumb
+        if (closeBtn) { closeBtn.addEventListener("click", function () { if (document.referrer !== "") { window.history.back(); } else { window.location.href = "../../index.html"; } }); }
+        const urlParams = new URLSearchParams(window.location.search); const refSource = urlParams.get('ref'); const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html'); const isFromInformasi = document.referrer.includes('informasi.html');
         const breadcrumbLinks = document.querySelectorAll('.breadcrumb-custom a');
-        
-        breadcrumbLinks.forEach(function(link) {
-            // Targetkan hanya link yang bertuliskan "Informasi"
-            if (link.innerText.trim() === "Informasi") {
-                if (isFromDiagnosis) {
-                    // JALUR A: Jika dari Diagnosis, ubah teksnya
-                    link.href = "/template/diagnosis.html";
-                    link.innerText = "Diagnosis";
-                } 
-                else if (!isFromInformasi) {
-                    // JALUR C: Jika BUKAN dari Informasi (artinya dari Beranda / index.html)
-                    // Ambil ikon chevron (panah) setelah kata "Informasi" lalu hapus
-                    const nextChevron = link.nextElementSibling;
-                    if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) {
-                        nextChevron.remove();
-                    }
-                    // Hapus link kata "Informasi" itu sendiri
-                    link.remove();
-                }
-                // JALUR B: Jika dari Informasi, dibiarkan saja (default)
-            }
-        });
+        breadcrumbLinks.forEach(function(link) { if (link.innerText.trim() === "Informasi") { if (isFromDiagnosis) { link.href = "../diagnosis.html"; link.innerText = "Diagnosis"; } else if (!isFromInformasi) { const nextChevron = link.nextElementSibling; if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) { nextChevron.remove(); } link.remove(); } } });
+        const slides = document.querySelectorAll('.slide'); const dotsContainer = document.querySelector('.slider-dots');
+        slides.forEach((_, i) => { const dot = document.createElement('span'); dot.classList.add('dot'); if (i === 0) dot.classList.add('active'); dot.addEventListener('click', () => goTo(i)); dotsContainer.appendChild(dot); });
+        const dots = document.querySelectorAll('.dot'); let current = 0;
+        function goTo(index) { slides[current].classList.remove('active'); dots[current].classList.remove('active'); current = (index + slides.length) % slides.length; slides[current].classList.add('active'); dots[current].classList.add('active'); }
+        document.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1)); document.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+        const tabBtns = document.querySelectorAll('.tab-btn'); const tabPanes = document.querySelectorAll('.tab-pane');
+        tabBtns.forEach(btn => { btn.addEventListener('click', () => { const target = btn.dataset.tab; tabBtns.forEach(b => b.classList.remove('active')); tabPanes.forEach(p => p.classList.remove('active')); btn.classList.add('active'); document.getElementById('tab-' + target).classList.add('active'); }); });
     </script>
-
 </body>
 </html>

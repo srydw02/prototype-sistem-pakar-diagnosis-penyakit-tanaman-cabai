@@ -1,250 +1,223 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Penyakit</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Detail Penyakit - Layu Bakteri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
-    <link rel="stylesheet" href="/static/style/style3.css" />
+    <link rel="stylesheet" href="../../static/style/style3.css" />
 </head>
-
 <body class="detail-page">
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-xl d-flex justify-content-between align-items-center">
-
-            <!-- Logo tetap di kiri -->
-            <a class="navbar-brand d-flex align-items-center" href="/template/informasi.html">
-                <img src="/static/images/logo2.png" alt="Logo SiPadi"
-                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-                <h3 style="color: green; margin: 0;">SiPadi</h3>
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="../informasi.html">
+                <img src="../../static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
-
-            <button id="menu-toggle" class="btn-back-home" title="Kembali">
-                ✕
-            </button>
-
+            <div id="menu-toggle" class="btn btn-back shadow-sm"><i class="fas fa-arrow-left mt-1"></i>Back</div>
         </div>
-    </nav>
-
+    </nav>  
 
     <div class="container-xl detail-container">
-
         <nav aria-label="breadcrumb" class="breadcrumb-custom mb-4">
-                <i class="fas fa-home"></i> <a href="/">Beranda</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> <a
-                    href="/template/informasi.html">Informasi</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> Penyakit Busuk Pelepah (Sheath Blight)
+            <i class="fas fa-home" style="color: #b91e1e;"></i>
+            <a href="../../index.html">Home</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i>
+            <a href="../informasi.html">Informasi</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem; color: #b91e1e;"></i>
+            Layu Bakteri
         </nav>
+                
+        <div class="img-wrapper">
+            <div class="img-slider">
+                <div class="slide active">
+                  <img src="../../static/images/assetPenyakit/LayuBakteri.jpg" class="img-detail" alt="Layu Bakteri 1" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/LayuBakteri2.jpg" class="img-detail" alt="Layu Bakteri 2" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/LayuBakteri3.jpg" class="img-detail" alt="Layu Bakteri 3" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/LayuBakteri4.jpg" class="img-detail" alt="Layu Bakteri 4" />
+                </div>
+                <button class="slider-btn slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn slider-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots"></div> 
+            </div>
+        </div>
 
-        <h2 class="fw-bold mb-4">
-            Penyakit Busuk Pelepah (Sheath Blight)
-        </h2>
-        <div class="row align-items-start">
-            <div class="col-lg-5 mb-4">
-                <div class="left-side">
-                    <img
-                        src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Busuk Pelepah (Sheath Blight).png"
-                        class="img-detail shadow-sm"
-                        alt="Penyakit Busuk Pelepah (Sheath Blight)"
-                    >
-                    <div class="mt-4">
-                        <h5 class="section-title">
-                            Deskripsi Singkat
-                        </h5>
-                        <p class="description-text">
-                            Penyakit busuk pelepah atau sheath blight merupakan penyakit jamur pada tanaman padi yang disebabkan oleh Rhizoctonia solani. Penyakit ini banyak ditemukan pada pertanaman padi dengan kelembapan tinggi dan jarak tanam terlalu rapat. Busuk pelepah menyerang bagian pelepah daun dan batang sehingga tanaman menjadi lemah dan mudah rebah. Penyakit ini dapat menyebar dengan cepat melalui air irigasi, percikan hujan, alat pertanian, dan kontak antar tanaman. Gejala awal biasanya muncul pada pelepah daun bagian bawah berupa bercak-bercak kecil berwarna hijau keabu-abuan yang kemudian membesar dan berubah menjadi coklat kehitaman. Pada serangan berat, tanaman dapat rebah
-                        </p>
+        <h2 class="font-weight-bold" style="padding-top: 30px; padding-bottom: 30px;">Layu Bakteri</h2>
+
+        <div class="detail-tabs">
+            <button class="tab-btn active" data-tab="deskripsi"><i class="fas fa-info-circle"></i> Deskripsi</button>
+            <button class="tab-btn" data-tab="gejala"><i class="fas fa-stethoscope"></i> Gejala</button>
+            <button class="tab-btn" data-tab="penyebab"><i class="fas fa-bug"></i> Penyebab</button>
+            <button class="tab-btn" data-tab="bagian"><i class="fas fa-leaf"></i> Bagian Diserang</button>
+            <button class="tab-btn" data-tab="penanganan"><i class="fas fa-shield-alt"></i> Penanganan</button>
+        </div>
+    
+        <div class="tab-content-wrapper">
+            <div class="tab-pane active" id="tab-deskripsi">
+                <p class="font-weight-narrow">Layu Bakteri adalah penyakit yang disebabkan oleh bakteri Ralstonia solanacearum. Penyakit ini sangat merusak karena bakteri menyerang jaringan pembuluh tanaman dan berkembang biak dengan cepat hingga menyumbat aliran air.</p>
+                <p class="font-weight-narrow">Berbeda dengan layu jamur, layu bakteri sering terjadi sangat mendadak. Tanaman bisa langsung layu sempurna dalam hitungan hari meskipun daunnya masih berwarna hijau.</p>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-gejala">
+                <ul class="detail-list">
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                        <b>Gejala Awal</b>
+                        <ul class="isi-gejala">
+                          <li>Tanaman layu mendadak di siang hari saat cuaca panas.</li>
+                          <li>Daun bagian atas terlihat layu, namun daun bagian bawah masih hijau segar.</li>
+                          <li>Pada sore/malam hari, tanaman terkadang terlihat kembali segar.</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                          <b>Gejala Lanjutan</b>
+                          <ul class="isi-gejala">
+                            <li>Pangkal batang terasa lunak jika ditekan.</li>
+                            <li>Jika batang dipotong melintang, akan keluar lendir putih kekuningan (exudat bakteri).</li>
+                            <li>Layu menjadi permanen dan tidak membaik lagi.</li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="list-icon"></div>
+                        <div>
+                            <b>Gejala Serangan Berat</b>
+                            <ul class="isi-gejala">
+                                <li>Seluruh daun menguning dan mengering.</li>
+                                <li>Batang membusuk dan tanaman rebah.</li>
+                                <li>Bakteri bisa tersebar ke tanaman lain melalui air irigasi.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-penyebab">
+                <div class="kotak-penyebab">
+                    <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Layu Bakteri disebabkan oleh bakteri tular tanah.</p>
+                    <div class="daftar-penyebab">
+                        <div class="item-penyebab">
+                            <img src="../../static/images/foto_penyebab/ralstonia_solanacearum.jpg" class="rounded-circle" width="150" height="150">
+                            <p><i>Ralstonia solanacearum</i></p>
+                        </div>
+                    </div>
+                    <div class="table-responsive px-4">
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-danger">
+                                <tr>
+                                    <th>Faktor</th>
+                                    <th>Kondisi yang Mendukung Penyakit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Suhu</td><td>25°C – 35°C</td></tr>
+                                <tr><td>Kelembapan</td><td>Sangat tinggi, tanah becek</td></tr>
+                                <tr><td>Penyebaran</td><td>Air irigasi, alat pertanian, benih terinfeksi</td></tr>
+                                <tr><td>Luka Tanaman</td><td>Luka akar mempercepat bakteri masuk</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="card card-custom border-0 p-4 p-lg-5">
-                    <h5 class="section-title">
-                        Bagian Yang Diserang
-                    </h5>
-                    <ul>
-                        <li class="mb-2">Pelepah Daun</li>
-                        <li class="mb-2">Batang Bagian Bawah</li>
-                        <li class="mb-2">Daun Bagian Bawah</li>
-                        <li class="mb-2">Malai</li>
-                    </ul>
-                    <h5 class="section-title">
-                        Gejala
-                    </h5>
-                    <ul>
-                        <li class="mb-2">
-                            Bercak oval pada pelepah.
-                        </li>
-                        <li class="mb-2">
-                            Pelepah membusuk.
-                        </li>
-                        <li class="mb-2">
-                            Daun mengering.
-                        </li>
-                        <li class="mb-2">
-                            Tanaman mudah rebah.
-                        </li>
-                        <li class="mb-2">
-                            Bulir hampa.
-                        </li>
-                    </ul>
-                    <h5 class="section-title">
-                        Detail Gejala
-                    </h5>
-                    <p class="description-text">
-                        Gejala awal muncul berupa bercak oval kecil berwarna hijau keabu-abuan pada pelepah daun dekat permukaan air. Bercak kemudian membesar menjadi coklat dengan tepi lebih gelap. Dalam kondisi lembap, bercak dapat meluas hingga menyelimuti seluruh pelepah sehingga pelepah membusuk. Daun menjadi kering dan batang melemah sehingga tanaman mudah roboh sebelum panen. Pada serangan berat, pengisian bulir terganggu dan menyebabkan bulir padi menjadi hampa.
-                    </p>
-                    <h5 class="section-title">
-                        Dampak
-                    </h5>
-                    <p class="description-text">
-                        Penyakit busuk pelepah dapat mengurangi kemampuan tanaman menyerap dan menyalurkan nutrisi sehingga pertumbuhan terganggu. Tanaman yang roboh sulit dipanen dan kualitas gabah menurun. Pada serangan berat, hasil panen dapat berkurang cukup besar. Selain itu, tanaman yang terserang juga lebih rentan terhadap serangan hama lain sehingga kerugian bisa semakin besar.
-                    </p>
-                    <h5 class="section-title">
-                        Penanganan
-                    </h5>
-                    <div class="warna p-4 rounded">
-                        <h6 class="fw-bold text-success mb-3">
-                            Solusi Pengendalian
-                        </h6>
-                        <p class="description-text mb-0">
-                            Pengendalian dilakukan dengan mengatur jarak tanam agar sirkulasi udara lebih baik, mengurangi kelembapan sawah, membersihkan sisa tanaman sakit, serta menggunakan fungisida sesuai anjuran. Pemupukan nitrogen juga perlu dikontrol agar tanaman tidak terlalu rimbun.
-                        </p>
-                    </div>
-                    <h5 class="section-title mt-4">
-                        Penyebab
-                    </h5>
-                    <p class="description-text">
-                        Penyakit ini disebabkan oleh jamur Rhizoctonia solani yang berkembang pada kondisi lembap, suhu hangat, dan pertanaman yang terlalu rapat. Jamur dapat bertahan pada sisa jerami dan tanah dalam waktu cukup lama. Penyebaran penyakit dapat terjadi melalui air irigasi, percikan hujan, alat pertanian, dan kontak antar tanaman.
-                    </p>
+        
+            <div class="tab-pane" id="tab-bagian">
+                <p class="font-weight-narrow">Bakteri menyerang sistem perakaran dan menyebar ke jaringan pembuluh (xilem) pada batang. Karena pembuluh tersumbat, seluruh bagian atas tanaman (daun, tangkai, dan pucuk) mengalami kekurangan air parah.</p>
+                <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Bagian yang diserang pada cabai.</p>
+                <div class="daftar-penyebab">
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/Bakteri_bagianbatang.jpg" class="rounded-circle" width="150" height="150"></div>
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/Bakteri_bagianakar.jpg" class="rounded-circle" width="150" height="150"></div>
                 </div>
+            </div>
+        
+            <div class="tab-pane px-4" id="tab-penanganan">
+                <div class="penanganan-card">
+                    <div class="penanganan-header"><h6>Cara Penanganan Penyakit</h6></div>
+                    <div class="penanganan-list">
+                        <div class="penanganan-item"><div class="penanganan-number">1</div><p>Perbaiki sanitasi kebun dan sistem drainase agar tidak ada genangan air.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">2</div><p>Cabut tanaman yang layu beserta tanah di sekitar akarnya, lalu bakar atau buang jauh dari lahan.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">3</div><p>Aplikasikan bakterisida berbahan aktif tembaga hidroksida pada tanaman di sekitarnya.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">4</div><p>Lakukan rotasi tanaman dengan padi-padian untuk memutus siklus hidup bakteri.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">5</div><p>Sterilkan alat pertanian (gunting, cangkul) setelah digunakan.</p></div>
+                    </div>
+                </div>
+            
+                <h6 class="obat-title">Rekomendasi Obat / Bakterisida</h6>
+                    <div class="obat-grid">
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_bakteri1.jpg" alt="Kocide 77 WP"></div>
+                            <div class="obat-info">
+                                <h6>Kocide 77 WP</h6>
+                                <p><b>Bahan Aktif:</b> Tembaga hidroksida 77%</p><p><b>Jenis:</b> Bakterisida kontak</p><p><b>Dosis:</b> 2 g/L air</p><p><b>Fungsi:</b> Mencegah penyebaran bakteri pada tanaman sehat.</p>
+                            </div>
+                        </div>
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_bakteri2.jpg" alt="Agrept 20 SP"></div>
+                            <div class="obat-info">
+                                <h6>Agrept 20 SP</h6>
+                                <p><b>Bahan Aktif:</b> Streptomisin sulfat 20%</p><p><b>Jenis:</b> Bakterisida sistemik</p><p><b>Dosis:</b> 1-1.5 g/L air</p><p><b>Fungsi:</b> Menghambat pertumbuhan bakteri di jaringan tanaman.</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="obat-note"><i class="fas fa-exclamation-triangle mr-2"></i><span>Sangat disarankan untuk mencabut tanaman yang sudah terinfeksi berat, karena bakterisida seringkali tidak efektif lagi jika pembuluh sudah tersumbat parah.</span></div>
+            </div>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-image">
+                <h5>Tahukah Anda?</h5>
+                <img src="../../static/images/foto_penyebab/fakta_bakteri.jpg" alt="Layu Bakteri Cabai">
+            </div>
+            <div class="fact-content">
+                <p class="isi">Bakteri Ralstonia solanacearum bisa bertahan di dalam tanah atau pada gulma tanaman lain selama bertahun-tahun tanpa menunjukkan gejala. Air irigasi adalah media penyebaran tersubur bagi bakteri ini.</p>
+                <small class="fact-source">Sumber: Buku Pengendalian Penyakit Bakteri, UGM Press.</small>
             </div>
         </div>
     </div>
 
     <footer class="footer-modern">
-
-    <div class="container-xl">
-
-      <div class="footer-top">
-
-        <div class="footer-brand">
-
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
-
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
-
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-4">
+                    <a class="navbar-brand d-flex align-items-center" href="../../index.html"><img src="../../static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;"></a>
+                    <p class="text-white-50" style="font-size: 17px;">Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html">Home</a></li><li><a href="../berita.html">Berita</a></li><li><a href="../jenisCabai.html">Jenis Cabai</a></li><li><a href="../informasi.html">Informasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4"><h5 class="text-white mb-3">Solusi</h5><p class="text-white-50" style="font-size: 17px;">Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.</p></div>
+            </div>
+            <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="text-center"><p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">©2026 ChiliCare - All Rights Reserved</p></div>
+            <div class="footer-brand-watermark">ChiliCare</div>
         </div>
-
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
-        </div>
-
-      </div>
-
-      <hr>
-
-      <div class="footer-bottom">
-
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
     </footer>
 
-    <script>
-        // 1. --- LOGIKA TOMBOL KEMBALI (X) ---
+   <script>
         const closeBtn = document.getElementById("menu-toggle");
-        if (closeBtn) {
-            closeBtn.addEventListener("click", function () {
-                if (document.referrer !== "") {
-                    window.history.back();
-                } else {
-                    window.location.href = "/index.html";
-                }
-            });
-        }
-
-        // 2. --- LOGIKA BREADCRUMB DINAMIS & KONDISIONAL ---
-        const urlParams = new URLSearchParams(window.location.search);
-        const refSource = urlParams.get('ref');
-        
-        // Deteksi Jalur Diagnosis
-        const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html');
-        // Deteksi Jalur Informasi
-        const isFromInformasi = document.referrer.includes('informasi.html');
-
-        // Ambil semua link di dalam breadcrumb
+        if (closeBtn) { closeBtn.addEventListener("click", function () { if (document.referrer !== "") { window.history.back(); } else { window.location.href = "../../index.html"; } }); }
+        const urlParams = new URLSearchParams(window.location.search); const refSource = urlParams.get('ref'); const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html'); const isFromInformasi = document.referrer.includes('informasi.html');
         const breadcrumbLinks = document.querySelectorAll('.breadcrumb-custom a');
-        
-        breadcrumbLinks.forEach(function(link) {
-            // Targetkan hanya link yang bertuliskan "Informasi"
-            if (link.innerText.trim() === "Informasi") {
-                if (isFromDiagnosis) {
-                    // JALUR A: Jika dari Diagnosis, ubah teksnya
-                    link.href = "/template/diagnosis.html";
-                    link.innerText = "Diagnosis";
-                } 
-                else if (!isFromInformasi) {
-                    // JALUR C: Jika BUKAN dari Informasi (artinya dari Beranda / index.html)
-                    // Ambil ikon chevron (panah) setelah kata "Informasi" lalu hapus
-                    const nextChevron = link.nextElementSibling;
-                    if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) {
-                        nextChevron.remove();
-                    }
-                    // Hapus link kata "Informasi" itu sendiri
-                    link.remove();
-                }
-                // JALUR B: Jika dari Informasi, dibiarkan saja (default)
-            }
-        });
+        breadcrumbLinks.forEach(function(link) { if (link.innerText.trim() === "Informasi") { if (isFromDiagnosis) { link.href = "../diagnosis.html"; link.innerText = "Diagnosis"; } else if (!isFromInformasi) { const nextChevron = link.nextElementSibling; if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) { nextChevron.remove(); } link.remove(); } } });
+        const slides = document.querySelectorAll('.slide'); const dotsContainer = document.querySelector('.slider-dots');
+        slides.forEach((_, i) => { const dot = document.createElement('span'); dot.classList.add('dot'); if (i === 0) dot.classList.add('active'); dot.addEventListener('click', () => goTo(i)); dotsContainer.appendChild(dot); });
+        const dots = document.querySelectorAll('.dot'); let current = 0;
+        function goTo(index) { slides[current].classList.remove('active'); dots[current].classList.remove('active'); current = (index + slides.length) % slides.length; slides[current].classList.add('active'); dots[current].classList.add('active'); }
+        document.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1)); document.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+        const tabBtns = document.querySelectorAll('.tab-btn'); const tabPanes = document.querySelectorAll('.tab-pane');
+        tabBtns.forEach(btn => { btn.addEventListener('click', () => { const target = btn.dataset.tab; tabBtns.forEach(b => b.classList.remove('active')); tabPanes.forEach(p => p.classList.remove('active')); btn.classList.add('active'); document.getElementById('tab-' + target).classList.add('active'); }); });
     </script>
 </body>
 </html>

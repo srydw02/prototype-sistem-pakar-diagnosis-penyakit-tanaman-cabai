@@ -1,253 +1,222 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Penyakit</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Detail Penyakit - Layu Fusarium</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
-    <link rel="stylesheet" href="/static/style/style3.css" />
+    <link rel="stylesheet" href="../../static/style/style3.css" />
 </head>
-
 <body class="detail-page">
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-xl d-flex justify-content-between align-items-center">
-
-            <!-- Logo tetap di kiri -->
-            <a class="navbar-brand d-flex align-items-center" href="/template/informasi.html">
-                <img src="/static/images/logo2.png" alt="Logo SiPadi"
-                    style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-                <h3 style="color: green; margin: 0;">SiPadi</h3>
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="../informasi.html">
+                <img src="../../static/images/icon/icon.svg" alt="ChiliCare Logo">
             </a>
-
-            <button id="menu-toggle" class="btn-back-home" title="Kembali">
-                ✕
-            </button>
-
+            <div id="menu-toggle" class="btn btn-back shadow-sm"><i class="fas fa-arrow-left mt-1"></i>Back</div>
         </div>
-    </nav>
-
+    </nav>  
 
     <div class="container-xl detail-container">
-
         <nav aria-label="breadcrumb" class="breadcrumb-custom mb-4">
-                <i class="fas fa-home"></i> <a href="/">Beranda</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> <a
-                    href="/template/informasi.html">Informasi</a>
-                <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i> Penyakit Tungro
+            <i class="fas fa-home" style="color: #b91e1e;"></i>
+            <a href="../../index.html">Home</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem;"></i>
+            <a href="../informasi.html">Informasi</a>
+            <i class="fas fa-chevron-right mx-2" style="font-size: 0.7rem; color: #b91e1e;"></i>
+            Layu Fusarium
         </nav>
+                
+        <div class="img-wrapper">
+            <div class="img-slider">
+                <div class="slide active">
+                  <img src="../../static/images/assetPenyakit/LayuFusarium.png" class="img-detail" alt="Layu Fusarium 1" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/LayuFusarium2.jpg" class="img-detail" alt="Layu Fusarium 2" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/LayuFusarium3.jpg" class="img-detail" alt="Layu Fusarium 3" />
+                </div>
+                <div class="slide">
+                  <img src="../../static/images/assetPenyakit/LayuFusarium4.jpg" class="img-detail" alt="Layu Fusarium 4" />
+                </div>
+                <button class="slider-btn slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn slider-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots"></div> 
+            </div>
+        </div>
 
-        <h2 class="fw-bold mb-4">
-            Penyakit Tungro
-        </h2>
-        <div class="row align-items-start">
-            <div class="col-lg-5 mb-4">
-                <div class="left-side">
-                    <img
-                        src="/static/images/fotoJenisPadi/fotopenyakitpadi/Penyakit Tungro.png"
-                        class="img-detail shadow-sm"
-                        alt="Penyakit Tungro"
-                    >
-                    <div class="mt-4">
-                        <h5 class="section-title">
-                            Deskripsi Singkat
-                        </h5>
-                        <p class="description-text">
-                            Penyakit tungro merupakan penyakit virus yang sangat merugikan pada tanaman padi dan menjadi salah satu penyebab utama penurunan hasil panen di berbagai daerah pertanian. Penyakit ini disebabkan oleh kombinasi dua virus, yaitu Rice Tungro Bacilliform Virus (RTBV) dan Rice Tungro Spherical Virus (RTSV), yang ditularkan oleh serangga wereng hijau. Tungro menyerang tanaman padi sejak fase awal pertumbuhan dan menyebabkan gangguan serius pada perkembangan tanaman sehingga pertumbuhan menjadi tidak normal.
-                        </p>
+        <h2 class="font-weight-bold" style="padding-top: 30px; padding-bottom: 30px;">Layu Fusarium</h2>
+
+        <div class="detail-tabs">
+            <button class="tab-btn active" data-tab="deskripsi"><i class="fas fa-info-circle"></i> Deskripsi</button>
+            <button class="tab-btn" data-tab="gejala"><i class="fas fa-stethoscope"></i> Gejala</button>
+            <button class="tab-btn" data-tab="penyebab"><i class="fas fa-bug"></i> Penyebab</button>
+            <button class="tab-btn" data-tab="bagian"><i class="fas fa-leaf"></i> Bagian Diserang</button>
+            <button class="tab-btn" data-tab="penanganan"><i class="fas fa-shield-alt"></i> Penanganan</button>
+        </div>
+    
+        <div class="tab-content-wrapper">
+            <div class="tab-pane active" id="tab-deskripsi">
+                <p class="font-weight-narrow">Layu Fusarium adalah penyakit layu yang disebabkan oleh jamur Fusarium oxysporum f.sp. capsici. Jamur ini menyerang jaringan pembuluh angkut tanaman sehingga air dan nutrisi tidak dapat mengalir dari akar ke daun.</p>
+                <p class="font-weight-narrow">Penyakit ini umumnya muncul pada tanah yang terlalu lembap dan suhu yang tinggi. Sekali tanaman terinfeksi, penyakit ini sulit disembuhkan dan biasanya berujung pada kematian tanaman secara bertahap.</p>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-gejala">
+                <ul class="detail-list">
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                        <b>Gejala Awal</b>
+                        <ul class="isi-gejala">
+                          <li>Daun bagian bawah mulai layu dan menguning.</li>
+                          <li>Layu terjadi perlahan, biasanya di siang hari dan agak membaik di malam hari.</li>
+                          <li>Pertumbuhan tanaman terlihat tidak optimal.</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-icon"></div>
+                      <div>
+                          <b>Gejala Lanjutan</b>
+                          <ul class="isi-gejala">
+                            <li>Kelayuan menjalar cepat ke daun bagian atas.</li>
+                            <li>Jika pangkal batang dipotong, jaringan pembuluh berwarna coklat tua.</li>
+                            <li>Tanaman terus melemah meskipun tanah dalam keadaan lembap.</li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="list-icon"></div>
+                        <div>
+                            <b>Gejala Serangan Berat</b>
+                            <ul class="isi-gejala">
+                                <li>Seluruh daun layu permanen dan mengering.</li>
+                                <li>Tanaman mati total.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="tab-pane px-5" id="tab-penyebab">
+                <div class="kotak-penyebab">
+                    <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Layu Fusarium disebabkan oleh jamur tular tanah.</p>
+                    <div class="daftar-penyebab">
+                        <div class="item-penyebab">
+                            <img src="../../static/images/foto_penyebab/fusarium_oxysporum.jpg" class="rounded-circle" width="150" height="150">
+                            <p><i>Fusarium oxysporum</i></p>
+                        </div>
+                    </div>
+                    <div class="table-responsive px-4">
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-danger">
+                                <tr>
+                                    <th>Faktor</th>
+                                    <th>Kondisi yang Mendukung Penyakit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Suhu Tanah</td><td>28°C – 32°C</td></tr>
+                                <tr><td>Kelembapan</td><td>Tanah sangat lembap / genangan air</td></tr>
+                                <tr><td>Drainase</td><td>Buruk, mudah tergenang</td></tr>
+                                <tr><td>Pekerjaan Lahan</td><td>Luka akar saat penyanggaan mempercepat infeksi</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="card card-custom border-0 p-4 p-lg-5">
-                    <h5 class="section-title">
-                        Bagian Yang Diserang
-                    </h5>
-                    <ul>
-                        <li class="mb-2">Daun</li>
-                        <li class="mb-2">Batang</li>
-                        <li class="mb-2">Anakan Padi</li>
-                        <li class="mb-2">Sistem Pertumbuhan Tanaman</li>
-                    </ul>
-                    <h5 class="section-title">
-                        Gejala
-                    </h5>
-                    <ul>
-                        <li class="mb-2">
-                            Tanaman kerdil.
-                        </li>
-                        <li class="mb-2">
-                            Daun menguning hingga oranye.
-                        </li>
-                        <li class="mb-2">
-                            Pertumbuhan terhambat.
-                        </li>
-                        <li class="mb-2">
-                            Jumlah anakan berkurang.
-                        </li>
-                        <li class="mb-2">
-                            Malai pendek.
-                        </li>
-                        <li class="mb-2">
-                            Bulir sedikit atau hampa.
-                        </li>
-                    </ul>
-                    <h5 class="section-title">
-                        Detail Gejala
-                    </h5>
-                    <p class="description-text">
-                        Gejala awal penyakit tungro biasanya ditandai dengan perubahan warna daun menjadi kuning pucat dimulai dari ujung daun kemudian berubah menjadi kuning-oranye. Daun terlihat lebih pendek dan tegak dibandingkan tanaman sehat. Pertumbuhan tanaman menjadi lambat dan tinggi tanaman jauh lebih pendek dari normal. Jumlah anakan berkurang drastis sehingga rumpun padi tampak jarang. Pada serangan berat, malai yang terbentuk pendek dan banyak bulir tidak terisi sempurna atau menjadi hampa.
-                    </p>
-                    <h5 class="section-title">
-                        Dampak
-                    </h5>
-                    <p class="description-text">
-                        Penyakit tungro dapat menyebabkan penurunan hasil panen secara signifikan karena tanaman tidak mampu tumbuh dan berkembang dengan baik. Jumlah anakan yang sedikit serta banyaknya bulir hampa menyebabkan produksi gabah menurun drastis. Pada serangan berat di fase awal pertumbuhan, tanaman dapat gagal menghasilkan panen sama sekali.
-                    </p>
-                    <h5 class="section-title">
-                        Penanganan
-                    </h5>
-                    <div class="warna p-4 rounded">
-                        <h6 class="fw-bold text-success mb-3">
-                            Solusi Pengendalian
-                        </h6>
-                        <p class="description-text mb-0">
-                            Pengendalian penyakit tungro dilakukan dengan mengendalikan populasi wereng hijau sebagai vektor utama penyebaran virus. Petani dianjurkan menggunakan varietas tahan tungro, melakukan tanam serempak, membersihkan gulma di sekitar sawah, serta memutus siklus hidup wereng dengan pergiliran tanaman. Penggunaan insektisida dapat dilakukan apabila populasi wereng meningkat tinggi. Selain itu, pemantauan rutin pada tanaman sangat penting agar penanganan dapat dilakukan lebih cepat sebelum penyakit menyebar luas.
-                        </p>
-                    </div>
-                    <h5 class="section-title mt-4">
-                        Penyebab
-                    </h5>
-                    <p class="description-text">
-                        Penyakit tungro disebabkan oleh virus RTBV dan RTSV yang ditularkan oleh wereng hijau (Nephotettix virescens). Penyebaran penyakit meningkat pada kondisi lingkungan yang mendukung perkembangan populasi wereng dan pada lahan yang memiliki banyak tanaman inang.
-                    </p>
+        
+            <div class="tab-pane" id="tab-bagian">
+                <p class="font-weight-narrow">Jamur ini terutama menyerang sistem perakaran dan jaringan pembuluh (xilem) pada batang tanaman cabai. Akibatnya, seluruh bagian tanaman di atas (daun, batang, buah) akan kekurangan air dan akhirnya layu.</p>
+                <p class="font-weight-bold" style="margin: 20px; font-size: 17px;">Bagian yang diserang pada cabai.</p>
+                <div class="daftar-penyebab">
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/Fusarium_bagianakar.jpg" class="rounded-circle" width="150" height="150"></div>
+                    <div class="item-penyebab"><img src="../../static/images/assetPenyakit/Fusarium_bagianbatang.jpg" class="rounded-circle" width="150" height="150"></div>
                 </div>
+            </div>
+        
+            <div class="tab-pane px-4" id="tab-penanganan">
+                <div class="penanganan-card">
+                    <div class="penanganan-header"><h6>Cara Penanganan Penyakit</h6></div>
+                    <div class="penanganan-list">
+                        <div class="penanganan-item"><div class="penanganan-number">1</div><p>Cabut dan bakar tanaman yang sudah sakit untuk mencegah jamur menyebar ke tanah sekitarnya.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">2</div><p>Lakukan pergiliran (rotasi) tanaman dengan famili selain Solanaceae (seperti padi-padian atau kacang-kacangan).</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">3</div><p>Aplikasikan agens hayati Trichoderma spp. pada saat pengolahan lahan untuk menekan populasi jamur.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">4</div><p>Perbaiki sistem drainase agar lahan tidak tergenang air.</p></div>
+                        <div class="penanganan-item"><div class="penanganan-number">5</div><p>Hindari melukai akar tanaman saat melakukan penyiangan atau pemupukan.</p></div>
+                    </div>
+                </div>
+            
+                <h6 class="obat-title">Rekomendasi Obat / Fungisida</h6>
+                    <div class="obat-grid">
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_fusarium1.jpg" alt="Score 250 EC"></div>
+                            <div class="obat-info">
+                                <h6>Score 250 EC</h6>
+                                <p><b>Bahan Aktif:</b> Difenokonazol 250 g/L</p><p><b>Jenis:</b> Fungisida sistemik</p><p><b>Dosis:</b> 1 ml/L air</p><p><b>Fungsi:</b> Menghambat perkembangan jamur di jaringan pembuluh.</p>
+                            </div>
+                        </div>
+                        <div class="obat-card">
+                            <div class="obat-img-wrapper"><img src="../../static/images/foto_penyebab/obat_fusarium2.jpg" alt="Amistar Top 325 SC"></div>
+                            <div class="obat-info">
+                                <h6>Amistar Top 325 SC</h6>
+                                <p><b>Bahan Aktif:</b> Azoksistrobin + Difenokonazol</p><p><b>Jenis:</b> Fungisida sistemik</p><p><b>Dosis:</b> 1 ml/L air</p><p><b>Fungsi:</b> Pengendalian layu Fusarium secara menyeluruh.</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="obat-note"><i class="fas fa-exclamation-triangle mr-2"></i><span>Penggunaan fungisida hanya efektif pada tahap awal infeksi. Pencegahan melalui drainase dan agens hayati adalah kunci utama.</span></div>
+            </div>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-image">
+                <h5>Tahukah Anda?</h5>
+                <img src="../../static/images/foto_penyebab/fakta_fusarium.jpg" alt="Layu Fusarium Cabai">
+            </div>
+            <div class="fact-content">
+                <p class="isi">Jamur Fusarium oxysporum dapat bertahan hidup di dalam tanah tanpa inang tanaman selama bertahun-tahun dalam bentuk spora istirahat (klamidospora). Inilah sebabnya rotasi tanaman sangat penting dilakukan.</p>
+                <small class="fact-source">Sumber: Jurnal Fitopatologi Indonesia, 2021.</small>
             </div>
         </div>
     </div>
 
     <footer class="footer-modern">
-
-    <div class="container-xl">
-
-      <div class="footer-top">
-
-        <div class="footer-brand">
-
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
-
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
-
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-4">
+                    <a class="navbar-brand d-flex align-items-center" href="../../index.html"><img src="../../static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;"></a>
+                    <p class="text-white-50" style="font-size: 17px;">Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html">Home</a></li><li><a href="../berita.html">Berita</a></li><li><a href="../jenisCabai.html">Jenis Cabai</a></li><li><a href="../informasi.html">Informasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4"><h5 class="text-white mb-3">Solusi</h5><p class="text-white-50" style="font-size: 17px;">Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.</p></div>
+            </div>
+            <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="text-center"><p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">©2026 ChiliCare - All Rights Reserved</p></div>
+            <div class="footer-brand-watermark">ChiliCare</div>
         </div>
-
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
-        </div>
-
-      </div>
-
-      <hr>
-
-      <div class="footer-bottom">
-
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
     </footer>
 
-    <script>
-        // 1. --- LOGIKA TOMBOL KEMBALI (X) ---
+   <script>
         const closeBtn = document.getElementById("menu-toggle");
-        if (closeBtn) {
-            closeBtn.addEventListener("click", function () {
-                if (document.referrer !== "") {
-                    window.history.back();
-                } else {
-                    window.location.href = "/index.html";
-                }
-            });
-        }
-
-        // 2. --- LOGIKA BREADCRUMB DINAMIS & KONDISIONAL ---
-        const urlParams = new URLSearchParams(window.location.search);
-        const refSource = urlParams.get('ref');
-        
-        // Deteksi Jalur Diagnosis
-        const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html');
-        // Deteksi Jalur Informasi
-        const isFromInformasi = document.referrer.includes('informasi.html');
-
-        // Ambil semua link di dalam breadcrumb
+        if (closeBtn) { closeBtn.addEventListener("click", function () { if (document.referrer !== "") { window.history.back(); } else { window.location.href = "../../index.html"; } }); }
+        const urlParams = new URLSearchParams(window.location.search); const refSource = urlParams.get('ref'); const isFromDiagnosis = (refSource === 'diagnosis') || document.referrer.includes('diagnosis.html'); const isFromInformasi = document.referrer.includes('informasi.html');
         const breadcrumbLinks = document.querySelectorAll('.breadcrumb-custom a');
-        
-        breadcrumbLinks.forEach(function(link) {
-            // Targetkan hanya link yang bertuliskan "Informasi"
-            if (link.innerText.trim() === "Informasi") {
-                if (isFromDiagnosis) {
-                    // JALUR A: Jika dari Diagnosis, ubah teksnya
-                    link.href = "/template/diagnosis.html";
-                    link.innerText = "Diagnosis";
-                } 
-                else if (!isFromInformasi) {
-                    // JALUR C: Jika BUKAN dari Informasi (artinya dari Beranda / index.html)
-                    // Ambil ikon chevron (panah) setelah kata "Informasi" lalu hapus
-                    const nextChevron = link.nextElementSibling;
-                    if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) {
-                        nextChevron.remove();
-                    }
-                    // Hapus link kata "Informasi" itu sendiri
-                    link.remove();
-                }
-                // JALUR B: Jika dari Informasi, dibiarkan saja (default)
-            }
-        });
+        breadcrumbLinks.forEach(function(link) { if (link.innerText.trim() === "Informasi") { if (isFromDiagnosis) { link.href = "../diagnosis.html"; link.innerText = "Diagnosis"; } else if (!isFromInformasi) { const nextChevron = link.nextElementSibling; if (nextChevron && nextChevron.classList.contains('fa-chevron-right')) { nextChevron.remove(); } link.remove(); } } });
+        const slides = document.querySelectorAll('.slide'); const dotsContainer = document.querySelector('.slider-dots');
+        slides.forEach((_, i) => { const dot = document.createElement('span'); dot.classList.add('dot'); if (i === 0) dot.classList.add('active'); dot.addEventListener('click', () => goTo(i)); dotsContainer.appendChild(dot); });
+        const dots = document.querySelectorAll('.dot'); let current = 0;
+        function goTo(index) { slides[current].classList.remove('active'); dots[current].classList.remove('active'); current = (index + slides.length) % slides.length; slides[current].classList.add('active'); dots[current].classList.add('active'); }
+        document.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1)); document.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+        const tabBtns = document.querySelectorAll('.tab-btn'); const tabPanes = document.querySelectorAll('.tab-pane');
+        tabBtns.forEach(btn => { btn.addEventListener('click', () => { const target = btn.dataset.tab; tabBtns.forEach(b => b.classList.remove('active')); tabPanes.forEach(p => p.classList.remove('active')); btn.classList.add('active'); document.getElementById('tab-' + target).classList.add('active'); }); });
     </script>
 </body>
 </html>

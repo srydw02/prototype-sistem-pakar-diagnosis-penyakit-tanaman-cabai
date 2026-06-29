@@ -3,51 +3,51 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="../gambar/icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../static/images/icon/icon.svg" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-  <link rel="stylesheet" href="../static/style/style.css" />
   <link rel="stylesheet" href="../static/style/style6.css" />
 
-  <title>Berita │ SiPadi</title>
+  <title>Berita │ ChiliCare</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
-    <div class="container-xl">
-      <a class="navbar-brand d-flex align-items-center">
-        <img src="/static/images/logo2.png" alt="Logo SiPadi"
-          style="width: 35px; height: 35px; object-fit: contain; margin-right: 8px;">
-        <h3 style="color: green; margin: 0;">SiPadi</h3>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item align-self-center">
-            <a class="nav-link" href="/#home">Home</a>
-          </li>
-          <li class="nav-item align-self-center active">
-            <a class="nav-link active" href="/template/berita.html">Berita</a>
-          </li>
-          <li class="nav-item align-self-center">
-            <a class="nav-link" href="/template/jenisPadi.html">Jenis Padi</a>
-          </li>
-          <li class="nav-item align-self-center">
-            <a class="nav-link" href="/template/informasi.html">Informasi</a>
-          </li>
-          <li class="nav-item align-self-center">
-            <a class="btn px-4 btn-primary ml-2 btn-register" href="/template/diagnosis.html"
-              role="button">Diagnosis</a>
-          </li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-xl">
+        
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <img src="../static/images/icon/icon.svg" alt="ChiliCare Logo">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#mainNavbarMenu"
+            aria-controls="mainNavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbarMenu">
+            <div class="d-lg-flex w-100 justify-content-between align-items-center">
+                
+                <ul class="navbar-nav mx-lg-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jenisCabai.html">Jenis Cabai</a></li>
+                    <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+                </ul>
+
+                <div class="navbar-action-btn-group my-2 my-lg-0">
+                    <a class="btn btn-diagnosis-nav shadow-sm" href="diagnosis.html" role="button">
+                        <i class="fas fa-stethoscope"></i>Diagnosis
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
   </nav>
 
@@ -61,9 +61,9 @@
           </div>
 
           <article class="hero-article">
-            <a href="/template/beritapadi/bankIndonesia.html" class="text-decoration-none text-dark">
+            <a href="beritapadi/bankIndonesia.html" class="text-decoration-none text-dark">
               <div class="img-wrapper">
-                <img src="/static/images/fotoberita/bankIndonesia.png" alt="Berita Utama" class="w-100" />
+                <img src="../static/images/fotoberita/bankIndonesia.png" alt="Berita Utama" class="w-100" />
               </div>
               <h1 class="hero-title mt-3">
                 Bank Indonesia: Pertanian Jadi Tulang Punggung Ekonomi, Bukti Nyata Sektor Pangan Semakin Kuat
@@ -83,8 +83,8 @@
           </div>
 
           <article class="medium-article mb-4">
-            <a href="/template/beritapadi/produksiBeras2.html" class="text-decoration-none text-dark">
-              <img src="/static/images/fotoberita/produkberas.png" alt="Berita" class="w-100 mb-2" />
+            <a href="beritapadi/produksiBeras2.html" class="text-decoration-none text-dark">
+              <img src="../static/images/fotoberita/produkberas.png" alt="Berita" class="w-100 mb-2" />
               <h3 class="medium-title">
                 Produksi Beras Semester I 2026 Diproyeksi Meningkat, Luas
                 Panen Ikut Menguat.
@@ -94,25 +94,25 @@
 
           <div class="list-article-wrapper">
             <article class="list-article">
-              <a href="/template/beritapadi/swasembadaBerasNyata.html" class="d-flex text-decoration-none text-dark">
+              <a href="beritapadi/swasembadaBerasNyata.html" class="d-flex text-decoration-none text-dark">
                 <div class="list-content pr-3">
                   <h4 class="list-title">
                     Swasembada Beras Nyata, Produksi Naik Tajam, Stok Muat, Tanpa Impor
                   </h4>
                 </div>
-                <img src="/static/images/fotoberita/berasnyata1.png" alt="Thumb" />
+                <img src="../static/images/fotoberita/berasnyata1.png" alt="Thumb" />
               </a>
             </article>
 
             <article class="list-article">
-              <a href="/template/beritapadi/irigasi.html" class="d-flex text-decoration-none text-dark">
+              <a href="beritapadi/irigasi.html" class="d-flex text-decoration-none text-dark">
                 <div class="list-content pr-3">
                   <h4 class="list-title">
                     Ratusan Hektar Sawah Terdampak Kekeringan, Ini Solusi
                     Irigasi Cerdas
                   </h4>
                 </div>
-                <img src="/static/images/fotoberita/kering.jpg" alt="Thumb" />
+                <img src="../static/images/fotoberita/kering.jpg" alt="Thumb" />
               </a>
             </article>
           </div>
@@ -121,7 +121,7 @@
 
       <div class="cnn-section-header mt-5 pt-3 mb-4">
         <div class="accent-bar"></div>
-        SEPUTAR PADI
+        SEPUTAR PERTANIAN
       </div>
 
       <div class="news-carousel-wrapper position-relative" id="techWrapper">
@@ -135,8 +135,8 @@
         <div class="news-carousel-track" id="techTrack">
           <div class="news-carousel-item">
             <article class="grid-article">
-              <a href="/template/beritapadi/kementan.html" class="text-decoration-none text-dark">
-                <img src="/static/images/fotoberita/kementan&pemda.png" alt="Tech 1" class="w-100 mb-2" />
+              <a href="beritapadi/kementan.html" class="text-decoration-none text-dark">
+                <img src="../static/images/fotoberita/kementan&pemda.png" alt="Tech 1" class="w-100 mb-2" />
                 <h3 class="grid-title">
                   Kementan dan Pemda Perkuat Antisipasi Kemarau, Pastikan Pertanaman Padi Gunungkidul Tetap Aman Hingga
                   Masa Panen
@@ -147,8 +147,8 @@
 
           <div class="news-carousel-item">
             <article class="grid-article">
-              <a href="/template/beritapadi/bankIndonesia.html" class="text-decoration-none text-dark">
-                <img src="/static/images/fotoberita/bankIndonesia.png" alt="Bank Indonesia" class="w-100 mb-2" />
+              <a href="beritapadi/bankIndonesia.html" class="text-decoration-none text-dark">
+                <img src="../static/images/fotoberita/bankIndonesia.png" alt="Bank Indonesia" class="w-100 mb-2" />
                 <h3 class="grid-title">
                   Bank Indonesia: Pertanian Jadi Tulang Punggung Ekonomi, Bukti Nyata Sektor Pangan Semakin Kuat
                 </h3>
@@ -158,8 +158,8 @@
 
           <div class="news-carousel-item">
             <article class="grid-article">
-              <a href="/template/beritapadi/kementanGaspol.html" class="text-decoration-none text-dark">
-                <img src="/static/images/fotoberita/kementanGaspol.png" alt="Kementan Gaspol" class="w-100 mb-2" />
+              <a href="beritapadi/kementanGaspol.html" class="text-decoration-none text-dark">
+                <img src="../static/images/fotoberita/kementanGaspol.png" alt="Kementan Gaspol" class="w-100 mb-2" />
                 <h3 class="grid-title">
                   Kementan Gaspol Tangani Hama Padi di Pinrang, 5.000 Hektare Diselamatkan
                 </h3>
@@ -169,8 +169,8 @@
 
           <div class="news-carousel-item">
             <article class="grid-article">
-              <a href="/template/beritapadi/penyakitKerdil.html" class="text-decoration-none text-dark">
-                <img src="/static/images/fotoberita/penyakitKerdil.png" alt="Penyakit Kerdil" class="w-100 mb-2" />
+              <a href="beritapadi/penyakitKerdil.html" class="text-decoration-none text-dark">
+                <img src="../static/images/fotoberita/penyakitKerdil.png" alt="Penyakit Kerdil" class="w-100 mb-2" />
                 <h3 class="grid-title">
                   Padi Terserang Penyakit Kerdil, Petani Sragen Keluhkan Hasil Panen Turun Dratis
                 </h3>
@@ -180,8 +180,8 @@
 
           <div class="news-carousel-item">
             <article class="grid-article">
-              <a href="/template/beritapadi/sistempakarbantu.html" class="text-decoration-none text-dark">
-                <img src="/static/images/fotoberita/homeberita3.jpg" alt="Sistem Pakar" class="w-100 mb-2" />
+              <a href="beritapadi/sistempakarbantu.html" class="text-decoration-none text-dark">
+                <img src="../static/images/fotoberita/homeberita3.jpg" alt="Sistem Pakar" class="w-100 mb-2" />
                 <h3 class="grid-title">
                   Deteksi Penyakit Padi Lebih Cepat, Ini Keunggulan Aplikasi Sistem Pakar
                 </h3>
@@ -199,9 +199,9 @@
       <div class="row mb-5">
         <div class="col-lg-8 pr-lg-4 mb-4 mb-lg-0">
           <article class="hero-article">
-            <a href="/template/beritapadi/padibojonegoro.html" class="text-decoration-none text-dark">
+            <a href="beritapadi/padibojonegoro.html" class="text-decoration-none text-dark">
               <div class="img-wrapper">
-                <img src="/static/images/fotoberita/padibojonegoro.png" alt="Edukasi Petani" class="w-100" />
+                <img src="../static/images/fotoberita/padibojonegoro.png" alt="Edukasi Petani" class="w-100" />
               </div>
               <h2 class="hero-title mt-3" style="font-size: 2rem;">
                 Produksi Padi Bojonegoro Sekitar Migas Kedung Keris Jeblok
@@ -216,16 +216,16 @@
         <div class="col-lg-4 mt-4 mt-lg-0">
           <div class="vertical-ticker-wrapper bg-white shadow-sm p-3 h-100 d-flex flex-column"
             style="border-radius: 12px; border: 1px solid #eef2f5;">
-            <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #0b8f1f; font-size: 1.1rem;">
+            <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #b91e1e; font-size: 1.1rem;">
               <i class="fas fa-lightbulb mr-2 text-warning"></i> Berita Lainnya
             </h5>
 
             <div class="vertical-ticker-track flex-grow-1" id="eduVerticalTrack"
               style="overflow-y: hidden; height: 460px;">
               
-              <a href="/template/beritapadi/swasembadaBerasNyata.html" class="d-flex text-decoration-none text-dark ticker-item">
+              <a href="beritapadi/swasembadaBerasNyata.html" class="d-flex text-decoration-none text-dark ticker-item">
                 <img
-                  src="/static/images/fotoberita/berasnyata1.png"
+                  src="../static/images/fotoberita/berasnyata1.png"
                   alt="Swasembada Beras" class="rounded mr-3" style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
                 <div class="d-flex flex-column justify-content-center">
                   <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
@@ -237,8 +237,8 @@
                 </div>
               </a>
 
-              <a href="/template/beritapadi/eksporberaskearab.html" class="d-flex text-decoration-none text-dark ticker-item">
-                <img src="/static/images/fotoberita/eksporberas.png" alt="Ekspor Beras" class="rounded mr-3"
+              <a href="beritapadi/eksporberaskearab.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="../static/images/fotoberita/eksporberas.png" alt="Ekspor Beras" class="rounded mr-3"
                   style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
                 <div class="d-flex flex-column justify-content-center">
                   <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
@@ -250,8 +250,8 @@
                 </div>
               </a>
 
-              <a href="/template/beritapadi/fasekritis.html" class="d-flex text-decoration-none text-dark ticker-item">
-                <img src="/static/images/fotoberita/pestisida2.png" alt="Fase Kritis" class="rounded mr-3"
+              <a href="beritapadi/fasekritis.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="../static/images/fotoberita/pestisida2.png" alt="Fase Kritis" class="rounded mr-3"
                   style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
                 <div class="d-flex flex-column justify-content-center">
                   <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
@@ -263,8 +263,8 @@
                 </div>
               </a>
 
-              <a href="/template/beritapadi/kementanUji.html" class="d-flex text-decoration-none text-dark ticker-item">
-                <img src="/static/images/fotoberita/kementanUji.png" alt="Kementan Uji" class="rounded mr-3"
+              <a href="beritapadi/kementanUji.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="../static/images/fotoberita/kementanUji.png" alt="Kementan Uji" class="rounded mr-3"
                   style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
                 <div class="d-flex flex-column justify-content-center">
                   <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
@@ -276,8 +276,8 @@
                 </div>
               </a>
 
-              <a href="/template/beritapadi/produksiBeras2.html" class="d-flex text-decoration-none text-dark ticker-item">
-                <img src="/static/images/fotoberita/produkberas.png" alt="Produksi Beras" class="rounded mr-3"
+              <a href="beritapadi/produksiBeras2.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="../static/images/fotoberita/produkberas.png" alt="Produksi Beras" class="rounded mr-3"
                   style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
                 <div class="d-flex flex-column justify-content-center">
                   <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
@@ -289,8 +289,8 @@
                 </div>
               </a>
 
-              <a href="/template/beritapadi/waspadaseranganblast.html" class="d-flex text-decoration-none text-dark ticker-item">
-                <img src="/static/images/fotoberita/homeberita1.jpg" alt="Penyakit Blast" class="rounded mr-3"
+              <a href="beritapadi/waspadaseranganblast.html" class="d-flex text-decoration-none text-dark ticker-item">
+                <img src="../static/images/fotoberita/homeberita1.jpg" alt="Penyakit Blast" class="rounded mr-3"
                   style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;" />
                 <div class="d-flex flex-column justify-content-center">
                   <h6 class="font-weight-bold mb-1" style="font-size: 0.95rem;">
@@ -311,73 +311,48 @@
   </main>
 
   <footer class="footer-modern">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-4 mb-4">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="../static/images/icon/icon-navbar.svg" alt="ChiliCare Logo" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+                </a>
+                <p class="text-white-50" style="font-size: 17px;">
+                    Sistem pakar diagnosis penyakit tanaman cabai yang membantu petani mengidentifikasi gangguan secara responsif.
+                </p>
+                <div class="social-links"></div>
+            </div>
 
-    <div class="container-xl">
+            <div class="col-lg-2 col-md-4 mb-4">
+                <h5 class="text-white mb-3">Produk</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="jenisCabai.html">Jenis Cabai</a></li>
+                    <li><a href="informasi.html">Informasi</a></li>
+                </ul>
+            </div>
 
-      <div class="footer-top">
-
-        <div class="footer-brand">
-
-          <img src="/static/images/logo2.png" alt="Logo SiPadi">
-
-          <div>
-            <h2>SiPadi</h2>
-            <p>Sistem Pakar Penyakit Padi</p>
-          </div>
-
+            <div class="col-lg-4 col-md-4 mb-4">
+                <h5 class="text-white mb-3">Solusi</h5>
+                <p class="text-white-50" style="font-size: 17px;">
+                    Teknologi pertanian cerdas untuk hasil panen yang lebih maksimal.
+                </p>
+            </div>
+        </div>
+        
+        <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        
+        <div class="text-center">
+            <p class="text-white-50" style="font-size: 17px; color: rgba(255, 255, 255, 0.6);">
+                ©2026 ChiliCare - All Rights Reserved
+            </p>
         </div>
 
-        <div class="footer-about">
-
-          <h4>Tentang</h4>
-
-          <p>
-            Sistem pakar diagnosis penyakit padi membantu petani dalam
-            mengidentifikasi penyakit pada tanaman padi berdasarkan
-            gejala yang muncul. Sistem ini memberikan hasil diagnosis
-            secara cepat beserta saran penanganannya, sehingga petani
-            dapat mengambil tindakan yang tepat untuk menjaga kesehatan
-            tanaman dan meningkatkan hasil panen.
-          </p>
-
+        <div class="footer-brand-watermark">
+            ChiliCare
         </div>
-
-      </div>
-
-      <hr>
-
-      <div class="footer-bottom">
-
-        <div class="footer-location">
-
-          <i class="fas fa-map-marker-alt"></i>
-
-          <span>
-            Surakarta, Indonesia
-          </span>
-
-        </div>
-
-        <div class="footer-copy">
-
-          <h6>
-            ©2026 | SiPadi | All Rights Reserved
-          </h6>
-
-        </div>
-
-        <div class="footer-phone">
-
-          <i class="fas fa-phone-alt"></i>
-
-          <span>
-            +62 000 0000 0000
-          </span>
-
-        </div>
-
-      </div>
-
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>

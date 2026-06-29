@@ -757,6 +757,18 @@
             showSlide(modalId);
         }
 
+        // ==========================================
+        // AUTO OPEN MODAL BERDASARKAN URL PARAMETER
+        // ==========================================
+        const urlParams = new URLSearchParams(window.location.search);
+        const modalTarget = urlParams.get('modal');
+        if (modalTarget) {
+            // Pastikan modal ada di halaman sebelum dipanggil
+            if (document.getElementById(modalTarget)) {
+                openModal(modalTarget);
+            }
+        }
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

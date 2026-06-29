@@ -914,11 +914,11 @@ button.btn-outline-hero {
     align-items: flex-end;
     padding: 24px;
     box-shadow: 0 10px 20px rgba(137,10,10,0.1);
-    flex: 0.3;
+    flex: 0.2; /* Diubah dari 0.3 ke 0.2 agar muat 5 card */
     min-width: 50px;
 }
 .ec-card.active, .ec-card:hover {
-    flex: 1.5;
+    flex: 1.5; /* Active card tetap besar dan dominan */
 }
 .ec-overlay {
     position: absolute;
